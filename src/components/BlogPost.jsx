@@ -1,47 +1,40 @@
 // src/components/BlogPost.jsx
 
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-// import blogPosts from '../blogData';
 import { useEffect, useState } from 'react';
 
-// Glob importiert ALLE Markdown-Dateien im Ordner
-const posts = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' });
+const posts = import.meta.glob('../posts/*.md', {
+  query: '?raw',
+  import: 'default',
+});
 
 function BlogPost() {
   const { id } = useParams();
   const [content, setContent] = useState('');
-  const [meta, setMedia] = useState({});
+  const [meta, setMeta] = useState({});
 
   useEffect(() => {
-    // Annahme: id etspricht Dateinamen, zb. 'fitnesstrip'
-    const file = '/src/posts/${id}.md';
-
-    // Den echten Importpfad holen:
     const importPath = Object.keys(posts).find((key) =>
       key.endsWith(`${id}.md`)
     );
     if (importPath) {
       posts[importPath]().then((raw) => {
-        // Frontmatter (Yaml oben) extrahieren
         const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/m.exec(raw);
         if (match) {
           const yaml = match[1];
           const body = match[2];
-          // Einfaches YAML-zu-Object (sehr basic)
           const metaObj = Object.fromEntries(
             yaml
               .split('\n')
-              .filter(line => line.includes(':'))
-              .map(line => {
+              .filter((line) => line.includes(':'))
+              .map((line) => {
                 const idx = line.indexOf(':');
                 const key = line.slice(0, idx).trim();
                 const value = line.slice(idx + 1).trim();
                 return [key, value];
               })
           );
-          setMeta(metaObj);
-
           setMeta(metaObj);
           setContent(body);
         } else {
@@ -67,13 +60,17 @@ function BlogPost() {
         />
       )}
       <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
-      <ReactMarkdown className='prose'>{content}</ReactMarkdown>
-      <a
-        href='/'
-        className='inline-block mt-8 text-blue-600 hover:undeline font-bold'
+      <p className="mb-4 text-gray-500">{meta.date}</p>
+      <div className='prose prose-slate dark:prose-invert max-w-none'>
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </div>
+
+      <Link
+        to='/'
+        className='inline-block mt-8 text-blue-600 hover:underline font-bold'
       >
         &larr; Zurück zum Blog
-      </a>
+      </Link>
     </article>
   );
 }
