@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BlogOverview from './components/BlogOverview';
-import BlogPost from './components/BlogPost'; // gleich anlegen!
+import BlogPost from './components/BlogPost'; 
 
 function App() {
   return (
