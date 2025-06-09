@@ -1,24 +1,67 @@
 // src/components/BlogPost.jsx
 
-import { useParams } from "react-router-dom";
-import blogPosts from '../blogData';
+import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+// import blogPosts from '../blogData';
+import { useEffect, useState } from 'react';
+
+// Glob importiert ALLE Markdown-Dateien im Ordner
+const posts = import.meta.glob('../posts/*.md', { as: 'raw' });
 
 function BlogPost() {
   const { id } = useParams();
-  
-  const post = blogPosts.find((p) => p.id === parseInt(id));
+  const [content, setContent] = useState('');
+  const [meta, setMedia] = useState({});
 
-  if (!post) {
-    return <div className="text-center py-16">Beitrag nicht gefunden.</div>;
-  }
+  useEffect(() => {
+    // Annahme: id etspricht Dateinamen, zb. 'fitnesstrip'
+    const file = '/src/posts/${id}.md';
+
+    // Den echten Importpfad holen:
+    const importPath = Object.keys(posts).find((key) =>
+      key.endsWith(`${id}.md`)
+    );
+    if (importPath) {
+      posts[importPath]().then((raw) => {
+        // Frontmatter (Yaml oben) extrahieren
+        const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/m.exec(raw);
+        if (match) {
+          const yaml = match[1];
+          const body = match[2];
+          // Einfaches YAML-zu-Object (sehr basic)
+          const metaObj = Object.fromEntries(
+            yaml.split('/n').map((line) => line.split(':').map((s) => s.trim()))
+          );
+          setMedia(metaObj);
+          setContent(body);
+        } else {
+          setContent(raw);
+          setMeta({});
+        }
+      });
+    } else {
+      setContent('Beitrag nicht gefunden.');
+      setMeta({});
+    }
+  }, [id]);
+
+  if (!content) return <div className='text-center py-16'>Lade ...</div>;
 
   return (
-    <article className="max-w-2xl mx-auto p-8 bg-white rounded-2xl shadow-xl mt-12">
-      <img src={post.image} alt={post.title} className="rounded-2xl mb-8 w-full object-cover h-64" />
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <p className="mb-8 text-gray-700">{post.summary}</p>
-      {/* Hier könntest du später den vollständigen Content einbauen */}
-      <a href="/" className="inline-block mt-8 text-blue-600 hover:underline font-bold">
+    <article className='max-w-2xl mx-auto p-8 bg-white rounded-2xl shadow-xl mt-12'>
+      {meta.image && (
+        <img
+          src={meta.image}
+          alt={meta.title}
+          className='rounded-2xl mb-8 w-full object-cover h-64'
+        />
+      )}
+      <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
+      <ReactMarkdown className='prose'>{content}</ReactMarkdown>
+      <a
+        href='/'
+        className='inline-block mt-8 text-blue-600 hover:undeline font-bold'
+      >
         &larr; Zurück zum Blog
       </a>
     </article>
@@ -26,4 +69,3 @@ function BlogPost() {
 }
 
 export default BlogPost;
-
