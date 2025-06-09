@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 
 // Glob importiert ALLE Markdown-Dateien im Ordner
-const posts = import.meta.glob('../posts/*.md', { as: 'raw' });
+const posts = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' });
 
 function BlogPost() {
   const { id } = useParams();
@@ -30,9 +30,19 @@ function BlogPost() {
           const body = match[2];
           // Einfaches YAML-zu-Object (sehr basic)
           const metaObj = Object.fromEntries(
-            yaml.split('/n').map((line) => line.split(':').map((s) => s.trim()))
+            yaml
+              .split('\n')
+              .filter(line => line.includes(':'))
+              .map(line => {
+                const idx = line.indexOf(':');
+                const key = line.slice(0, idx).trim();
+                const value = line.slice(idx + 1).trim();
+                return [key, value];
+              })
           );
-          setMedia(metaObj);
+          setMeta(metaObj);
+
+          setMeta(metaObj);
           setContent(body);
         } else {
           setContent(raw);
