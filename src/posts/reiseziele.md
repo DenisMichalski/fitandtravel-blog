@@ -38,4 +38,9 @@ Wichtig: Offen sein für Neues – manchmal reicht schon der nächste Park vor d
 
 ---
 
-Mehr Tipps? [Schau auf meinem Instagram!](https://instagram.com/fitandtrave_ai)
+Mehr Tipps? <a href="https://www.instagram.com/fitandtravelblog/" target="_blank" rel="noopener noreferrer"
+class="inline-block mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-400 text-white text-lg font-bold rounded-xl shadow-lg hover:from-pink-600 hover:to-yellow-500 transition">
+  Folge mir auf Instagram
+</a>
+
+

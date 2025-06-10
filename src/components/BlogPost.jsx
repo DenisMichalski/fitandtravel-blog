@@ -2,6 +2,7 @@
 
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { useEffect, useState } from 'react';
 
 const posts = import.meta.glob('../posts/*.md', {
@@ -65,7 +66,7 @@ function BlogPost() {
       <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
       <p className='mb-4 text-gray-500'>{meta.date}</p>
       <div className='prose prose-slate dark:prose-invert max-w-none'>
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={rehypeRaw}>{content}</ReactMarkdown>
       </div>
 
       <Link
