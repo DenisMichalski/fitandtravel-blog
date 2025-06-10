@@ -43,7 +43,7 @@ Egal ob im Hotelzimmer, am Strand oder im Park einer fremden Stadt – Möglichk
 ## Mein Fazit
 
 Reisen und Fitness? Das passt perfekt zusammen!  
-Du willst mehr Tipps? Schau auf meinem [Instagram-Profil](https://instagram.com/fitandtrave_ai) vorbei und begleite meine nächsten Abenteuer.
+Du willst mehr Tipps? Schau auf meinem [Instagram-Profil](https://www.instagram.com/fitandandtravel/) vorbei und begleite meine nächsten Abenteuer.
 
 ---
 
