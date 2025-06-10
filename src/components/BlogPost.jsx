@@ -31,7 +31,10 @@ function BlogPost() {
               .map((line) => {
                 const idx = line.indexOf(':');
                 const key = line.slice(0, idx).trim();
-                const value = line.slice(idx + 1).trim();
+                let value = line.slice(idx + 1).trim();
+                if (value.startsWith('"') && value.endsWith('"')) {
+                  value = value.slice(1, -1);
+                }
                 return [key, value];
               })
           );
@@ -60,7 +63,7 @@ function BlogPost() {
         />
       )}
       <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
-      <p className="mb-4 text-gray-500">{meta.date}</p>
+      <p className='mb-4 text-gray-500'>{meta.date}</p>
       <div className='prose prose-slate dark:prose-invert max-w-none'>
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
