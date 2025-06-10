@@ -6,7 +6,7 @@ import BlogPost from './components/BlogPost';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/fitandtravel-blog">
       <Header />
       <Routes>
         <Route path="/" element={
