@@ -3,6 +3,7 @@ title: "Mein erster Fitness-Trip"
 summary: "Wie ich Training & Abenteuer auf Reisen verbinde."
 image: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&h=400"
 date: "2025-06-09"
+category: "Fitness"
 ---
 
 # Mein erster Fitness-Trip

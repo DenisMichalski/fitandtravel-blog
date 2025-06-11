@@ -3,6 +3,8 @@ title: "Die besten Reiseziele für Aktive"
 summary: "Hier findest du Inspiration für deinen nächsten Abenteuer-Trip."
 image: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&h=400"
 date: "2025-06-10"
+category: "Reisen"
+
 ---
 
 # Die besten Reiseziele für Aktive
