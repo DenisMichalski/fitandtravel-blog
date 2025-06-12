@@ -3,6 +3,7 @@ title: "So trainierst du effektiv im Hotelzimmer"
 summary: "Kurze Workouts, keine Ausreden – dein Hotel wird zum Fitnessstudio."
 image: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&h=400"
 date: "2025-06-11"
+category: "Fitness"
 ---
 
 # So trainierst du effektiv im Hotelzimmer
