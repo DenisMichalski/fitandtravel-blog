@@ -3,8 +3,8 @@
 const blogPosts = [
   {
     id: 'fitnesstrip',
-    title: 'Top 5 Fitness-Gadgets für unterwegs',
-    summary: 'Mit diesen Gadgets bleibst du auch auf Reisen fit.',
+    title: 'Mein erster Fitness-Trip',
+    summary: 'Willkommen zu meinem ersten ausführlichen Blogpost!',
     image:
       'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&h=400',
   },
@@ -23,11 +23,13 @@ const blogPosts = [
     image:
       'https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&h=400',
   },
+  {
+    id: 'Fitness-Gadgets',
+    title: 'Top 5 Fitness-Gadgets für unterwegs',
+    summary: 'Mit diesen Gadgets bleibst du auch auf Reisen fit.',
+    image:
+      'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&h=400',
+  },
 ];
 
 export default blogPosts;
-
-
-
-
-
