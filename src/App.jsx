@@ -5,11 +5,13 @@ import BlogOverview from './components/BlogOverview';
 import BlogPost from './components/BlogPost';
 import About from './components/About';
 import Footer from './components/Footer';
+import TestDark from './TestDark';
 
 function App() {
   return (
     <Router basename='/fitandtravel-blog'>
       <Header />
+      <TestDark />
       <Routes>
         <Route
           path='/'

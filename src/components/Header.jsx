@@ -2,6 +2,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
 
+
 function Header() {
   const { pathname } = useLocation();
 
@@ -10,7 +11,7 @@ function Header() {
     `hover:text-blue-300 transition-colors ${
       pathname === path ? 'underline font-bold' : ''
     }`;
-
+  
   return (
     <header className='bg-slate-900 text-white px-6 py-4 flex justify-between items-center shadow-lg'>
       <h1 className='text-2xl font-extrabold tracking-tight'>
