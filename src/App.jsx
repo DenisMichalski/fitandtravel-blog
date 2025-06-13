@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import BlogOverview from './components/BlogOverview';
 import BlogPost from './components/BlogPost';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           element={<BlogPost />}
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }
