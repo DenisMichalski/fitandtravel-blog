@@ -1,5 +1,6 @@
 ---
 title: "Datenschutzerklärung"
+category: "legal"
 ---
 
 # Datenschutzerklärung

@@ -1,5 +1,6 @@
 ---
 title: "Impressum"
+category: "legal"
 ---
 
 # Impressum

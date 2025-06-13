@@ -43,8 +43,8 @@ function BlogOverview() {
 
   const filteredPosts =
     selectedCategory === 'Alle'
-      ? posts
-      : posts.filter(post => post.category === selectedCategory);
+      ? posts.filter(post => post.category !== 'legal')
+      : posts.filter(post => post.category === selectedCategory && post.category !== 'legal');
 
   return (
     <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
