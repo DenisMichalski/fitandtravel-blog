@@ -5,38 +5,50 @@ import BlogOverview from './components/BlogOverview';
 import BlogPost from './components/BlogPost';
 import About from './components/About';
 import Footer from './components/Footer';
-import TestDark from './TestDark';
+import Impressum from './components/Impressum';
+import Datenschutz from './components/Datenschutz';
 
 function App() {
   return (
     <Router basename='/fitandtravel-blog'>
-      <Header />
-      <TestDark />
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <>
-              <Hero />
-              {/* Optional: Teaser von 3 Blogposts */}
-              <BlogOverview limit={3} />
-            </>
-          }
-        />
-        <Route
-          path='/blog'
-          element={<BlogOverview />}
-        />
-        <Route
-          path='/about'
-          element={<About />}
-        />
-        <Route
-          path='/blog/:id'
-          element={<BlogPost />}
-        />
-      </Routes>
-      <Footer />
+      <div className='bg-gray-100 dark:bg-slate-900 min-h-screen transition-colors'>
+        <Header />
+        <main>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <Hero />
+                  {/* Optional: Zeige die letzten 3 Blogposts als Teaser auf der Startseite */}
+                  <BlogOverview limit={3} />
+                </>
+              }
+            />
+            <Route
+              path='/blog'
+              element={<BlogOverview />}
+            />
+            <Route
+              path='/about'
+              element={<About />}
+            />
+            <Route
+              path='/blog/:id'
+              element={<BlogPost />}
+            />
+            <Route
+              path='/impressum'
+              element={<Impressum />}
+            />
+            <Route
+              path='/datenschutz'
+              element={<Datenschutz />}
+            />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
