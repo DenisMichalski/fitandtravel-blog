@@ -21,7 +21,9 @@ function DarkModeToggle() {
   return (
     <button
       onClick={() => setDark((v) => !v)}
-      className="ml-4 px-4 py-2 rounded-lg font-semibold bg-gray-200 dark:bg-slate-800 text-slate-900 dark:text-white shadow transition"
+      className="ml-4 px-4 py-2 rounded-lg font-semibold 
+  bg-gray-200 dark:bg-slate-800 text-slate-900 dark:text-white 
+  shadow transition border border-gray-300 dark:border-slate-700"
       aria-label="Dark Mode umschalten"
       title="Dark Mode umschalten"
     >

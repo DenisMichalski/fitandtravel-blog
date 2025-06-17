@@ -55,7 +55,7 @@ function BlogPost() {
   if (!content) return <div className='text-center py-16'>Lade ...</div>;
 
   return (
-    <article className='max-w-2xl mx-auto p-8 bg-white rounded-2xl shadow-xl mt-12'>
+    <article className='max-w-2xl mx-auto p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl mt-12'>
       {meta.image && (
         <img
           src={meta.image}
@@ -66,7 +66,7 @@ function BlogPost() {
       <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
       <p className='mb-4 text-gray-500'>{meta.date}</p>
       <div className='prose prose-slate dark:prose-invert max-w-none'>
-        <ReactMarkdown rehypePlugins={rehypeRaw}>{content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
       </div>
 
       <Link

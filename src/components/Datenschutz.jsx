@@ -2,7 +2,7 @@
 
 function Datenschutz() {
   return (
-    <section className="max-w-2xl mx-auto py-16 px-6">
+    <section className=" text-slate-900 dark:text-white max-w-2xl mx-auto py-16 px-6">
       <h2 className="text-3xl font-bold mb-4">Datenschutzerklärung</h2>
       <p className="mb-4">
         <strong>Datenschutz</strong><br />
