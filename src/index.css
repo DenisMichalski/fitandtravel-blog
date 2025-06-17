@@ -5,3 +5,20 @@
 
 
 
+.dark .prose {
+    --tw-prose-body: #fff;
+    --tw-prose-headings: #fff;
+    --tw-prose-links: #93c5fd;
+    --tw-prose-bold: #fff;
+    --tw-prose-counters: #fff;
+    --tw-prose-bullets: #fff;
+    --tw-prose-hr: #fff;
+    --tw-prose-quotes: #fff;
+    --tw-prose-quote-borders: #fff;
+    --tw-prose-captions: #fff;
+    --tw-prose-code: #fff;
+    --tw-prose-pre-code: #fff;
+    --tw-prose-pre-bg: #1e293b;
+    --tw-prose-th-borders: #fff;
+    --tw-prose-td-borders: #fff;
+}
