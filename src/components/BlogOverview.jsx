@@ -1,23 +1,30 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 // Markdown-Posts importieren
-const postFiles = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' });
+const postFiles = import.meta.glob('../posts/*.md', {
+  query: '?raw',
+  import: 'default',
+});
 
 function extractFrontmatter(md) {
   const match = /^---\n([\s\S]*?)\n---\n/m.exec(md);
   if (!match) return {};
   const yaml = match[1];
   return Object.fromEntries(
-    yaml.split('\n').filter(line => line.includes(':')).map(line => {
-      const idx = line.indexOf(':');
-      const key = line.slice(0, idx).trim();
-      let value = line.slice(idx + 1).trim();
-      if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1);
-      }
-      return [key, value];
-    })
+    yaml
+      .split('\n')
+      .filter((line) => line.includes(':'))
+      .map((line) => {
+        const idx = line.indexOf(':');
+        const key = line.slice(0, idx).trim();
+        let value = line.slice(idx + 1).trim();
+        if (value.startsWith('"') && value.endsWith('"')) {
+          value = value.slice(1, -1);
+        }
+        return [key, value];
+      })
   );
 }
 
@@ -38,22 +45,34 @@ function BlogOverview() {
 
   const allCategories = [
     'Alle',
-    ...Array.from(new Set(posts.map(post => post.category))),
+    ...Array.from(new Set(posts.map((post) => post.category))),
   ];
 
   const filteredPosts =
     selectedCategory === 'Alle'
-      ? posts.filter(post => post.category !== 'legal')
-      : posts.filter(post => post.category === selectedCategory && post.category !== 'legal');
+      ? posts.filter((post) => post.category !== 'legal')
+      : posts.filter(
+          (post) =>
+            post.category === selectedCategory && post.category !== 'legal'
+        );
 
   return (
+    <>
+      <Helmet>
+        <title>Blog | Fit &amp; Travel</title>
+        <meta name="description" content="Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs." />
+        <meta property="og:title" content="Blog | Fit &amp; Travel" />
+        <meta property="og:description" content="Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs." />
+        {/* Optional: Bild für Blogübersicht */}
+        <meta property="og:image" content="https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&h=600" />
+      </Helmet>
     <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
       <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
         Neu im Blog
       </h2>
       {/* Kategorie-Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {allCategories.map(category => (
+      <div className='flex flex-wrap justify-center gap-4 mb-8'>
+        {allCategories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
@@ -97,10 +116,9 @@ function BlogOverview() {
           </article>
         ))}
       </div>
-    </section>
+      </section>
+      </>
   );
 }
 
 export default BlogOverview;
-
-
