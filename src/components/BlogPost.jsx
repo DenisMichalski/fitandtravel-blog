@@ -1,4 +1,4 @@
-// src/components/BlogPost.jsx
+import { Helmet } from 'react-helmet-async';
 
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -56,6 +56,35 @@ function BlogPost() {
 
   return (
     <article className='max-w-2xl mx-auto p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl mt-12'>
+      <Helmet>
+        <title>
+          {meta.title
+            ? `${meta.title} | Fit & Travel`
+            : 'Blogpost | Fit & Travel'}
+        </title>
+        <meta
+          name='description'
+          content={
+            meta.summary ||
+            'Erfahrungen, Tipps & Motivation für Fitness und Reisen'
+          }
+        />
+        {/* Optional: Social-Media-Preview */}
+        <meta
+          property='og:title'
+          content={meta.title || 'Fit & Travel Blog'}
+        />
+        <meta
+          property='og:description'
+          content={meta.summary || 'Blog über Fitness & Reisen'}
+        />
+        {meta.image && (
+          <meta
+            property='og:image'
+            content={meta.image}
+          />
+        )}
+      </Helmet>
       {meta.image && (
         <img
           src={meta.image}
