@@ -63,9 +63,12 @@ function BlogPost() {
           className='rounded-2xl mb-8 w-full object-cover h-64'
         />
       )}
-      <h1 className='text-3xl font-bold mb-4'>{meta.title || 'Blogpost'}</h1>
+      <h1 className='text-3xl font-bold mb-4 text-slate-900 dark:text-white'>
+        {meta.title || 'Blogpost'}
+      </h1>
+
       <p className='mb-4 text-gray-500'>{meta.date}</p>
-      <div className='prose prose-slate dark:prose-invert max-w-none'>
+      <div className='prose prose-lg dark:prose-invert max-w-none'>
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
       </div>
 
