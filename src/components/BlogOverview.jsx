@@ -60,64 +60,76 @@ function BlogOverview() {
     <>
       <Helmet>
         <title>Blog | Fit &amp; Travel</title>
-        <meta name="description" content="Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs." />
-        <meta property="og:title" content="Blog | Fit &amp; Travel" />
-        <meta property="og:description" content="Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs." />
+        <meta
+          name='description'
+          content='Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs.'
+        />
+        <meta
+          property='og:title'
+          content='Blog | Fit &amp; Travel'
+        />
+        <meta
+          property='og:description'
+          content='Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs.'
+        />
         {/* Optional: Bild für Blogübersicht */}
-        <meta property="og:image" content="https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&h=600" />
+        <meta
+          property='og:image'
+          content='https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&h=600'
+        />
       </Helmet>
-    <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
-      <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
-        Neu im Blog
-      </h2>
-      {/* Kategorie-Buttons */}
-      <div className='flex flex-wrap justify-center gap-4 mb-8'>
-        {allCategories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full font-semibold border 
+      <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
+        <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
+          Neu im Blog
+        </h2>
+        {/* Kategorie-Buttons */}
+        <div className='flex flex-wrap justify-center gap-4 mb-8'>
+          {allCategories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full font-semibold border 
               ${
                 selectedCategory === category
                   ? 'bg-pink-500 text-white'
                   : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300'
               }
               transition`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-        {filteredPosts.map((post) => (
-          <article
-            key={post.id}
-            className='bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col'
-          >
-            <img
-              src={post.image}
-              alt={post.title}
-              className='w-full h-52 object-cover'
-            />
-            <div className='p-6 flex flex-col flex-1'>
-              <h3 className='text-xl font-bold mb-1 text-slate-900 dark:text-white'>
-                {post.title}
-              </h3>
-              <p className='mb-4 text-gray-600 dark:text-gray-300 flex-1'>
-                {post.summary}
-              </p>
-              <Link
-                to={`/blog/${post.id}`}
-                className='inline-block text-slate-900 dark:text-blue-300 font-bold underline hover:text-blue-600 dark:hover:text-pink-300 transition'
-              >
-                Weiterlesen
-              </Link>
-            </div>
-          </article>
-        ))}
-      </div>
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
+          {filteredPosts.map((post) => (
+            <article
+              key={post.id}
+              className='bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col'
+            >
+              <img
+                src={post.image}
+                alt={post.title}
+                className='w-full h-52 object-cover'
+              />
+              <div className='p-6 flex flex-col flex-1'>
+                <h3 className='text-xl font-bold mb-1 text-slate-900 dark:text-white'>
+                  {post.title}
+                </h3>
+                <p className='mb-4 text-gray-600 dark:text-gray-300 flex-1'>
+                  {post.summary}
+                </p>
+                <Link
+                  to={`/blog/${post.id}`}
+                  className='inline-block text-slate-900 dark:text-blue-300 font-bold underline hover:text-blue-600 dark:hover:text-pink-300 transition'
+                >
+                  Weiterlesen
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
-      </>
+    </>
   );
 }
 
