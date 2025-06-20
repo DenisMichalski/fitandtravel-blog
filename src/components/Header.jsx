@@ -39,6 +39,12 @@ function Header() {
         >
           Über
         </Link>
+        <Link
+          to='/Kontakt'
+          className={linkClass('/kontakt')}
+        >
+          Kontakt
+        </Link>
         <DarkModeToggle />
       </nav>
     </header>

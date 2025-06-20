@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
 import { HelmetProvider } from 'react-helmet-async';
+import Kontakt from './components/Kontakt';
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
               <Route
                 path='/datenschutz'
                 element={<Datenschutz />}
+              />
+              <Route
+                path='/kontakt'
+                element={<Kontakt />}
               />
             </Routes>
           </main>

@@ -18,9 +18,18 @@ function Footer() {
           Datenschutz
         </Link>
       </div>
-      <div className='mt-4 text-sm text-gray-400'>
-        Powered by React &amp; Tailwind CSS
-      </div>
+      <Link
+        to='/kontakt'
+        className='hover:underline hover:text-blue-300 transition'
+      >
+        Kontakt
+      </Link>
+
+      <Link>
+        <div className='mt-4 text-sm text-gray-400'>
+          Powered by React &amp; Tailwind CSS
+        </div>
+      </Link>
     </footer>
   );
 }
