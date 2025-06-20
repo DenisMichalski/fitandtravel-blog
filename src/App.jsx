@@ -13,7 +13,8 @@ import Kontakt from './components/Kontakt';
 function App() {
   return (
     <HelmetProvider>
-      <Router basename='/fitandtravel-blog'>
+      <Router>
+        {/* <Router basename='/fitandtravel-blog'> */}
         <div className='bg-gray-100 dark:bg-slate-900 min-h-screen transition-colors'>
           <Header />
           <main>
