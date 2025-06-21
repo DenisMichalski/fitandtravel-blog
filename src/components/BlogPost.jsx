@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import AuthorBadge from './AuthorBadge';
 
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -107,6 +108,7 @@ function BlogPost() {
       >
         &larr; Zurück zum Blog
       </Link>
+      <AuthorBadge />
     </article>
   );
 }
