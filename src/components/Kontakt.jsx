@@ -20,7 +20,7 @@ function Kontakt() {
           <div className="text-green-600 font-bold my-8">Danke, deine Nachricht wurde gesendet!</div>
         ) : (
           <form
-            action="https://formspree.io/f/xwpbnnqa"  
+            action="https://formspree.io/f/xvgrbbwb"  
             method="POST"
             className="space-y-6"
             onSubmit={() => setSuccess(true)}
