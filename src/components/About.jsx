@@ -35,7 +35,7 @@ function About() {
         <img
           src={profilePic}
           alt='Profil'
-          className='mx-auto rounded-full w-42 h-52 object-cover shadow-lg mb-4'
+          className='mx-auto rounded-full w-50 h-50 object-cover shadow-lg mb-4'
         />
         <p className='text-slate-800 dark:text-gray-300'>
           Folge mir auch auf{' '}
