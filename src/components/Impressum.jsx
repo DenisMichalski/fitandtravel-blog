@@ -9,8 +9,8 @@ function Impressum() {
         <br />
         Denis Michalski
         <br />
-        Musterstraße 1<br />
-        12345 Musterstadt
+        Postfach 31 17 35<br />
+        70477 Stuttgart        
         <br />
         Deutschland
       </p>
