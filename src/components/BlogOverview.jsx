@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 // Markdown-Posts importieren
 const postFiles = import.meta.glob('../posts/*.md', {
@@ -58,26 +57,12 @@ function BlogOverview() {
 
   return (
     <>
-      <Helmet>
-        <title>Blog | Fit &amp; Travel</title>
-        <meta
-          name='description'
-          content='Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs.'
-        />
-        <meta
-          property='og:title'
-          content='Blog | Fit &amp; Travel'
-        />
-        <meta
-          property='og:description'
-          content='Alle Blogposts rund um Fitness, Reisen und Abenteuer. Finde Inspiration, Tipps & Motivation für unterwegs.'
-        />
-        {/* Optional: Bild für Blogübersicht */}
-        <meta
-          property='og:image'
-          content='https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&h=600'
-        />
-      </Helmet>
+      <title>Blog | Fit &amp; Travel</title>
+      <meta
+        name='description'
+        content='Alle neuesten Beiträge rund um Fitness & Reisen.'
+      />
+
       <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
         <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
           Neu im Blog

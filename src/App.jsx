@@ -7,12 +7,10 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
-import { HelmetProvider } from 'react-helmet-async';
 import Kontakt from './components/Kontakt';
 
 function App() {
   return (
-    <HelmetProvider>
       <Router>
         {/* <Router basename='/fitandtravel-blog'> */}
         <div className='bg-gray-100 dark:bg-slate-900 min-h-screen transition-colors'>
@@ -58,7 +56,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </HelmetProvider>
   );
 }
 

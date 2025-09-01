@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 
 function Kontakt() {
@@ -6,13 +5,12 @@ function Kontakt() {
 
   return (
     <>
-      <Helmet>
-        <title>Kontakt | Fit &amp; Travel</title>
-        <meta
-          name='description'
-          content='Hier kannst du mir direkt eine Nachricht schreiben.'
-        />
-      </Helmet>
+      <title>Kontakt | Fit &amp; Travel</title>
+      <meta
+        name='description'
+        content='Schreib mir eine Nachricht.'
+      />
+
       <section className='max-w-2xl mx-auto py-16 px-6 text-center bg-white dark:bg-slate-900 rounded-3xl shadow-lg'>
         <h2 className='text-3xl font-bold mb-4 text-slate-900 dark:text-white'>
           Kontakt

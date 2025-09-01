@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import AuthorBadge from './AuthorBadge';
 
 import { useParams, Link } from 'react-router-dom';
@@ -56,36 +55,12 @@ function BlogPost() {
   if (!content) return <div className='text-center py-16'>Lade ...</div>;
 
   return (
+
     <article className='max-w-2xl mx-auto p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl mt-12'>
-      <Helmet>
-        <title>
-          {meta.title
-            ? `${meta.title} | Fit & Travel`
-            : 'Blogpost | Fit & Travel'}
-        </title>
-        <meta
-          name='description'
-          content={
-            meta.summary ||
-            'Erfahrungen, Tipps & Motivation für Fitness und Reisen'
-          }
-        />
-        {/* Optional: Social-Media-Preview */}
-        <meta
-          property='og:title'
-          content={meta.title || 'Fit & Travel Blog'}
-        />
-        <meta
-          property='og:description'
-          content={meta.summary || 'Blog über Fitness & Reisen'}
-        />
-        {meta.image && (
-          <meta
-            property='og:image'
-            content={meta.image}
-          />
-        )}
-      </Helmet>
+
+      <title>{post?.title ? `${post.title} | Fit & Travel` : "Beitrag | Fit & Travel"}</title>
+      <meta name="description" content={post?.excerpt || "Beitrag auf Fit & Travel"} />
+
       {meta.image && (
         <img
           src={meta.image}

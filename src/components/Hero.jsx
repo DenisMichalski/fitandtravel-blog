@@ -1,15 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-
 function Hero() {
   return (
     <>
-      <Helmet>
-        <title>Fit &amp; Travel – Fitness & Abenteuer auf Reisen</title>
-        <meta
-          name='description'
-          content='Tipps, Motivation und Gadgets für alle, die auch unterwegs aktiv bleiben wollen. Der Blog für Fitness und Reisen!'
-        />
-      </Helmet>
+      <title>Fit &amp; Travel Blog – Start</title>
+      <meta
+        name='description'
+        content='Fitness auf Reisen: Workouts, Routinen & Tipps für unterwegs.'
+      />
+
       <section
         className='flex flex-col items-center justify-center py-16 px-4 text-center
   bg-gradient-to-br from-blue-100 to-pink-100 dark:from-slate-800 dark:to-slate-900 min-h-[60vh]'
