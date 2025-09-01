@@ -10,7 +10,11 @@ function Impressum() {
         Denis Michalski
         <br />
         Postfach 31 17 35<br />
+<<<<<<< HEAD
         70477 Stuttgart        
+=======
+        70477 Stuttgart
+>>>>>>> 1ffb15aa45a15b9d86eede5ba39296b266542cad
         <br />
         Deutschland
       </p>
