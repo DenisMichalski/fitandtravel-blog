@@ -1,12 +1,89 @@
-# React + Vite
+# 🌍 Fit & Travel Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ein moderner, responsiver Blog rund um Fitness, Reisen und einen aktiven Lifestyle – entwickelt mit React, Vite und Tailwind CSS.
 
-Currently, two official plugins are available:
+👉 Live-Webseite: https://fitandtravelblog.de/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Über das Projekt
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Der Fit & Travel Blog verbindet zwei Leidenschaften: fit bleiben und die Welt entdecken.  
+Ziel dieses Projekts ist der Aufbau einer inhaltsstarken Plattform mit:
+
+- Reiseinspiration & Guides  
+- Fitness-Tipps für unterwegs  
+- Produktempfehlungen & Affiliate-Content  
+- Schneller, moderner und SEO-freundlicher Webstruktur  
+
+Langfristig soll daraus eine digitale Marke mit App und eigenem Shop entstehen.
+
+---
+
+## ✨ Features
+
+- ⚡ React + Vite für hohe Performance  
+- 🎨 Styling mit Tailwind CSS  
+- 📱 Vollständig responsives Design  
+- 🧭 Blog-Struktur für Content-Marketing  
+- 🌐 Deployment über GitHub Pages mit eigener Domain  
+- 🔍 SEO-optimierte Basis  
+
+---
+
+## 🛠 Tech Stack
+
+- React  
+- Vite  
+- Tailwind CSS  
+- JavaScript (ES6+)  
+- GitHub Pages (Hosting & Deployment)
+
+---
+
+## 📦 Lokale Entwicklung
+
+Repository klonen:
+
+```bash
+git clone https://github.com/DenisMichalski/fitandtravel-blog.git
+cd fitandtravel-blog
+
+
+Abhängigkeiten installieren:
+
+npm install
+
+
+Entwicklungsserver starten:
+
+npm run dev
+
+
+Produktionsbuild erstellen:
+
+npm run build
+
+🌍 Deployment
+
+Die Webseite wird über GitHub Pages aus dem Branch gh-pages veröffentlicht
+und ist mit der Domain verbunden:
+
+👉 https://fitandtravelblog.de/
+
+📈 Geplante Erweiterungen
+
+Ausbau von SEO-optimierten Bloginhalten
+
+Affiliate-Marketing & Monetarisierung
+
+Performance-Optimierung
+
+Mobile App für Fitness & Reisen
+
+Integration eines Online-Shops
+
+👤 Autor
+
+Erstellt von Denis Michalski
+GitHub: https://github.com/DenisMichalski
