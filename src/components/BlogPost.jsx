@@ -1,14 +1,20 @@
-import AuthorBadge from './AuthorBadge';
+import AuthorBadge from "./AuthorBadge";
 
-import { useParams, Link } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import { useEffect, useState } from 'react';
+import { useParams, Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import { useEffect, useState } from "react";
+
+import {
+  buildLinktreeUrl,
+  trackLinktreeClick,
+  isLinktreeLink,
+} from "../utils/linktree";
 
 // alle Markdown-Posts (Dateinamen entsprechen dem :id-Param, z.B. mein-erster-fitnesstrip.md)
-const posts = import.meta.glob('../posts/*.md', {
-  query: '?raw',
-  import: 'default',
+const posts = import.meta.glob("../posts/*.md", {
+  query: "?raw",
+  import: "default",
 });
 
 function NotFoundMini({ id }) {
@@ -16,7 +22,9 @@ function NotFoundMini({ id }) {
     <section className="max-w-2xl mx-auto p-8 mt-12 bg-white dark:bg-slate-900 rounded-2xl shadow-xl">
       <title>Beitrag nicht gefunden | Fit &amp; Travel</title>
       <meta name="robots" content="noindex" />
-      <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Beitrag nicht gefunden</h2>
+      <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">
+        Beitrag nicht gefunden
+      </h2>
       <p className="mb-6">Für den Slug „{id}“ wurde kein Artikel gefunden.</p>
       <Link to="/blog" className="underline font-semibold">
         ← Zurück zur Blog-Übersicht
@@ -27,21 +35,23 @@ function NotFoundMini({ id }) {
 
 export default function BlogPost() {
   const { id } = useParams();
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
   const [meta, setMeta] = useState(null); // null = noch nicht geladen, {} = keine Frontmatter
 
   useEffect(() => {
     let cancelled = false;
 
     async function load() {
-      setContent('');
+      setContent("");
       setMeta(null);
 
       // passenden Import-Pfad finden (../posts/<id>.md)
-      const importPath = Object.keys(posts).find((key) => key.endsWith(`${id}.md`));
+      const importPath = Object.keys(posts).find((key) =>
+        key.endsWith(`${id}.md`)
+      );
       if (!importPath) {
         if (!cancelled) {
-          setContent('__NOT_FOUND__');
+          setContent("__NOT_FOUND__");
           setMeta({});
         }
         return;
@@ -59,13 +69,16 @@ export default function BlogPost() {
           // sehr einfacher YAML-Parser (Key: Value), reicht für Titel/Datum/Excerpt/Image
           const metaObj = Object.fromEntries(
             yaml
-              .split('\n')
-              .filter((line) => line.includes(':'))
+              .split("\n")
+              .filter((line) => line.includes(":"))
               .map((line) => {
-                const idx = line.indexOf(':');
+                const idx = line.indexOf(":");
                 const key = line.slice(0, idx).trim();
                 let value = line.slice(idx + 1).trim();
-                if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+                if (
+                  (value.startsWith('"') && value.endsWith('"')) ||
+                  (value.startsWith("'") && value.endsWith("'"))
+                ) {
                   value = value.slice(1, -1);
                 }
                 return [key, value];
@@ -84,7 +97,7 @@ export default function BlogPost() {
         }
       } catch (e) {
         if (!cancelled) {
-          setContent('__NOT_FOUND__');
+          setContent("__NOT_FOUND__");
           setMeta({});
         }
       }
@@ -102,13 +115,16 @@ export default function BlogPost() {
   }
 
   // Nicht gefunden
-  if (content === '__NOT_FOUND__') {
+  if (content === "__NOT_FOUND__") {
     return <NotFoundMini id={id} />;
   }
 
-  const pageTitle = meta?.title ? `${meta.title} | Fit & Travel` : 'Beitrag | Fit & Travel';
-  const pageDesc = meta?.excerpt || meta?.description || 'Blogbeitrag auf Fit & Travel';
-  const imageAlt = meta?.title || 'Beitragsbild';
+  const pageTitle = meta?.title
+    ? `${meta.title} | Fit & Travel`
+    : "Beitrag | Fit & Travel";
+  const pageDesc =
+    meta?.excerpt || meta?.description || "Blogbeitrag auf Fit & Travel";
+  const imageAlt = meta?.title || "Beitragsbild";
 
   return (
     <article className="max-w-2xl mx-auto p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl mt-12">
@@ -128,7 +144,7 @@ export default function BlogPost() {
       )}
 
       <h1 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">
-        {meta?.title || 'Blogpost'}
+        {meta?.title || "Blogpost"}
       </h1>
 
       {(meta?.date || meta?.author) && (
@@ -140,11 +156,62 @@ export default function BlogPost() {
       )}
 
       <div className="prose prose-lg dark:prose-invert max-w-none">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            a: ({ href = "", children, ...props }) => {
+              // Linktree-Links automatisch tracken + optional UTM dranhängen
+              if (isLinktreeLink(href)) {
+                const trackedHref = buildLinktreeUrl({
+                  source: "blog_post",
+                  content: id, // id ist dein slug
+                  medium: "cta",
+                  campaign: "linktree",
+                });
+
+                return (
+                  <a
+                    href={trackedHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() =>
+                      trackLinktreeClick({
+                        location: "blog_post_link",
+                        page: id,
+                      })
+                    }
+                    {...props}
+                  >
+                    {children}
+                  </a>
+                );
+              }
+
+              // normale Links: sicher öffnen (optional)
+              const isExternal = href.startsWith("http");
+
+              return (
+                <a
+                  href={href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  {...props}
+                >
+                  {children}
+                </a>
+              );
+            },
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       </div>
 
       <div className="mt-8 flex items-center justify-between">
-        <Link to="/blog" className="inline-block text-blue-600 hover:underline font-bold">
+        <Link
+          to="/blog"
+          className="inline-block text-blue-600 hover:underline font-bold"
+        >
           ← Zurück zum Blog
         </Link>
         <AuthorBadge />
