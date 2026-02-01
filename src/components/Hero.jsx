@@ -38,7 +38,7 @@ function Hero() {
             })
           }
         >
-            Jetzt entdecken ⇾
+          Jetzt entdecken ⇾
         </a>
       </section>
     </>
