@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
 import Kontakt from './components/Kontakt';
+import RecommendationsSection from './components/RecommendationsSection';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
                   <>
                     <Hero />
                     {/* Optional: Zeige die letzten 3 Blogposts als Teaser auf der Startseite */}
+                    <RecommendationsSection page="home" />
                     <BlogOverview limit={3} />
                   </>
                 }
