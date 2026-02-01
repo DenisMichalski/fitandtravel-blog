@@ -28,6 +28,8 @@ function Hero() {
         <a
           href={buildLinktreeUrl({
             source: "homepage",
+            medium: "cta",
+            campaign: "hero",
             content: "hero_button",
           })}
           target="_blank"
@@ -37,7 +39,22 @@ function Hero() {
               location: "hero_button",
             })
           }
+          className="mt-2 px-8 py-4 text-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-xl font-semibold shadow-lg hover:from-pink-600 hover:to-yellow-500 transition flex items-center gap-2"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
           Jetzt entdecken ⇾
         </a>
       </section>
