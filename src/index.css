@@ -106,3 +106,34 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark Mode fixes for Recommendations */
+.dark .rec-section__title,
+.dark .rec-category__title {
+  color: #fff;
+}
+
+.dark .rec-section__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark .rec-card {
+  background: rgba(15, 23, 42, 0.6); /* slate-900-ish */
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.dark .rec-card:hover {
+  border-color: rgba(255, 255, 255, 0.30);
+}
+
+.dark .rec-card__title {
+  color: #fff;
+}
+
+.dark .rec-card__desc {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.dark .rec-card__cta {
+  color: #60a5fa; /* hellblau */
+}
