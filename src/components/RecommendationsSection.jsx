@@ -84,7 +84,7 @@ export default function RecommendationsSection({ page = "home" }) {
         <h2 className="rec-section__title">My Recommendations</h2>
         <p className="rec-section__subtitle">
           Direkte Links statt Linktree. Später kommen hier Affiliate-Links rein
-          – aber schon jetzt messen wir, was Leute wirklich anklicken.
+          
         </p>
       </div>
 
