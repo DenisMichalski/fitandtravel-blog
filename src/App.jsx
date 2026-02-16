@@ -9,6 +9,7 @@ import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
 import Kontakt from './components/Kontakt';
 import RecommendationsSection from './components/RecommendationsSection';
+import Gear from './components/Gear';
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
               <Route
                 path='/about'
                 element={<About />}
+              />
+              <Route path="/gear" 
+              element={<Gearr />}
               />
               <Route
                 path='/blog/:id'
