@@ -1,4 +1,6 @@
 import { buildLinktreeUrl, trackLinktreeClick } from "../utils/linktree";
+import { Link } from "react-router-dom";
+import { trackEvent } from "../utils/analytics";
 
 function Hero() {
   return (
@@ -25,18 +27,12 @@ function Hero() {
           Tipps, Motivation und praktische Gadgets für alle, die unterwegs aktiv
           bleiben wollen.
         </p>
-        <a
-          href={buildLinktreeUrl({
-            source: "homepage",
-            medium: "cta",
-            campaign: "hero",
-            content: "hero_button",
-          })}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/gear"
           onClick={() =>
-            trackLinktreeClick({
+            trackEvent("cta_click", {
               location: "hero_button",
+              target: "gear_page"
             })
           }
           className="mt-2 px-8 py-4 text-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-xl font-semibold shadow-lg hover:from-pink-600 hover:to-yellow-500 transition flex items-center gap-2"
@@ -55,8 +51,8 @@ function Hero() {
               d="M17 8l4 4m0 0l-4 4m4-4H3"
             />
           </svg>
-          Jetzt entdecken ⇾
-        </a>
+           Meine Empfehlungen ansehen ⇾
+        </Link>
       </section>
     </>
   );
