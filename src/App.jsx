@@ -40,7 +40,7 @@ function App() {
                 element={<About />}
               />
               <Route path="/gear" 
-              element={<Gearr />}
+              element={<Gear />}
               />
               <Route
                 path='/blog/:id'
