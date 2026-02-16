@@ -63,8 +63,9 @@ function BlogOverview() {
       <div
         className="
     mb-10 rounded-2xl p-6 text-center
-    bg-white border border-slate-200
-    dark:bg-slate-800 dark:border-slate-700
+    bg-white border-2 border-pink-400/40
+    shadow-md hover:shadow-lg transition
+    dark:bg-slate-800 dark:border-pink-300/30
   "
       >
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">
@@ -115,7 +116,7 @@ function BlogOverview() {
               className={`px-4 py-2 rounded-full font-semibold border 
               ${selectedCategory === category
                   ? 'bg-pink-500 text-white'
-                  : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300'
+                  : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300 dark:border-slate-700'
                 }
               transition`}
             >
