@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { trackEvent } from '../utils/analytics';
 
 // Markdown-Posts importieren
 const postFiles = import.meta.glob('../posts/*.md', {
@@ -44,20 +45,55 @@ function BlogOverview() {
 
   const allCategories = [
     'Alle',
-    ...Array.from(new Set(posts.map((post) => post.category))),
+    ...Array.from(new Set(posts.map((post) => post.category.filter(Boolean)))),
   ];
 
   const filteredPosts =
     selectedCategory === 'Alle'
       ? posts.filter((post) => post.category !== 'legal')
       : posts.filter(
-          (post) =>
-            post.category === selectedCategory && post.category !== 'legal'
-        );
+        (post) =>
+          post.category === selectedCategory && post.category !== 'legal'
+      );
 
   return (
     <>
       <title>Blog | Fit &amp; Travel</title>
+      <div
+        className="
+    mb-10 rounded-2xl p-6
+    bg-white border border-slate-200
+    dark:bg-slate-800 dark:border-slate-700
+  "
+      >
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+          Empfehlungen & Gear
+        </h2>
+
+        <p className="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">
+          Ich habe eine Seite mit meinen Fitness- und Travel-Essentials erstellt.
+          Direkt verlinkt und später perfekt für Deals & Empfehlungen.
+        </p>
+
+        <Link
+          to="/gear"
+          onClick={() =>
+            trackEvent('cta_click', {
+              location: 'blog_overview',
+              target: 'gear_page'
+            })
+          }
+          className="
+      inline-flex items-center gap-2 mt-4
+      px-5 py-3 rounded-xl font-semibold
+      bg-gradient-to-r from-pink-500 to-yellow-400 text-white
+      hover:from-pink-600 hover:to-yellow-500 transition
+    "
+        >
+          Empfehlungen ansehen →
+        </Link>
+      </div>
+
       <meta
         name='description'
         content='Alle neuesten Beiträge rund um Fitness & Reisen.'
@@ -67,6 +103,7 @@ function BlogOverview() {
         <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
           Neu im Blog
         </h2>
+
         {/* Kategorie-Buttons */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>
           {allCategories.map((category) => (
@@ -74,11 +111,10 @@ function BlogOverview() {
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full font-semibold border 
-              ${
-                selectedCategory === category
+              ${selectedCategory === category
                   ? 'bg-pink-500 text-white'
                   : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300'
-              }
+                }
               transition`}
             >
               {category}
