@@ -45,8 +45,9 @@ function BlogOverview() {
 
   const allCategories = [
     'Alle',
-    ...Array.from(new Set(posts.map((post) => post.category.filter(Boolean)))),
+    ...Array.from(new Set(posts.map((post) => post.category).filter(Boolean))),
   ];
+
 
   const filteredPosts =
     selectedCategory === 'Alle'
@@ -61,7 +62,7 @@ function BlogOverview() {
       <title>Blog | Fit &amp; Travel</title>
       <div
         className="
-    mb-10 rounded-2xl p-6
+    mb-10 rounded-2xl p-6 text-center
     bg-white border border-slate-200
     dark:bg-slate-800 dark:border-slate-700
   "
@@ -70,7 +71,7 @@ function BlogOverview() {
           Empfehlungen & Gear
         </h2>
 
-        <p className="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p className="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mx-auto">
           Ich habe eine Seite mit meinen Fitness- und Travel-Essentials erstellt.
           Direkt verlinkt und später perfekt für Deals & Empfehlungen.
         </p>
@@ -93,6 +94,7 @@ function BlogOverview() {
           Empfehlungen ansehen →
         </Link>
       </div>
+
 
       <meta
         name='description'
