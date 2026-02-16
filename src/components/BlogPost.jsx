@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useEffect, useState } from "react";
+import GearCTA from "./GearCTA";
 
 import {
   buildLinktreeUrl,
@@ -206,6 +207,8 @@ export default function BlogPost() {
           {content}
         </ReactMarkdown>
       </div>
+
+      <GearCTA page={id} />
 
       <div className="mt-8 flex items-center justify-between">
         <Link
