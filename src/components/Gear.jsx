@@ -38,6 +38,7 @@ const GEAR = [
           "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
         href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AHF33ROPJ2LOJ%3Fsource%3Dps-sl-shoppingads-lpcontext&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_yoga_mat",
         badges: ["Mobility", "Sauber", "Reisetauglich"],
+        featured: true,
       },
       {
         title: "Gesunde Routine auch auf Reisen",
@@ -122,6 +123,19 @@ function GearCard({ item, category, page }) {
   dark:hover:border-pink-300/30
 "
     >
+      {item.featured && (
+        <div className="mb-3">
+          <span
+            className="
+            inline-block text-xs font-bold px-3 py-1 rounded-full
+            bg-pink-500 text-white shadow-sm
+          "
+          >
+            ⭐ Top Empfehlung
+          </span>
+        </div>
+      )}
+
       <div className="font-bold text-lg mb-2">{item.title}</div>
       {Array.isArray(item.badges) && item.badges.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-3">
