@@ -39,17 +39,22 @@ const GEAR = [
       {
         title: "Packing Cubes",
         description: "Koffer-Organisation = schneller packen, weniger Chaos.",
-        href: "https://example.com/packing-cubes",
+        href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_packing_cubes",
       },
       {
         title: "Compact Power Bank",
         description: "Must-have für Stadt, Strand, Wandern – Akku safe.",
-        href: "https://example.com/power-bank",
+        href: "https://www.shopwudn.com/products/fast-charging-4000-mah-ultra-slim-built-in-iphone-lightning-cable-micro-usb-plug-black?srsltid=AfmBOopzh6NT688vewGvAPbv69hebDMRQAb0n5KTuzzGfdEyjRxTbyrk&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_power_bank",
       },
       {
         title: "Lightweight Daypack",
         description: "Für Tagestrips: klein, leicht, aber genug Platz.",
-        href: "https://example.com/daypack",
+        href: "https://www.decathlon.vn/en-VN/p/hiking-backpack-30l-nh-arpenaz-100-quechua-8920035.html?srsltid=AfmBOoqaegViubOFaYpT54w8dhVSsJeaHSVhMtcqAgBBsRFp2zl9iIHh&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_daypack",
+      },
+      {
+        title: "Travel Bottles Set",
+        description: "Flüssigkeiten sicher & platzsparend im Handgepäck.",
+        href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_bottles_set",
       },
     ],
   },
