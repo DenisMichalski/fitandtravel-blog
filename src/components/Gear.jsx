@@ -114,11 +114,13 @@ function GearCard({ item, category, page }) {
         })
       }
       className="
-        block rounded-2xl p-5
-        bg-white text-slate-900 border border-slate-200
-        hover:-translate-y-0.5 hover:shadow-xl transition
-        dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700
-      "
+  group block rounded-2xl p-5
+  bg-white text-slate-900 border border-slate-200
+  transition-all duration-200 ease-out
+  hover:-translate-y-1 hover:shadow-2xl hover:border-pink-300/60
+  dark:bg-slate-800 dark:text-slate-100 dark:border-slate-700
+  dark:hover:border-pink-300/30
+"
     >
       <div className="font-bold text-lg mb-2">{item.title}</div>
       {Array.isArray(item.badges) && item.badges.length > 0 && (
