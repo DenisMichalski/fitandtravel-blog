@@ -11,17 +11,24 @@ const GEAR = [
       {
         title: "Resistance Bands Set",
         description: "Viel Training für wenig Platz. Perfekt fürs Hotelzimmer.",
-        href: "https://example.com/resistance-bands",
+        href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_resistance_bands",
       },
       {
         title: "Foldable Yoga Mat",
         description: "Passt in den Koffer – ideal für Mobility & Stretching.",
-        href: "https://example.com/foldable-yoga-mat",
+        href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AHF33ROPJ2LOJ%3Fsource%3Dps-sl-shoppingads-lpcontext&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_yoga_mat",
       },
       {
         title: "Shaker + Protein-Container",
-        description: "Sauberer Alltag unterwegs – weniger Stress, mehr Routine.",
-        href: "https://example.com/shaker",
+        description:
+          "Sauberer Alltag unterwegs – weniger Stress, mehr Routine.",
+        href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3517BHP4L5HFZ%3Fsource%3Dps-sl-shoppingads-lpcontext&psc=1&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_shaker_container",
+      },
+      {
+        title: "Travel Jump Rope",
+        description:
+          "Cardio-Training für unterwegs – leicht, effektiv, platzsparend.",
+        href: "https://www.decathlon.de/p/geschwindigkeits-springseil-speed-rope-grun/311896/c219m8807817?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_jump_rope",
       },
     ],
   },
@@ -107,7 +114,7 @@ export default function Gear() {
           Gear & Empfehlungen
         </h1>
         <p className="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
-           Später kommen hier richtige Links (wenn Affiliate wieder aktiv ist).
+          Später kommen hier richtige Links (wenn Affiliate wieder aktiv ist).
         </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
