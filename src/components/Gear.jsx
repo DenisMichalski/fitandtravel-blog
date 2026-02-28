@@ -121,6 +121,22 @@ function GearCard({ item, category, page }) {
       "
     >
       <div className="font-bold text-lg mb-2">{item.title}</div>
+      {Array.isArray(item.badges) && item.badges.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-3">
+          {item.badges.map((badge) => (
+            <span
+              key={badge}
+              className="
+              text-xs font-semibold px-2 py-1 rounded-full
+              bg-slate-100 text-slate-700
+              dark:bg-slate-700 dark:text-slate-100
+            "
+            >
+              {badge}
+            </span>
+          ))}
+        </div>
+      )}
       <div className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
         {item.description}
       </div>
