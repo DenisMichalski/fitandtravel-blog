@@ -129,10 +129,12 @@ function GearCard({ item, category, page }) {
             <span
               key={badge}
               className="
-              text-xs font-semibold px-2 py-1 rounded-full
-              bg-slate-100 text-slate-700
-              dark:bg-slate-700 dark:text-slate-100
-            "
+  text-[11px] font-semibold px-2 py-1 rounded-full
+  bg-slate-100 text-slate-700
+  dark:bg-slate-700 dark:text-slate-100
+  group-hover:bg-slate-200 dark:group-hover:bg-slate-600
+  transition-colors duration-200
+"
             >
               {badge}
             </span>
@@ -142,8 +144,11 @@ function GearCard({ item, category, page }) {
       <div className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
         {item.description}
       </div>
-      <div className="font-semibold text-blue-600 dark:text-blue-400">
-        Empfehlung ansehen →
+      <div
+        className="font-semibold text-blue-600 dark:text-blue-400
+      group-hover:translate-x-0.5 transition-transform duration-200"
+      >
+        Empfehlung ansehen
       </div>
     </a>
   );
