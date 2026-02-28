@@ -3,6 +3,23 @@ import { trackOutboundClick, withUtm } from "../utils/outbound";
 import AuthorBadge from "./AuthorBadge";
 import { Link } from "react-router-dom";
 
+function TrustBox({ title, text }) {
+  return (
+    <div
+      className="
+    mb-5 rounded-2xl p-5
+    bg-white border border-slate-200
+    dark:bg-slate-800 dark:border-slate-700
+  "
+    >
+      <div className="font-bold text-slate-900 dark:text-white">{title}</div>
+      <div className="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed">
+        {text}
+      </div>
+    </div>
+  );
+}
+
 const GEAR = [
   {
     category: "Fitness (Hotel & Unterwegs)",
@@ -10,12 +27,14 @@ const GEAR = [
     items: [
       {
         title: "Training überall ohne Geräte",
-        description: "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
+        description:
+          "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
         href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_resistance_bands",
       },
       {
         title: "Komfort & Hygiene beim Training unterwegs",
-        description: "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
+        description:
+          "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
         href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AHF33ROPJ2LOJ%3Fsource%3Dps-sl-shoppingads-lpcontext&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_yoga_mat",
       },
       {
@@ -48,7 +67,8 @@ const GEAR = [
       },
       {
         title: "Alles dabei – ohne schwer zu tragen",
-        description: "Perfekt für Sightseeing, Strandtage und spontane Abenteuer.",
+        description:
+          "Perfekt für Sightseeing, Strandtage und spontane Abenteuer.",
         href: "https://www.decathlon.vn/en-VN/p/hiking-backpack-30l-nh-arpenaz-100-quechua-8920035.html?srsltid=AfmBOoqaegViubOFaYpT54w8dhVSsJeaHSVhMtcqAgBBsRFp2zl9iIHh&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_daypack",
       },
       {
@@ -156,6 +176,12 @@ export default function Gear() {
                 {section.subtitle}
               </p>
             </div>
+            <TrustBox
+            title={`Warum diese ${section.category} Empfehlungen?`}
+            text={section.category.includes("Fitness")
+            ? "Alles hier ist leicht, passt ins Handgepäck und funktioniert ohne Gym. Ideal für Hotelzimmer, Strand oder Park – schnell, simpel und effektiv."
+            : "Diese Essentials sparen dir Zeit und Nerven unterwegs. Weniger Chaos, mehr Komfort – und du bist für Tagestrips & spontane Abenteuer ready."
+            } />
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {section.items.map((item) => (
