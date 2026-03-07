@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { trackOutboundClick, withUtm } from "../utils/outbound";
 import AuthorBadge from "./AuthorBadge";
 import { Link } from "react-router-dom";
@@ -137,6 +138,7 @@ function GearCard({ item, category, page }) {
       )}
 
       <div className="font-bold text-lg mb-2">{item.title}</div>
+
       {Array.isArray(item.badges) && item.badges.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-3">
           {item.badges.map((badge) => (
@@ -155,9 +157,11 @@ function GearCard({ item, category, page }) {
           ))}
         </div>
       )}
+
       <div className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
         {item.description}
       </div>
+
       <div
         className="font-semibold text-blue-600 dark:text-blue-400
       group-hover:translate-x-0.5 transition-transform duration-200"
@@ -172,77 +176,90 @@ export default function Gear() {
   const page = "gear";
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-10">
-      <title>Gear | Fit & Travel</title>
-      <meta
-        name="description"
-        content="Meine Empfehlungen für Fitness unterwegs und Travel Essentials – kompakt, praktisch und erprobt."
-      />
+    <>
+      <Helmet>
+        <title>Fitness & Travel Gear Empfehlungen | Fit & Travel</title>
+        <meta
+          name="description"
+          content="Entdecke meine Empfehlungen für Fitness unterwegs und praktische Travel Essentials – kompakt, reisetauglich und ideal für Hotel, Strand und Alltag."
+        />
+        <meta
+          name="keywords"
+          content="fitness unterwegs, travel gear, hotel workout equipment, fitness reisen, travel essentials, fit and travel"
+        />
+        <link rel="canonical" href="https://fitandtravelblog.de/gear" />
+      </Helmet>
 
-      <header className="mb-8">
-        <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
-          Gear & Empfehlungen
-        </h1>
-        <p className="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
-          Später kommen hier richtige Links (wenn Affiliate wieder aktiv ist).
-        </p>
+      <section className="max-w-5xl mx-auto px-6 py-10">
+        <header className="mb-8">
+          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white">
+            Gear & Empfehlungen
+          </h1>
+          <p className="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
+            Meine Empfehlungen für Fitness unterwegs und praktische Travel
+            Essentials – kompakt, nützlich und ideal für Reisen.
+          </p>
 
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold
                        bg-slate-900 text-white hover:opacity-90 transition
                        dark:bg-white dark:text-slate-900"
-          >
-            ← Zur Startseite
-          </Link>
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold
+            >
+              ← Zur Startseite
+            </Link>
+
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold
                        border border-slate-300 text-slate-900 hover:bg-slate-50 transition
                        dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
-          >
-            Blog ansehen
-          </Link>
-          <div className="ml-auto">
-            <AuthorBadge />
+            >
+              Blog ansehen
+            </Link>
+
+            <div className="ml-auto">
+              <AuthorBadge />
+            </div>
           </div>
+        </header>
+
+        <div className="grid gap-10">
+          {GEAR.map((section) => (
+            <div key={section.category}>
+              <div className="mb-4">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+                  {section.category}
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300">
+                  {section.subtitle}
+                </p>
+              </div>
+
+              <TrustBox
+                title={`Warum diese ${section.category} Empfehlungen?`}
+                text={
+                  section.category.includes("Fitness")
+                    ? "Alles hier ist leicht, passt ins Handgepäck und funktioniert ohne Gym. Ideal für Hotelzimmer, Strand oder Park – schnell, simpel und effektiv."
+                    : "Diese Essentials sparen dir Zeit und Nerven unterwegs. Weniger Chaos, mehr Komfort – und du bist für Tagestrips und spontane Abenteuer ready."
+                }
+              />
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {section.items.map((item) => (
+                  <GearCard
+                    key={item.title}
+                    item={item}
+                    category={section.category}
+                    page={page}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      </header>
-
-      <div className="grid gap-10">
-        {GEAR.map((section) => (
-          <div key={section.category}>
-            <div className="mb-4">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-                {section.category}
-              </h2>
-              <p className="text-slate-600 dark:text-slate-300">
-                {section.subtitle}
-              </p>
-            </div>
-            <TrustBox
-              title={`Warum diese ${section.category} Empfehlungen?`}
-              text={
-                section.category.includes("Fitness")
-                  ? "Alles hier ist leicht, passt ins Handgepäck und funktioniert ohne Gym. Ideal für Hotelzimmer, Strand oder Park – schnell, simpel und effektiv."
-                  : "Diese Essentials sparen dir Zeit und Nerven unterwegs. Weniger Chaos, mehr Komfort – und du bist für Tagestrips & spontane Abenteuer ready."
-              }
-            />
-
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {section.items.map((item) => (
-                <GearCard
-                  key={item.title}
-                  item={item}
-                  category={section.category}
-                  page={page}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
