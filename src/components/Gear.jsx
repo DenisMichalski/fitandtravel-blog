@@ -178,7 +178,7 @@ export default function Gear() {
   return (
     <>
       <Helmet>
-        <title>Fitness & Travel Gear Empfehlungen | Fit & Travel</title>
+        <title>Best Travel Fitness Gear | Fit & Travel</title>
 
         <meta
           name="description"
