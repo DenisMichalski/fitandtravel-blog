@@ -188,6 +188,28 @@ export default function Gear() {
           content="fitness unterwegs, travel gear, hotel workout equipment, fitness reisen, travel essentials, fit and travel"
         />
         <link rel="canonical" href="https://fitandtravelblog.de/gear" />
+
+        <meta
+          property="og:title"
+          content="Fitness & Travel Gear Empfehlungen | Fit & Travel"
+        />
+        <meta
+          property="og:description"
+          content="Praktische Empfehlungen für Fitness unterwegs und nützliche Travel Essentials für Reisen, Hotel und Alltag."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fitandtravelblog.de/gear" />
+        <meta property="og:site_name" content="Fit & Travel" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Fitness & Travel Gear Empfehlungen | Fit & Travel"
+        />
+        <meta
+          name="twitter:description"
+          content="Praktische Empfehlungen für Fitness unterwegs und nützliche Travel Essentials."
+        />
       </Helmet>
 
       <section className="max-w-5xl mx-auto px-6 py-10">
