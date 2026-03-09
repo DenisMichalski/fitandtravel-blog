@@ -4,11 +4,11 @@ import { trackEvent } from "./analytics.js";
 
 const BASE_LINKTREE_URL = "https://linktr.fitandtravel.ai";
 
-export function buildLinktreeUrl({ 
-    source, 
-    medium = "cta", 
-    campaign = "" 
-  , content = ""
+export function buildLinktreeUrl({
+  source,
+  medium = "cta",
+  campaign = "",
+  content = "",
 }) {
   const params = new URLSearchParams({
     utm_source: source,
@@ -27,5 +27,8 @@ export function trackLinktreeClick(data = {}) {
 }
 
 export function isLinktreeLink(href = "") {
-  return href.includes("linktr.ee/fitandtravel.ai");
+  return (
+    href.includes("linktr.fitandtravel.ai") ||
+    href.includes("linktr.ee/fitandtravel.ai")
+  );
 }
