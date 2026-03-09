@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { trackEvent } from '../utils/analytics';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { trackEvent } from "../utils/analytics";
 
 // Markdown-Posts importieren
-const postFiles = import.meta.glob('../posts/*.md', {
-  query: '?raw',
-  import: 'default',
+const postFiles = import.meta.glob("../posts/*.md", {
+  query: "?raw",
+  import: "default",
 });
 
 function extractFrontmatter(md) {
@@ -14,10 +14,10 @@ function extractFrontmatter(md) {
   const yaml = match[1];
   return Object.fromEntries(
     yaml
-      .split('\n')
-      .filter((line) => line.includes(':'))
+      .split("\n")
+      .filter((line) => line.includes(":"))
       .map((line) => {
-        const idx = line.indexOf(':');
+        const idx = line.indexOf(":");
         const key = line.slice(0, idx).trim();
         let value = line.slice(idx + 1).trim();
         if (value.startsWith('"') && value.endsWith('"')) {
@@ -28,123 +28,133 @@ function extractFrontmatter(md) {
   );
 }
 
-function BlogOverview() {
+function BlogOverview({ limit }) {
   const [posts, setPosts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('Alle');
+  const [selectedCategory, setSelectedCategory] = useState("Alle");
 
   useEffect(() => {
     Promise.all(
       Object.entries(postFiles).map(async ([path, loader]) => {
         const raw = await loader();
         const meta = extractFrontmatter(raw);
-        meta.id = path.match(/\/([a-z0-9_-]+)\.md$/i)[1]; // id aus Dateinamen
+        meta.id = path.match(/\/([a-z0-9_-]+)\.md$/i)[1];
         return meta;
       })
     ).then((allPosts) => setPosts(allPosts));
   }, []);
 
   const allCategories = [
-    'Alle',
+    "Alle",
     ...Array.from(new Set(posts.map((post) => post.category).filter(Boolean))),
   ];
 
-
   const filteredPosts =
-    selectedCategory === 'Alle'
-      ? posts.filter((post) => post.category !== 'legal')
+    selectedCategory === "Alle"
+      ? posts.filter((post) => post.category !== "legal")
       : posts.filter(
-        (post) =>
-          post.category === selectedCategory && post.category !== 'legal'
-      );
+          (post) =>
+            post.category === selectedCategory && post.category !== "legal"
+        );
+
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    const dateA = new Date(a.date || 0);
+    const dateB = new Date(b.date || 0);
+    return dateB - dateA;
+  });
+
+  const visiblePosts = limit ? sortedPosts.slice(0, limit) : sortedPosts;
 
   return (
     <>
       <title>Blog | Fit &amp; Travel</title>
+
       <div
         className="
-    mb-10 rounded-2xl p-6 text-center
-    bg-white border-2 border-pink-400/40
-    shadow-md hover:shadow-lg transition
-    dark:bg-slate-800 dark:border-pink-300/30
-  "
+          mb-10 rounded-2xl p-6 text-center
+          bg-white border-2 border-pink-400/40
+          shadow-md hover:shadow-lg transition
+          dark:bg-slate-800 dark:border-pink-300/30
+        "
       >
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">
           Empfehlungen & Gear
         </h2>
 
         <p className="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mx-auto">
-          Ich habe eine Seite mit meinen Fitness- und Travel-Essentials erstellt.
-          Direkt verlinkt und später perfekt für Deals & Empfehlungen.
+          Ich habe eine Seite mit meinen Fitness- und Travel-Essentials
+          erstellt. Direkt verlinkt und später perfekt für Deals & Empfehlungen.
         </p>
 
         <Link
           to="/gear"
           onClick={() =>
-            trackEvent('cta_click', {
-              location: 'blog_overview',
-              target: 'gear_page'
+            trackEvent("cta_click", {
+              location: "blog_overview",
+              target: "gear_page",
             })
           }
           className="
-      inline-flex items-center gap-2 mt-4
-      px-5 py-3 rounded-xl font-semibold
-      bg-gradient-to-r from-pink-500 to-yellow-400 text-white
-      hover:from-pink-600 hover:to-yellow-500 transition
-    "
+            inline-flex items-center gap-2 mt-4
+            px-5 py-3 rounded-xl font-semibold
+            bg-gradient-to-r from-pink-500 to-yellow-400 text-white
+            hover:from-pink-600 hover:to-yellow-500 transition
+          "
         >
           Empfehlungen ansehen →
         </Link>
       </div>
 
-
       <meta
-        name='description'
-        content='Alle neuesten Beiträge rund um Fitness & Reisen.'
+        name="description"
+        content="Alle neuesten Beiträge rund um Fitness & Reisen."
       />
 
-      <section className='bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto'>
-        <h2 className='text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white'>
+      <section className="bg-gray-100 dark:bg-slate-900 py-12 px-4 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white">
           Neu im Blog
         </h2>
 
-        {/* Kategorie-Buttons */}
-        <div className='flex flex-wrap justify-center gap-4 mb-8'>
-          {allCategories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full font-semibold border 
-              ${selectedCategory === category
-                  ? 'bg-pink-500 text-white'
-                  : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300 dark:border-slate-700'
+        {!limit && (
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {allCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full font-semibold border 
+                ${
+                  selectedCategory === category
+                    ? "bg-pink-500 text-white"
+                    : "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-gray-300 dark:border-slate-700"
                 }
-              transition`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>
-          {filteredPosts.map((post) => (
+                transition`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {visiblePosts.map((post) => (
             <article
               key={post.id}
-              className='bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col'
+              className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
             >
               <img
                 src={post.image}
                 alt={post.title}
-                className='w-full h-52 object-cover'
+                className="w-full h-52 object-cover"
               />
-              <div className='p-6 flex flex-col flex-1'>
-                <h3 className='text-xl font-bold mb-1 text-slate-900 dark:text-white'>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">
                   {post.title}
                 </h3>
-                <p className='mb-4 text-gray-600 dark:text-gray-300 flex-1'>
+                <p className="mb-4 text-gray-600 dark:text-gray-300 flex-1">
                   {post.summary}
                 </p>
                 <Link
                   to={`/blog/${post.id}`}
-                  className='inline-block text-slate-900 dark:text-blue-300 font-bold underline hover:text-blue-600 dark:hover:text-pink-300 transition'
+                  className="inline-block text-slate-900 dark:text-blue-300 font-bold underline hover:text-blue-600 dark:hover:text-pink-300 transition"
                 >
                   Weiterlesen
                 </Link>
