@@ -1,5 +1,4 @@
 import AuthorBadge from "./AuthorBadge";
-
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -12,7 +11,6 @@ import {
   isLinktreeLink,
 } from "../utils/linktree";
 
-// alle Markdown-Posts (Dateinamen entsprechen dem :id-Param, z.B. mein-erster-fitnesstrip.md)
 const posts = import.meta.glob("../posts/*.md", {
   query: "?raw",
   import: "default",
@@ -37,7 +35,7 @@ function NotFoundMini({ id }) {
 export default function BlogPost() {
   const { id } = useParams();
   const [content, setContent] = useState("");
-  const [meta, setMeta] = useState(null); // null = noch nicht geladen, {} = keine Frontmatter
+  const [meta, setMeta] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -46,10 +44,10 @@ export default function BlogPost() {
       setContent("");
       setMeta(null);
 
-      // passenden Import-Pfad finden (../posts/<id>.md)
       const importPath = Object.keys(posts).find((key) =>
         key.endsWith(`${id}.md`)
       );
+
       if (!importPath) {
         if (!cancelled) {
           setContent("__NOT_FOUND__");
@@ -61,13 +59,12 @@ export default function BlogPost() {
       try {
         const raw = await posts[importPath]();
 
-        // rudimentäres Frontmatter-Parsing: ---\n...\n---\n<body>
         const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/m.exec(raw);
+
         if (match) {
           const yaml = match[1];
           const body = match[2];
 
-          // sehr einfacher YAML-Parser (Key: Value), reicht für Titel/Datum/Excerpt/Image
           const metaObj = Object.fromEntries(
             yaml
               .split("\n")
@@ -76,12 +73,14 @@ export default function BlogPost() {
                 const idx = line.indexOf(":");
                 const key = line.slice(0, idx).trim();
                 let value = line.slice(idx + 1).trim();
+
                 if (
                   (value.startsWith('"') && value.endsWith('"')) ||
                   (value.startsWith("'") && value.endsWith("'"))
                 ) {
                   value = value.slice(1, -1);
                 }
+
                 return [key, value];
               })
           );
@@ -96,7 +95,7 @@ export default function BlogPost() {
             setContent(raw);
           }
         }
-      } catch (e) {
+      } catch {
         if (!cancelled) {
           setContent("__NOT_FOUND__");
           setMeta({});
@@ -105,17 +104,16 @@ export default function BlogPost() {
     }
 
     load();
+
     return () => {
       cancelled = true;
     };
   }, [id]);
 
-  // Ladezustand
   if (meta === null) {
     return <div className="text-center py-16">Lade …</div>;
   }
 
-  // Nicht gefunden
   if (content === "__NOT_FOUND__") {
     return <NotFoundMini id={id} />;
   }
@@ -123,25 +121,46 @@ export default function BlogPost() {
   const pageTitle = meta?.title
     ? `${meta.title} | Fit & Travel`
     : "Beitrag | Fit & Travel";
+
   const pageDesc =
-    meta?.excerpt || meta?.description || "Blogbeitrag auf Fit & Travel";
+    meta?.summary ||
+    meta?.excerpt ||
+    meta?.description ||
+    "Blogbeitrag auf Fit & Travel";
+
   const imageAlt = meta?.title || "Beitragsbild";
+  const pageUrl = `https://fitandtravelblog.de/blog/${id}`;
 
   return (
     <article className="max-w-2xl mx-auto p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl mt-12">
-      {/* React 19: Head-Tags direkt im JSX */}
       <title>{pageTitle}</title>
       <meta name="description" content={pageDesc} />
-      <link rel="canonical" href={`https://fitandtravelblog.de/blog/${id}`} />
+      <link rel="canonical" href={pageUrl} />
+
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDesc} />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:site_name" content="Fit & Travel" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageDesc} />
 
       {meta?.image && (
-        <img
-          src={meta.image}
-          alt={imageAlt}
-          className="rounded-2xl mb-8 w-full object-cover h-64"
-          loading="lazy"
-          decoding="async"
-        />
+        <>
+          <meta property="og:image" content={meta.image} />
+          <meta property="og:image:alt" content={imageAlt} />
+          <meta name="twitter:image" content={meta.image} />
+
+          <img
+            src={meta.image}
+            alt={imageAlt}
+            className="rounded-2xl mb-8 w-full object-cover h-64"
+            loading="lazy"
+            decoding="async"
+          />
+        </>
       )}
 
       <h1 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">
@@ -161,11 +180,10 @@ export default function BlogPost() {
           rehypePlugins={[rehypeRaw]}
           components={{
             a: ({ href = "", children, ...props }) => {
-              // Linktree-Links automatisch tracken + optional UTM dranhängen
               if (isLinktreeLink(href)) {
                 const trackedHref = buildLinktreeUrl({
                   source: "blog_post",
-                  content: id, // id ist dein slug
+                  content: id,
                   medium: "cta",
                   campaign: "linktree",
                 });
@@ -188,7 +206,6 @@ export default function BlogPost() {
                 );
               }
 
-              // normale Links: sicher öffnen (optional)
               const isExternal = href.startsWith("http");
 
               return (
