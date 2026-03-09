@@ -9,17 +9,17 @@ const RECOMMENDATIONS = [
         title: "Resistance Bands Set",
         description:
           "Super für Reisen + Home-Workouts. Leicht, günstig, effektiv.",
-        href: "https://example.com/resistance-bands", // später Affiliate-Link
+        href: "https://fitandtravelblog.de/gear", // später Affiliate-Link
       },
       {
         title: "Foldable Yoga Mat",
         description: "Passt in den Koffer. Nice für Hotel-Workouts.",
-        href: "https://example.com/foldable-yoga-mat",
+        href: "https://fitandtravelblog.de/gear",
       },
       {
         title: "Shaker + Protein-Container",
         description: "Für unterwegs – spart Stress und Geld.",
-        href: "https://example.com/shaker",
+        href: "https://fitandtravelblog.de/gear",
       },
     ],
   },
@@ -82,8 +82,7 @@ export default function RecommendationsSection({ page = "home" }) {
     <section className="rec-section">
       <div className="rec-section__header">
         <h2 className="rec-section__title">My Recommendations</h2>
-        <p className="rec-section__subtitle">
-        </p>
+        <p className="rec-section__subtitle"></p>
       </div>
 
       <div className="rec-section__grid">
