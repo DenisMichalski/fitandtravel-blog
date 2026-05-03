@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { trackOutboundClick, withUtm } from "../utils/outbound";
 import AuthorBadge from "./AuthorBadge";
