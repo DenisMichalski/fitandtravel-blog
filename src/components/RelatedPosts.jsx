@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { trackEvent } from "../utils/analytics";
 
-// Alle Markdown-Posts laden
 const postFiles = import.meta.glob("../posts/*.md", {
   query: "?raw",
   import: "default",
@@ -9,6 +9,7 @@ const postFiles = import.meta.glob("../posts/*.md", {
 
 function extractFrontmatter(md) {
   const match = /^---\n([\s\S]*?)\n---\n/m.exec(md);
+
   if (!match) return {};
 
   const yaml = match[1];
@@ -20,6 +21,7 @@ function extractFrontmatter(md) {
       .map((line) => {
         const idx = line.indexOf(":");
         const key = line.slice(0, idx).trim();
+
         let value = line.slice(idx + 1).trim();
 
         if (
@@ -34,7 +36,11 @@ function extractFrontmatter(md) {
   );
 }
 
-export default function RelatedPosts({ currentId, currentCategory, limit = 3 }) {
+export default function RelatedPosts({
+  currentId,
+  currentCategory,
+  limit = 3,
+}) {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
@@ -56,26 +62,27 @@ export default function RelatedPosts({ currentId, currentCategory, limit = 3 }) 
         .filter((post) => post.category !== "legal");
 
       const sameCategory = filtered.filter(
-        (post) => currentCategory && post.category === currentCategory
+        (post) =>
+          currentCategory && post.category === currentCategory
       );
 
       const fallbackPosts = filtered.filter(
-        (post) => !currentCategory || post.category !== currentCategory
+        (post) =>
+          !currentCategory || post.category !== currentCategory
       );
 
-      const sortedSameCategory = [...sameCategory].sort((a, b) => {
-        const dateA = new Date(a.date || 0);
-        const dateB = new Date(b.date || 0);
-        return dateB - dateA;
-      });
+      const sortByDate = (posts) =>
+        [...posts].sort((a, b) => {
+          const dateA = new Date(a.date || 0);
+          const dateB = new Date(b.date || 0);
 
-      const sortedFallback = [...fallbackPosts].sort((a, b) => {
-        const dateA = new Date(a.date || 0);
-        const dateB = new Date(b.date || 0);
-        return dateB - dateA;
-      });
+          return dateB - dateA;
+        });
 
-      const combined = [...sortedSameCategory, ...sortedFallback].slice(0, limit);
+      const combined = [
+        ...sortByDate(sameCategory),
+        ...sortByDate(fallbackPosts),
+      ].slice(0, limit);
 
       setRelatedPosts(combined);
     }
@@ -88,46 +95,96 @@ export default function RelatedPosts({ currentId, currentCategory, limit = 3 }) 
   }
 
   return (
-    <section className="mt-12">
-      <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
-        Passende Beiträge
+    <section className="mt-16">
+      <h2 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">
+        Mehr aus {currentCategory || "Fit & Travel"}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {relatedPosts.map((post) => (
-          <article
+          <Link
             key={post.id}
-            className="bg-gray-50 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition"
+            to={`/blog/${post.id}`}
+            onClick={() =>
+              trackEvent("related_post_click", {
+                current_post: currentId,
+                target_post: post.id,
+                category: post.category || "unknown",
+              })
+            }
+            className="
+              group block overflow-hidden rounded-2xl
+              bg-gray-50 dark:bg-slate-800
+              shadow-md hover:shadow-xl
+              transition-all duration-300
+              hover:-translate-y-1
+            "
           >
             {post.image && (
-              <img
-                src={post.image}
-                alt={post.title || "Beitragsbild"}
-                className="w-full h-40 object-cover"
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title || "Beitragsbild"}
+                  className="
+                    w-full h-44 object-cover
+                    transition-transform duration-500
+                    group-hover:scale-105
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             )}
 
             <div className="p-5 flex flex-col h-full">
-              <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+              {post.category && (
+                <span
+                  className="
+                    inline-block mb-3 text-xs font-semibold
+                    px-3 py-1 rounded-full
+                    bg-pink-100 text-pink-700
+                    dark:bg-pink-500/20 dark:text-pink-300
+                    w-fit
+                  "
+                >
+                  {post.category}
+                </span>
+              )}
+
+              <h3
+                className="
+                  text-lg font-bold mb-2
+                  text-slate-900 dark:text-white
+                  group-hover:text-pink-500
+                  transition
+                "
+              >
                 {post.title || "Blogbeitrag"}
               </h3>
 
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 flex-1">
+              {post.date && (
+                <p className="text-sm text-gray-500 mb-3">
+                  {post.date}
+                </p>
+              )}
+
+              <p className="text-sm text-gray-600 dark:text-gray-300 flex-1">
                 {post.summary ||
                   post.excerpt ||
                   "Mehr Tipps rund um Fitness, Reisen und smarte Essentials."}
               </p>
 
-              <Link
-                to={`/blog/${post.id}`}
-                className="inline-block font-semibold text-blue-600 dark:text-blue-300 hover:underline"
+              <div
+                className="
+                  mt-5 font-semibold
+                  text-blue-600 dark:text-blue-300
+                  group-hover:underline
+                "
               >
                 Weiterlesen →
-              </Link>
+              </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
