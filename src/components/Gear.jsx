@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { trackOutboundClick, withUtm } from "../utils/outbound";
 import AuthorBadge from "./AuthorBadge";
-import { Link } from "react-router-dom";
 
 function TrustBox({ title, text }) {
   return (
@@ -178,6 +178,19 @@ export default function Gear() {
     <>
       <Helmet>
         <title>Best Travel Fitness Gear | Fit & Travel</title>
+
+        <meta
+          property="og:image"
+          content="https://fitandtravelblog.de/og-cover.jpg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Fit & Travel Gear Empfehlungen"
+        />
+        <meta
+          name="twitter:image"
+          content="https://fitandtravelblog.de/og-cover.jpg"
+        />
 
         <meta
           name="description"
