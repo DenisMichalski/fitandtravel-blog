@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useEffect, useState } from "react";
 import GearCTA from "./GearCTA";
+import RelatedPosts from "./RelatedPosts";
 
 import {
   buildLinktreeUrl,
@@ -175,57 +176,59 @@ export default function BlogPost() {
         </p>
       )}
 
-      <div className="prose prose-lg dark:prose-invert max-w-none">
-        <ReactMarkdown
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            a: ({ href = "", children, ...props }) => {
-              if (isLinktreeLink(href)) {
-                const trackedHref = buildLinktreeUrl({
-                  source: "blog_post",
-                  content: id,
-                  medium: "cta",
-                  campaign: "linktree",
-                });
+     <div className="prose prose-lg dark:prose-invert max-w-none">
+  <ReactMarkdown
+    rehypePlugins={[rehypeRaw]}
+    components={{
+      a: ({ href = "", children, ...props }) => {
+        if (isLinktreeLink(href)) {
+          const trackedHref = buildLinktreeUrl({
+            source: "blog_post",
+            content: id,
+            medium: "cta",
+            campaign: "linktree",
+          });
 
-                return (
-                  <a
-                    href={trackedHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() =>
-                      trackLinktreeClick({
-                        location: "blog_post_link",
-                        page: id,
-                      })
-                    }
-                    {...props}
-                  >
-                    {children}
-                  </a>
-                );
+          return (
+            <a
+              href={trackedHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                trackLinktreeClick({
+                  location: "blog_post_link",
+                  page: id,
+                })
               }
+              {...props}
+            >
+              {children}
+            </a>
+          );
+        }
 
-              const isExternal = href.startsWith("http");
+        const isExternal = href.startsWith("http");
 
-              return (
-                <a
-                  href={href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  {...props}
-                >
-                  {children}
-                </a>
-              );
-            },
-          }}
-        >
-          {content}
-        </ReactMarkdown>
-      </div>
+        return (
+          <a
+            href={href}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            {...props}
+          >
+            {children}
+          </a>
+        );
+      },
+    }}
+  >
+    {content}
+  </ReactMarkdown>
+</div>
 
-      <GearCTA page={id} />
+<RelatedPosts currentId={id} currentCategory={meta?.category} />
+
+<GearCTA page={id} />
 
       <div className="mt-8 flex items-center justify-between">
         <Link
