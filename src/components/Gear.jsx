@@ -30,7 +30,7 @@ const GEAR = [
         description:
           "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
         href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803",
-        merchant: "Amazon",
+        merchant: "Decathlon",
         affiliate: false,
         badges: ["Hotel", "Ohne Gym", "Leicht"],
         featured: true,
@@ -39,9 +39,9 @@ const GEAR = [
         title: "Komfort & Hygiene beim Training unterwegs",
         description:
           "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
-        href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN",
-        merchant: "Decathlon",
-        affiliate: false,
+        href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?tag=fitandtrave0b-21",
+        merchant: "Amazon",
+        affiliate: true,
         badges: ["Mobility", "Sauber", "Reisetauglich"],
         featured: true,
       },
@@ -49,9 +49,9 @@ const GEAR = [
         title: "Gesunde Routine auch auf Reisen",
         description:
           "Protein, Snacks oder Supplements immer griffbereit. Praktisch für unterwegs.",
-        href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX",
+        href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX?tag=fitandtrave0b-21",
         merchant: "Amazon",
-        affiliate: false,
+        affiliate: true,
         badges: ["Routine", "Praktisch", "Kompakt"],
       },
       {
@@ -72,9 +72,9 @@ const GEAR = [
       {
         title: "Stressfrei packen & schneller finden",
         description: "Perfekt für Navigation, Fotos und lange Reisetage.",
-        href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN",
+        href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN?tag=fitandtrave0b-21",
         merchant: "Amazon",
-        affiliate: false,
+        affiliate: true,
         badges: ["Organisation", "Stressfrei", "Travel Hack"],
       },
       {
@@ -97,9 +97,9 @@ const GEAR = [
       {
         title: "Handgepäck ready & auslaufsicher",
         description: "Spart Platz und verhindert Chaos im Kulturbeutel.",
-        href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M",
+        href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M?tag=fitandtrave0b-21",
         merchant: "Amazon",
-        affiliate: false,
+        affiliate: true,
         badges: ["Handgepäck", "Auslaufsicher", "Platzsparend"],
       },
     ],
@@ -134,7 +134,7 @@ function GearCard({ item, category, page }) {
       rel="noopener noreferrer"
       onClick={() =>
         trackOutboundClick({
-          destination: item.href,
+          destination: trackedHref,
           label: item.title,
           location: page,
           page,
@@ -310,8 +310,9 @@ export default function Gear() {
         </header>
 
         <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
-          Hinweis: Einige Links führen zu externen Shops. Sobald Affiliate-Links
-          genutzt werden, kennzeichne ich diese transparent.
+          Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber etwas
+          kaufst, erhalte ich eine kleine Provision – für dich bleibt der
+          Preis gleich.
         </div>
 
         {topPicks.length > 0 && (
