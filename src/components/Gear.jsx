@@ -31,7 +31,6 @@ const GEAR = [
           "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
         href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_resistance_bands",
         badges: ["Hotel", "Ohne Gym", "Leicht"],
-        featured: true,
       },
       {
         title: "Komfort & Hygiene beim Training unterwegs",
@@ -72,7 +71,6 @@ const GEAR = [
         description: "Must-have für Stadt, Strand, Wandern – Akku safe.",
         href: "https://www.shopwudn.com/products/fast-charging-4000-mah-ultra-slim-built-in-iphone-lightning-cable-micro-usb-plug-black?srsltid=AfmBOopzh6NT688vewGvAPbv69hebDMRQAb0n5KTuzzGfdEyjRxTbyrk&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_power_bank",
         badges: ["Must-have", "Kompakt", "Zuverlässig"],
-        featured: true,
       },
       {
         title: "Alles dabei – ohne schwer zu tragen",
@@ -279,8 +277,9 @@ export default function Gear() {
         </header>
 
         <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
-          Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber etwas kaufst,
-          erhalte ich eine kleine Provision – für dich bleibt der Preis gleich.
+          Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber etwas
+          kaufst, erhalte ich eine kleine Provision – für dich bleibt der
+          Preis gleich.
         </div>
 
         {topPicks.length > 0 && (
