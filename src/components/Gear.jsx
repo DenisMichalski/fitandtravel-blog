@@ -276,6 +276,31 @@ export default function Gear() {
           </div>
         </header>
 
+        {topPicks.length > 0 && (
+          <section className="mb-12">
+            <div className="mb-4">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                Meine Top Empfehlungen 🔥
+              </h2>
+              <p className="text-slate-600 dark:text-slate-300">
+                Wenn du nur mit wenigen Essentials starten willst, sind das meine
+                wichtigsten Empfehlungen für Fitness & Reisen.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {topPicks.map((item) => (
+                <GearCard
+                  key={item.title}
+                  item={item}
+                  category={item.category}
+                  page={`${page}_top_picks`}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="grid gap-10">
           {GEAR.map((section) => (
             <div key={section.category}>
