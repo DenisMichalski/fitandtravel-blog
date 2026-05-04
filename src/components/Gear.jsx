@@ -89,6 +89,15 @@ const GEAR = [
   },
 ];
 
+const topPicks = GEAR.flatMap((section) =>
+  section.items
+    .filter((item) => item.featured)
+    .map((item) => ({
+      ...item,
+      category: section.category,
+    }))
+);
+
 function GearCard({ item, category, page }) {
   const utmContent = `${category
     .toLowerCase()
