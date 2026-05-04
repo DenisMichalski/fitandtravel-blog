@@ -119,7 +119,7 @@ function GearCard({ item, category, page }) {
         trackOutboundClick({
           destination: item.href,
           label: item.title,
-          location: "gear_page",
+          location: "page",
           page,
         })
       }
