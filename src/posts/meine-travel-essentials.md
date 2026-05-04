@@ -50,6 +50,9 @@ Gerade bei Navigation, Fotos, Tickets oder längeren Tagen ist eine Powerbank f�
 
 Ich habe meine fast immer im Rucksack – einfach für Sicherheit.
 
+👉 Meine Empfehlung:  
+[Powerbank ansehen](https://www.amazon.de/dp/B07QXV6N1B?tag=fitandtrave0b-21)
+
 ## 3. Travel Bottles – perfekt fürs Handgepäck
 
 Seit ich kleine Reisebehälter nutze, ist mein Kulturbeutel deutlich entspannter.
@@ -67,6 +70,9 @@ Sie sparen Platz und sind besonders praktisch, wenn du nur mit Handgepäck unter
 ## 4. Ein kleiner Tagesrucksack
 
 Ein leichter Tagesrucksack ist für mich auf Reisen extrem praktisch.
+
+👉 Meine Empfehlung:  
+[Rucksack ansehen](https://www.decathlon.de/p/wanderrucksack-nh-arpenaz-100-30l/_/R-p-301675)
 
 Ob Sightseeing, Strand, Wanderung oder kurzer Stadttrip – du hast Wasser, Snacks, Powerbank und wichtige Dinge immer dabei.
 
