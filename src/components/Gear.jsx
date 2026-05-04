@@ -29,14 +29,19 @@ const GEAR = [
         title: "Training überall ohne Geräte",
         description:
           "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
-        href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_resistance_bands",
+        href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803",
+        merchant: "Amazon",
+        affiliate: false,
         badges: ["Hotel", "Ohne Gym", "Leicht"],
+        featured: true,
       },
       {
         title: "Komfort & Hygiene beim Training unterwegs",
         description:
           "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
-        href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AHF33ROPJ2LOJ%3Fsource%3Dps-sl-shoppingads-lpcontext&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_yoga_mat",
+        href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN",
+        merchant: "Decathlon",
+        affiliate: false,
         badges: ["Mobility", "Sauber", "Reisetauglich"],
         featured: true,
       },
@@ -44,14 +49,18 @@ const GEAR = [
         title: "Gesunde Routine auch auf Reisen",
         description:
           "Protein, Snacks oder Supplements immer griffbereit. Praktisch für unterwegs.",
-        href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3517BHP4L5HFZ%3Fsource%3Dps-sl-shoppingads-lpcontext&psc=1&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_shaker_container",
+        href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX",
+        merchant: "Amazon",
+        affiliate: false,
         badges: ["Routine", "Praktisch", "Kompakt"],
       },
       {
         title: "5-Minuten Cardio überall",
         description:
           "Cardio-Training für unterwegs – leicht, effektiv, platzsparend.",
-        href: "https://www.decathlon.de/p/geschwindigkeits-springseil-speed-rope-grun/311896/c219m8807817?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=fitness_jump_rope",
+        href: "https://www.decathlon.de/p/geschwindigkeits-springseil-speed-rope-grun/311896/c219m8807817",
+        merchant: "Decathlon",
+        affiliate: false,
         badges: ["Cardio", "Ultraleicht", "Schnell"],
       },
     ],
@@ -63,26 +72,34 @@ const GEAR = [
       {
         title: "Stressfrei packen & schneller finden",
         description: "Perfekt für Navigation, Fotos und lange Reisetage.",
-        href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_packing_cubes",
+        href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN",
+        merchant: "Amazon",
+        affiliate: false,
         badges: ["Organisation", "Stressfrei", "Travel Hack"],
       },
       {
         title: "Nie wieder leerer Akku unterwegs",
         description: "Must-have für Stadt, Strand, Wandern – Akku safe.",
-        href: "https://www.shopwudn.com/products/fast-charging-4000-mah-ultra-slim-built-in-iphone-lightning-cable-micro-usb-plug-black?srsltid=AfmBOopzh6NT688vewGvAPbv69hebDMRQAb0n5KTuzzGfdEyjRxTbyrk&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_power_bank",
+        href: "https://www.shopwudn.com/products/fast-charging-4000-mah-ultra-slim-built-in-iphone-lightning-cable-micro-usb-plug-black",
+        merchant: "ShopWudn",
+        affiliate: false,
         badges: ["Must-have", "Kompakt", "Zuverlässig"],
       },
       {
         title: "Alles dabei – ohne schwer zu tragen",
         description:
           "Perfekt für Sightseeing, Strandtage und spontane Abenteuer.",
-        href: "https://www.decathlon.vn/en-VN/p/hiking-backpack-30l-nh-arpenaz-100-quechua-8920035.html?srsltid=AfmBOoqaegViubOFaYpT54w8dhVSsJeaHSVhMtcqAgBBsRFp2zl9iIHh&utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_daypack",
+        href: "https://www.decathlon.vn/en-VN/p/hiking-backpack-30l-nh-arpenaz-100-quechua-8920035.html",
+        merchant: "Decathlon",
+        affiliate: false,
         badges: ["Leicht", "Outdoor", "Alltag"],
       },
       {
         title: "Handgepäck ready & auslaufsicher",
         description: "Spart Platz und verhindert Chaos im Kulturbeutel.",
-        href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M?utm_source=blog&utm_medium=gear&utm_campaign=direct_links&utm_content=travel_bottles_set",
+        href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M",
+        merchant: "Amazon",
+        affiliate: false,
         badges: ["Handgepäck", "Auslaufsicher", "Platzsparend"],
       },
     ],
@@ -121,6 +138,8 @@ function GearCard({ item, category, page }) {
           label: item.title,
           location: page,
           page,
+          merchant: item.merchant || "unknown",
+          affiliate: item.affiliate || false,
         })
       }
       className="
@@ -146,6 +165,20 @@ function GearCard({ item, category, page }) {
       )}
 
       <div className="font-bold text-lg mb-2">{item.title}</div>
+
+      <div className="flex flex-wrap gap-2 mb-3">
+        {item.merchant && (
+          <span className="text-[11px] font-semibold px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">
+            {item.merchant}
+          </span>
+        )}
+
+        {item.affiliate && (
+          <span className="text-[11px] font-semibold px-2 py-1 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-300">
+            Affiliate-Link
+          </span>
+        )}
+      </div>
 
       {Array.isArray(item.badges) && item.badges.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-3">
@@ -277,9 +310,8 @@ export default function Gear() {
         </header>
 
         <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
-          Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber etwas
-          kaufst, erhalte ich eine kleine Provision – für dich bleibt der
-          Preis gleich.
+          Hinweis: Einige Links führen zu externen Shops. Sobald Affiliate-Links
+          genutzt werden, kennzeichne ich diese transparent.
         </div>
 
         {topPicks.length > 0 && (

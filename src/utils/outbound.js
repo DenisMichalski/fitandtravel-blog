@@ -1,4 +1,4 @@
-import { trackEvent } from "./analytics";
+import { trackEvent } from "./analytics.js";
 
 /**
  * Fügt optional UTM-Parameter zu einem Link hinzu.
@@ -25,11 +25,15 @@ export function trackOutboundClick({
   label = "",
   location = "",
   page = "",
+  merchant = "",
+  affiliate = false,
 }) {
   trackEvent("outbound_click", {
     destination,
     label,
     location,
     page,
+    merchant,
+    affiliate,
   });
 }
