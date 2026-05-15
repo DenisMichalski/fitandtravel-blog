@@ -102,6 +102,26 @@ const GEAR = [
         affiliate: true,
         badges: ["Handgepäck", "Auslaufsicher", "Platzsparend"],
       },
+      {
+        title: "Noise-Cancelling Kopfhörer",
+        description:
+          "Perfekt für Flüge, Bahnfahrten und konzentriertes Arbeiten unterwegs.",
+        href: "https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21",
+        merchant: "Amazon",
+        affiliate: true,
+        badges: ["Travel", , "Noise Cancelling", "Focus", "Flug"],
+        featured: true,
+      },
+      {
+        title: "Travel Organizer",
+        description:
+          "Ordnung für Kabel, Powerbank und Technik – perfekt fürs Handgepäck.",
+        href: "https://www.amazon.de/dp/B0C6FDSTZB?tag=fitandtrave0b-21",
+        merchant: "Amazon",
+        affiliate: true,
+        badges: ["Travel", "Organisation", "Handgepäck"],
+        featured: true,
+      },
     ],
   },
 ];
