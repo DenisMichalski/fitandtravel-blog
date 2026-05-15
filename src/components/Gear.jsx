@@ -109,7 +109,7 @@ const GEAR = [
         href: "https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21",
         merchant: "Amazon",
         affiliate: true,
-        badges: ["Travel", , "Noise Cancelling", "Focus", "Flug"],
+        badges: ["Travel", "Noise Cancelling", "Focus", "Flug"],
         featured: true,
       },
       {
