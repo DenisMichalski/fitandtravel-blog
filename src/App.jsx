@@ -14,55 +14,55 @@ import Gear from './components/Gear';
 
 function App() {
   return (
-      <Router>
-        {/* <Router basename='/fitandtravel-blog'> */}
-        <div className='bg-gray-100 dark:bg-slate-900 min-h-screen transition-colors'>
-          <Header />
-          <main>
-            <Routes>
-              <Route
-                path='/'
-                element={
-                  <>
-                    <Hero />
-                    {/* Optional: Zeige die letzten 3 Blogposts als Teaser auf der Startseite */}
-                    <RecommendationsSection page="home" />
-                    <BlogOverview limit={3} />
-                  </>
-                }
-              />
-              <Route
-                path='/blog'
-                element={<BlogOverview />}
-              />
-              <Route
-                path='/about'
-                element={<About />}
-              />
-              <Route path="/gear" 
+    <Router>
+      {/* <Router basename='/fitandtravel-blog'> */}
+      <div className='bg-gray-100 dark:bg-slate-900 min-h-screen transition-colors'>
+        <Header />
+        <main>
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <Hero />
+                  {/* Optional: Zeige die letzten 5 Blogposts als Teaser auf der Startseite */}
+                  <RecommendationsSection page="home" />
+                  <BlogOverview limit={5} />
+                </>
+              }
+            />
+            <Route
+              path='/blog'
+              element={<BlogOverview />}
+            />
+            <Route
+              path='/about'
+              element={<About />}
+            />
+            <Route path="/gear"
               element={<Gear />}
-              />
-              <Route
-                path='/blog/:id'
-                element={<BlogPost />}
-              />
-              <Route
-                path='/impressum'
-                element={<Impressum />}
-              />
-              <Route
-                path='/datenschutz'
-                element={<Datenschutz />}
-              />
-              <Route
-                path='/kontakt'
-                element={<Kontakt />}
-              />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+            />
+            <Route
+              path='/blog/:id'
+              element={<BlogPost />}
+            />
+            <Route
+              path='/impressum'
+              element={<Impressum />}
+            />
+            <Route
+              path='/datenschutz'
+              element={<Datenschutz />}
+            />
+            <Route
+              path='/kontakt'
+              element={<Kontakt />}
+            />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
