@@ -1,4 +1,4 @@
-import{j as e,H as h,L as i,w as g,a as p}from"./index-Cuhvsq55.js";import{A as m}from"./AuthorBadge-BYXM-joS.js";import"./profil-B473ki6U.js";function u({title:t,text:a}){return e.jsxs("div",{className:`
+import{j as e,H as h,L as i,w as g,a as p}from"./index-BemjlG6a.js";import{A as m}from"./AuthorBadge-BeaJPF8p.js";import"./profil-B473ki6U.js";function u({title:t,text:a}){return e.jsxs("div",{className:`
     mb-5 rounded-2xl p-5
     bg-white border border-slate-200
     dark:bg-slate-800 dark:border-slate-700
