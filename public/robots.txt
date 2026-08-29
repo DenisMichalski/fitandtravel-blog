@@ -1,4 +1,4 @@
 User-agent: *
-Allow_ /
+Allow: /
 
-Sitemap: https://fitandtravelblog.de/Sitemap.xml
+Sitemap: https://fitandtravelblog.de/sitemap.xml
