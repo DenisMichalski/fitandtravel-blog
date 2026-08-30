@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+    title="Impressum | Fit & Travel Blog"
+    description="Impressum und Anbieterkennzeichnung für den Fit & Travel Blog."
+    canonical="https://fitandtravelblog.de/impressum"
+>
+    <Header />
+
+    <main class="min-h-screen bg-slate-50 px-4 py-12 dark:bg-slate-900">
+        <section
+            class="mx-auto max-w-2xl rounded-3xl bg-white px-6 py-16 shadow-xl dark:bg-slate-800"
+        >
+            <h1 class="mb-6 text-3xl font-bold text-slate-900 dark:text-white">
+                Impressum
+            </h1>
+
+            <address class="mb-6 not-italic text-slate-900 dark:text-gray-300">
+                <strong>Angaben gemäß § 5 DDG</strong>
+                <br />
+                Denis Michalski
+                <br />
+                Postfach 31 17 35
+                <br />
+                70477 Stuttgart
+                <br />
+                Deutschland
+            </address>
+
+            <p class="mb-6 text-slate-900 dark:text-gray-300">
+                <strong>Kontakt</strong>
+                <br />
+                E-Mail:
+                <a
+                    href="mailto:fitandtravel.ai@gmail.com"
+                    class="text-blue-600 underline hover:text-pink-500 dark:text-pink-400"
+                >
+                    fitandtravel.ai@gmail.com
+                </a>
+            </p>
+
+            <p class="mb-6 text-slate-900 dark:text-gray-300">
+                <strong>Verantwortlich für den Inhalt</strong>
+                <br />
+                Denis Michalski
+                <br />
+                (Adresse wie oben)
+            </p>
+
+            <p class="mt-8 text-sm text-gray-400 dark:text-gray-500">
+                Quelle:
+                <a
+                    href="https://www.e-recht24.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="underline"
+                >
+                    e-recht24.de
+                </a>
+            </p>
+        </section>
+    </main>
+</Layout>

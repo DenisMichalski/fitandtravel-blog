@@ -1,0 +1,126 @@
+---
+import "../styles/global.css";
+import CookieConsent from "../components/CookieConsent.astro";
+
+const {
+  title = "Fit & Travel | Fitness unterwegs & Travel Essentials",
+  description = "Fit & Travel – entdecke Fitness für unterwegs, praktische Travel Essentials und hilfreiche Tipps für Reisen, Hotel und Alltag.",
+  canonical = "https://fitandtravelblog.de/",
+  image = "https://fitandtravelblog.de/og-cover.jpg",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonical} />
+
+    <link
+      rel="shortcut icon"
+      href="/fitandtravel-icon-ohne-text.ico"
+      type="image/x-icon"
+    />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Fit & Travel" />
+    <meta property="og:image" content={image} />
+    <meta
+      property="og:image:alt"
+      content="Fit & Travel – Fitness unterwegs und Travel Essentials"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+  </head>
+
+  <body>
+    <slot />
+
+    <script is:inline>
+      (() => {
+        const STORAGE_KEY = "fitandtravel-consent";
+        const GA_ID = "G-4SHX2Q29JS";
+
+        let analyticsLoaded = false;
+
+        window.loadFitAndTravelAnalytics = function () {
+          if (analyticsLoaded) return;
+
+          analyticsLoaded = true;
+
+          window[`ga-disable-${GA_ID}`] = false;
+
+          window.dataLayer = window.dataLayer || [];
+
+          window.gtag = function () {
+            window.dataLayer.push(arguments);
+          };
+
+          window.gtag("js", new Date());
+
+          window.gtag("config", GA_ID, {
+            anonymize_ip: true,
+          });
+
+          const script = document.createElement("script");
+
+          script.async = true;
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=" +
+            encodeURIComponent(GA_ID);
+
+          document.head.appendChild(script);
+        };
+
+        window.disableFitAndTravelAnalytics = function () {
+          window[`ga-disable-${GA_ID}`] = true;
+
+          if (typeof window.gtag === "function") {
+            window.gtag("consent", "update", {
+              analytics_storage: "denied",
+            });
+          }
+        };
+
+        try {
+          const consent = JSON.parse(
+            localStorage.getItem(STORAGE_KEY) || "null",
+          );
+
+          if (consent?.analytics === true) {
+            window.loadFitAndTravelAnalytics();
+          }
+        } catch {
+          // Ungültigen localStorage-Wert ignorieren.
+        }
+      })();
+    </script>
+
+    <CookieConsent />
+  </body>
+</html>

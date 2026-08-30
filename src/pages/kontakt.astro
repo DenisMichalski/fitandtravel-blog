@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+    title="Kontakt | Fit & Travel"
+    description="Schreib mir eine Nachricht."
+    canonical="https://fitandtravelblog.de/kontakt"
+>
+    <Header />
+
+    <main class="min-h-screen bg-slate-50 px-4 py-12 dark:bg-slate-900">
+        <section
+            class="mx-auto max-w-2xl rounded-3xl bg-white px-6 py-16 text-center shadow-lg dark:bg-slate-800"
+        >
+            <h1 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white">
+                Kontakt
+            </h1>
+
+            <p class="mb-6 text-lg text-slate-800 dark:text-gray-300">
+                Du hast Fragen, Feedback oder möchtest zusammenarbeiten?
+                <br />
+                Schreib mir hier direkt eine Nachricht!
+            </p>
+
+            <form
+                id="contact-form"
+                action="https://formspree.io/f/xvgrbbwb"
+                method="POST"
+                class="space-y-6"
+            >
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Dein Name"
+                    required
+                    autocomplete="name"
+                    class="w-full rounded-xl border border-gray-300 px-4 py-2 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                />
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Deine E-Mail"
+                    required
+                    autocomplete="email"
+                    class="w-full rounded-xl border border-gray-300 px-4 py-2 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                />
+
+                <textarea
+                    name="message"
+                    placeholder="Deine Nachricht"
+                    required
+                    rows="5"
+                    class="w-full rounded-xl border border-gray-300 px-4 py-2 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                ></textarea>
+
+                <button
+                    id="contact-submit"
+                    type="submit"
+                    class="rounded-xl bg-gradient-to-r from-pink-500 to-yellow-400 px-6 py-3 text-lg font-bold text-white shadow-lg transition hover:from-pink-600 hover:to-yellow-500 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                    Nachricht senden
+                </button>
+
+                <p
+                    id="contact-status"
+                    class="hidden rounded-xl px-4 py-3 font-semibold"
+                    role="status"
+                    aria-live="polite"
+                >
+                </p>
+            </form>
+
+            <p class="mt-8 text-slate-800 dark:text-gray-300">
+                Oder schau bei
+                <a
+                    href="https://www.instagram.com/fitandtravelblog/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-bold text-pink-500 underline transition hover:text-yellow-400"
+                >
+                    Instagram
+                </a>
+                vorbei!
+            </p>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    const form = document.querySelector("#contact-form");
+    const status = document.querySelector("#contact-status");
+    const submitButton = document.querySelector("#contact-submit");
+
+    if (
+        form instanceof HTMLFormElement &&
+        status instanceof HTMLElement &&
+        submitButton instanceof HTMLButtonElement
+    ) {
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Wird gesendet …";
+
+            status.classList.add("hidden");
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error("Formular konnte nicht gesendet werden.");
+                }
+
+                form.reset();
+
+                status.textContent =
+                    "✅ Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.";
+
+                status.className =
+                    "rounded-xl bg-green-100 px-4 py-3 font-semibold text-green-800 dark:bg-green-900/30 dark:text-green-300";
+            } catch {
+                status.textContent =
+                    "❌ Beim Senden ist etwas schiefgelaufen. Bitte versuche es noch einmal.";
+
+                status.className =
+                    "rounded-xl bg-red-100 px-4 py-3 font-semibold text-red-800 dark:bg-red-900/30 dark:text-red-300";
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = "Nachricht senden";
+            }
+        });
+        form.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter") return;
+
+            const target = event.target;
+
+            if (!(target instanceof HTMLElement)) return;
+
+            // Im Nachrichtenfeld:
+            // Enter = senden
+            // Shift + Enter = neue Zeile
+            if (target instanceof HTMLTextAreaElement) {
+                if (event.shiftKey) return;
+
+                event.preventDefault();
+                form.requestSubmit();
+                return;
+            }
+
+            // In Name und E-Mail:
+            // Enter = senden
+            if (target instanceof HTMLInputElement) {
+                event.preventDefault();
+                form.requestSubmit();
+            }
+        });
+    }
+</script>

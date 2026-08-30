@@ -1,0 +1,259 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import GearCard from "../components/GearCard.astro";
+
+const GEAR = [
+    {
+        category: "Fitness (Hotel & Unterwegs)",
+        subtitle: "Leicht, kompakt, effektiv – perfekt für Reisen.",
+        trustText:
+            "Alles hier ist leicht, passt ins Handgepäck und funktioniert ohne Gym. Ideal für Hotelzimmer, Strand oder Park – schnell, simpel und effektiv.",
+        items: [
+            {
+                title: "Training überall ohne Geräte",
+                description:
+                    "Ideal für Hotelzimmer, Strand oder Park — leicht & vielseitig.",
+                href: "https://www.decathlon.de/p/fitness-band-trainingsband-3er-set-widerstand-5-6-7-kg-blau-bordeauxrot/305336/c113c88c381m8528803",
+                merchant: "Decathlon",
+                affiliate: false,
+                badges: ["Hotel", "Ohne Gym", "Leicht"],
+                featured: true,
+            },
+            {
+                title: "Komfort & Hygiene beim Training unterwegs",
+                description:
+                    "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
+                href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Mobility", "Sauber", "Reisetauglich"],
+                featured: true,
+            },
+            {
+                title: "Gesunde Routine auch auf Reisen",
+                description:
+                    "Protein, Snacks oder Supplements immer griffbereit. Praktisch für unterwegs.",
+                href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Routine", "Praktisch", "Kompakt"],
+            },
+            {
+                title: "5-Minuten Cardio überall",
+                description:
+                    "Cardio-Training für unterwegs – leicht, effektiv, platzsparend.",
+                href: "https://www.decathlon.de/p/geschwindigkeits-springseil-speed-rope-grun/311896/c219m8807817",
+                merchant: "Decathlon",
+                affiliate: false,
+                badges: ["Cardio", "Ultraleicht", "Schnell"],
+            },
+        ],
+    },
+    {
+        category: "Travel & Outdoor Essentials",
+        subtitle: "Praktisch, robust, reisetauglich.",
+        trustText:
+            "Diese Essentials sparen dir Zeit und Nerven unterwegs. Weniger Chaos, mehr Komfort – und du bist für Tagestrips und spontane Abenteuer ready.",
+        items: [
+            {
+                title: "Stressfrei packen & schneller finden",
+                description:
+                    "Mehr Ordnung im Gepäck und schneller alles griffbereit.",
+                href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Organisation", "Stressfrei", "Travel Hack"],
+            },
+            {
+                title: "Nie wieder leerer Akku unterwegs",
+                description:
+                    "Must-have für Stadt, Strand und längere Reisetage.",
+                href: "https://www.shopwudn.com/products/fast-charging-4000-mah-ultra-slim-built-in-iphone-lightning-cable-micro-usb-plug-black",
+                merchant: "ShopWudn",
+                affiliate: false,
+                badges: ["Must-have", "Kompakt", "Zuverlässig"],
+            },
+            {
+                title: "Alles dabei – ohne schwer zu tragen",
+                description:
+                    "Perfekt für Sightseeing, Strandtage und spontane Abenteuer.",
+                href: "https://www.decathlon.vn/en-VN/p/hiking-backpack-30l-nh-arpenaz-100-quechua-8920035.html",
+                merchant: "Decathlon",
+                affiliate: false,
+                badges: ["Leicht", "Outdoor", "Alltag"],
+            },
+            {
+                title: "Handgepäck ready & auslaufsicher",
+                description:
+                    "Spart Platz und verhindert Chaos im Kulturbeutel.",
+                href: "https://www.amazon.de/-/en/Squeezable-Containers-Toiletries-Conditioner-Accessories/dp/B0CD432W5M?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Handgepäck", "Auslaufsicher", "Platzsparend"],
+            },
+            {
+                title: "Noise-Cancelling Kopfhörer",
+                description:
+                    "Perfekt für Flüge, Bahnfahrten und konzentriertes Arbeiten unterwegs.",
+                href: "https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Travel", "Noise Cancelling", "Focus", "Flug"],
+                featured: true,
+            },
+            {
+                title: "Travel Organizer",
+                description:
+                    "Ordnung für Kabel, Powerbank und Technik – perfekt fürs Handgepäck.",
+                href: "https://www.amazon.de/dp/B0C6FDSTZB?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Travel", "Organisation", "Handgepäck"],
+                featured: true,
+            },
+        ],
+    },
+];
+
+const topPicks = GEAR.flatMap((section) =>
+    section.items
+        .filter((item) => item.featured)
+        .map((item) => ({
+            ...item,
+            category: section.category,
+        })),
+);
+---
+
+<Layout
+    title="Fitness & Travel Gear Empfehlungen | Fit & Travel"
+    description="Entdecke meine Empfehlungen für Fitness unterwegs und praktische Travel Essentials – kompakt, reisetauglich und ideal für Hotel, Strand und Alltag."
+    canonical="https://fitandtravelblog.de/gear"
+>
+    <Header />
+
+    <main class="min-h-screen bg-gray-100 dark:bg-slate-900">
+        <section class="mx-auto max-w-5xl px-6 py-10">
+            <header class="mb-8">
+                <h1
+                    class="text-3xl font-extrabold text-slate-900 dark:text-white"
+                >
+                    Gear &amp; Empfehlungen
+                </h1>
+
+                <p
+                    class="mt-3 max-w-3xl leading-relaxed text-slate-600 dark:text-slate-300"
+                >
+                    Meine Empfehlungen für Fitness unterwegs und praktische
+                    Travel Essentials – kompakt, nützlich und ideal für Reisen.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a
+                        href="/"
+                        class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white transition hover:opacity-90 dark:bg-white dark:text-slate-900"
+                    >
+                        ← Zur Startseite
+                    </a>
+
+                    <a
+                        href="/blog"
+                        class="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-4 py-2 font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+                    >
+                        Blog ansehen
+                    </a>
+                </div>
+            </header>
+
+            <div
+                class="mb-8 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+            >
+                Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber
+                etwas kaufst, erhalte ich eine kleine Provision – für dich
+                bleibt der Preis gleich.
+            </div>
+            {
+                topPicks.length > 0 && (
+                    <section class="mb-12">
+                        <div class="mb-5">
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                                Meine Top Empfehlungen 🔥
+                            </h2>
+
+                            <p class="mt-2 text-slate-600 dark:text-slate-300">
+                                Wenn du nur mit wenigen Essentials starten
+                                willst, sind das meine wichtigsten Empfehlungen
+                                für Fitness & Reisen.
+                            </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {topPicks.map((item) => (
+                                <GearCard
+                                    item={item}
+                                    category={item.category}
+                                    location="gear_top_picks"
+                                />
+                            ))}
+                        </div>
+                    </section>
+                )
+            }
+
+            <div class="grid gap-12">
+                {
+                    GEAR.map((section) => (
+                        <section>
+                            <div class="mb-4">
+                                <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+                                    {section.category}
+                                </h2>
+
+                                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                                    {section.subtitle}
+                                </p>
+                            </div>
+
+                            <div class="mb-5 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+                                <div class="font-bold text-slate-900 dark:text-white">
+                                    Warum diese {section.category} Empfehlungen?
+                                </div>
+
+                                <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-300">
+                                    {section.trustText}
+                                </p>
+                            </div>
+
+                            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                {section.items.map((item) => (
+                                    <GearCard
+                                        item={item}
+                                        category={section.category}
+                                        location="gear"
+                                    />
+                                ))}
+                            </div>
+                        </section>
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    document.querySelectorAll("[data-gear-link]").forEach((link) => {
+        link.addEventListener("click", () => {
+            if (!(link instanceof HTMLElement)) return;
+
+            window.gtag?.("event", "outbound_click", {
+                label: link.dataset.label,
+                merchant: link.dataset.merchant,
+                affiliate: link.dataset.affiliate === "true",
+                location: link.dataset.location,
+                page: "gear",
+            });
+        });
+    });
+</script>

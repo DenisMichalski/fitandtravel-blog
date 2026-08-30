@@ -1,9 +1,0 @@
-// Analytics Helper
-export function trackEvent(name, params = {}) {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", name, params);
-  } else {
-    // Debug (nur lokal sichtbar)
-    console.log("[Analytics]", name, params);
-  }
-}
