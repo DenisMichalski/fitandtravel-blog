@@ -44,7 +44,7 @@
 
 <script>
     document.querySelector("#hero-gear-cta")?.addEventListener("click", () => {
-        window.gtag?.("event", "cta_click", {
+        window.trackFitAndTravelEvent?.("cta_click", {
             location: "hero_button",
             target: "gear_page",
         });

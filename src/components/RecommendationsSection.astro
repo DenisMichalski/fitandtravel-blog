@@ -112,7 +112,7 @@ const recommendations = [
         link.addEventListener("click", () => {
             if (!(link instanceof HTMLElement)) return;
 
-            window.gtag?.("event", "recommendation_click", {
+            window.trackFitAndTravelEvent?.("recommendation_click", {
                 label: link.dataset.recommendation,
                 category: link.dataset.category,
                 location: "homepage_recommendations",

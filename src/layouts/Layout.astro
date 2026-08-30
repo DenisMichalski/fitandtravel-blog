@@ -66,45 +66,89 @@ const {
         const STORAGE_KEY = "fitandtravel-consent";
         const GA_ID = "G-4SHX2Q29JS";
 
-        let analyticsLoaded = false;
+        let analyticsScriptLoaded = false;
+        let analyticsConfigured = false;
+        let analyticsConsentGranted = false;
 
-        window.loadFitAndTravelAnalytics = function () {
-          if (analyticsLoaded) return;
+        window.dataLayer = window.dataLayer || [];
 
-          analyticsLoaded = true;
-
-          window[`ga-disable-${GA_ID}`] = false;
-
-          window.dataLayer = window.dataLayer || [];
-
-          window.gtag = function () {
+        window.gtag =
+          window.gtag ||
+          function () {
             window.dataLayer.push(arguments);
           };
 
-          window.gtag("js", new Date());
+        // Standardmäßig keine Analyse- oder Werbeeinwilligung.
+        window.gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
 
-          window.gtag("config", GA_ID, {
-            anonymize_ip: true,
-          });
+        function loadGoogleAnalyticsScript() {
+          if (
+            analyticsScriptLoaded ||
+            document.querySelector(`script[data-fitandtravel-ga="${GA_ID}"]`)
+          ) {
+            return;
+          }
+
+          analyticsScriptLoaded = true;
 
           const script = document.createElement("script");
-
           script.async = true;
+          script.dataset.fitandtravelGa = GA_ID;
           script.src =
             "https://www.googletagmanager.com/gtag/js?id=" +
             encodeURIComponent(GA_ID);
 
           document.head.appendChild(script);
+        }
+
+        window.trackFitAndTravelEvent = function (eventName, parameters = {}) {
+          if (
+            analyticsConsentGranted !== true ||
+            typeof window.gtag !== "function"
+          ) {
+            return;
+          }
+
+          window.gtag("event", eventName, parameters);
+        };
+
+        window.loadFitAndTravelAnalytics = function () {
+          analyticsConsentGranted = true;
+          window[`ga-disable-${GA_ID}`] = false;
+
+          window.gtag("consent", "update", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+          });
+
+          if (!analyticsConfigured) {
+            analyticsConfigured = true;
+
+            window.gtag("js", new Date());
+
+            window.gtag("config", GA_ID);
+
+            loadGoogleAnalyticsScript();
+          }
         };
 
         window.disableFitAndTravelAnalytics = function () {
+          analyticsConsentGranted = false;
           window[`ga-disable-${GA_ID}`] = true;
 
-          if (typeof window.gtag === "function") {
-            window.gtag("consent", "update", {
-              analytics_storage: "denied",
-            });
-          }
+          window.gtag("consent", "update", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+          });
         };
 
         try {
@@ -114,9 +158,11 @@ const {
 
           if (consent?.analytics === true) {
             window.loadFitAndTravelAnalytics();
+          } else {
+            window.disableFitAndTravelAnalytics();
           }
         } catch {
-          // Ungültigen localStorage-Wert ignorieren.
+          window.disableFitAndTravelAnalytics();
         }
       })();
     </script>
