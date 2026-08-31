@@ -1,12 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+
+const legalStreet = import.meta.env.LEGAL_STREET;
+const legalCity = import.meta.env.LEGAL_CITY;
+
+if (!legalStreet || !legalCity) {
+    throw new Error("Legal address environment variables are missing.");
+}
 ---
 
 <Layout
     title="Impressum | Fit & Travel Blog"
     description="Impressum und Anbieterkennzeichnung für den Fit & Travel Blog."
     canonical="https://fitandtravelblog.de/impressum"
+    noindex={true}
 >
     <Header />
 
@@ -23,9 +31,9 @@ import Header from "../components/Header.astro";
                 <br />
                 Denis Michalski
                 <br />
-                Postfach 31 17 35
+                {legalStreet}
                 <br />
-                70477 Stuttgart
+                {legalCity}
                 <br />
                 Deutschland
             </address>
@@ -43,11 +51,14 @@ import Header from "../components/Header.astro";
             </p>
 
             <p class="mb-6 text-slate-900 dark:text-gray-300">
-                <strong>Verantwortlich für den Inhalt</strong>
+                <strong>
+                    Verantwortlich für journalistisch-redaktionelle Inhalte
+                    gemäß § 18 Abs. 2 MStV
+                </strong>
                 <br />
                 Denis Michalski
                 <br />
-                (Adresse wie oben)
+                Anschrift wie oben
             </p>
 
             <p class="mt-8 text-sm text-gray-400 dark:text-gray-500">
@@ -58,7 +69,6 @@ import Header from "../components/Header.astro";
                     rel="noopener noreferrer"
                     class="underline"
                 >
-                    e-recht24.de
                 </a>
             </p>
         </section>

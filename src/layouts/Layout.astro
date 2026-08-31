@@ -7,6 +7,7 @@ const {
   description = "Fit & Travel – entdecke Fitness für unterwegs, praktische Travel Essentials und hilfreiche Tipps für Reisen, Hotel und Alltag.",
   canonical = "https://fitandtravelblog.de/",
   image = "https://fitandtravelblog.de/og-cover.jpg",
+  noindex = false,
 } = Astro.props;
 ---
 
@@ -32,6 +33,7 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <link rel="canonical" href={canonical} />
 
