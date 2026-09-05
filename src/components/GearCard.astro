@@ -29,7 +29,7 @@ const rel = item.affiliate
     data-merchant={item.merchant}
     data-affiliate={String(item.affiliate)}
     data-location={location}
-    class="group block rounded-2xl border border-slate-200 bg-white p-5 text-slate-900 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-pink-300/60 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-pink-300/30"
+    class="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 text-slate-900 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-pink-300/60 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-pink-300/30"
 >
     {
         item.featured && (
@@ -91,7 +91,7 @@ const rel = item.affiliate
     }
 
     <div
-        class="font-semibold text-blue-600 transition-transform duration-200 group-hover:translate-x-0.5 dark:text-blue-400"
+        class="mt-auto pt-2 font-semibold text-blue-600 transition-transform duration-200 group-hover:translate-x-0.5 dark:text-blue-400"
     >
         {item.merchant ? `Bei ${item.merchant} ansehen →` : "Empfehlung ansehen →"}
     </div>
