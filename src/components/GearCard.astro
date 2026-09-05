@@ -79,9 +79,20 @@ const rel = item.affiliate
         {item.description}
     </p>
 
+    {
+        item.reason && (
+            <div class="mb-4 rounded-xl bg-slate-50 p-3 text-sm leading-relaxed text-slate-700 dark:bg-slate-900/60 dark:text-slate-300">
+                <span class="font-bold text-slate-900 dark:text-white">
+                    Warum interessant:
+                </span>{" "}
+                {item.reason}
+            </div>
+        )
+    }
+
     <div
         class="font-semibold text-blue-600 transition-transform duration-200 group-hover:translate-x-0.5 dark:text-blue-400"
     >
-        Empfehlung ansehen →
+        {item.merchant ? `Bei ${item.merchant} ansehen →` : "Empfehlung ansehen →"}
     </div>
 </a>
