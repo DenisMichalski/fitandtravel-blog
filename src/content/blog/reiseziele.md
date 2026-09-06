@@ -75,11 +75,24 @@ Der Vorteil: Du kannst den Schwierigkeitsgrad sehr gut an dein eigenes Fitnessle
 
 ## 4. Thailand – Phuket für Fitness, Strand und Muay Thai
 
-Phuket gehört für mich unbedingt in diese Liste.
+Phuket gehört für mich unbedingt in diese Liste – diesmal auch aus eigener Erfahrung.
 
-Ich war **2026 selbst auf Phuket** und finde gerade die Kombination aus tropischem Urlaub, Stränden und den vielen Möglichkeiten für Sport besonders spannend.
+Ich war **im März 2026 für zwei Wochen auf Phuket**. Dabei habe ich verschiedene Seiten der Insel kennengelernt: Strände, Phuket Town, die Gegend rund um Bang Tao und natürlich auch einige bekannte Ausflugsziele.
 
-Du kannst dort einen klassischen Strandurlaub machen und trotzdem problemlos aktive Tage einbauen.
+### Meine persönlichen Eindrücke von Phuket
+
+Besonders in Erinnerung geblieben sind mir mehrere Strände:
+
+- Bang Tao Beach
+- Surin Beach
+- Kamala Beach
+- Banana Beach
+
+Meine persönlichen Favoriten waren **Banana Beach und Kamala Beach**. Gerade diese Mischung aus Strand, Bewegung und Ausflügen hat für mich gut zu einem aktiven Urlaub gepasst.
+
+Außerdem habe ich **Phuket Town** besucht und war beim **Big Buddha**. Dadurch war die Reise für mich nicht nur Strandurlaub, sondern auch eine gute Gelegenheit, unterschiedliche Orte der Insel kennenzulernen.
+
+Im März habe ich das Wetter als **sehr heiß** erlebt. Für längere Spaziergänge oder Training draußen würde ich deshalb eher die kühleren Tageszeiten wählen und genügend Wasser einplanen.
 
 ### Was kannst du auf Phuket sportlich machen?
 
@@ -93,23 +106,29 @@ Je nachdem, worauf du Lust hast, bieten sich zum Beispiel an:
 - Muay Thai
 - MMA und andere Kampfsportarten
 
-Gerade **Muay Thai** ist natürlich etwas, das perfekt zu Thailand passt. Auch wenn du kein erfahrener Kampfsportler bist, gibt es auf Phuket Trainingsmöglichkeiten für unterschiedliche Erfahrungslevel.
+Gerade **Muay Thai** passt natürlich besonders gut zu Thailand. Auf Phuket findest du mehrere Trainingsmöglichkeiten, wenn du im Urlaub einmal etwas anderes als ein klassisches Fitnessstudio ausprobieren möchtest.
 
-### Bangtao Muay Thai & MMA
+### Bangtao Muay Thai & MMA – selbst vor Ort angeschaut
 
 Ein konkretes Beispiel ist **[Bangtao Muay Thai & MMA](https://bangtaomuaythai.com/)** in Choeng Thale auf Phuket.
 
-Das Trainingszentrum liegt im Bereich Bang Tao und bietet laut eigener Website Programme für Anfänger bis hin zu erfahrenen Athleten. Neben Muay Thai gehören unter anderem MMA, Brazilian Jiu-Jitsu, Kickboxing, Wrestling sowie Strength & Conditioning zum Angebot.
+Ich habe das Trainingszentrum während meines Aufenthalts **selbst besucht und angeschaut**, dort aber nicht trainiert. Schon vor Ort fand ich spannend zu sehen, wie stark Fitness und Kampfsport in dieser Gegend zum Alltag gehören.
 
-Wer also im Phuket-Urlaub einmal etwas anderes als ein klassisches Fitnessstudio ausprobieren möchte, kann dort Kampfsport und Fitnesstraining direkt mit der Reise verbinden.
+Das Trainingszentrum liegt im Bereich Bang Tao und bietet laut eigener Website Programme für verschiedene Erfahrungslevel. Neben Muay Thai gehören dort auch weitere Kampfsport- und Conditioning-Angebote zum Programm.
 
-**Wichtig:** Trainingspläne, Preise und verfügbare Kurse können sich ändern. Prüfe deshalb vor deinem Besuch immer den aktuellen Stundenplan beim Anbieter.
+Wenn du dort trainieren möchtest, prüfe vor deinem Besuch am besten den aktuellen Stundenplan, die Preise und die angebotenen Kurse direkt beim Anbieter.
+
+### Essen auf Phuket – mein Favorit: grünes Curry
+
+Natürlich gehört für mich bei Thailand auch das Essen dazu.
+
+Mein persönlicher Favorit war **grünes Curry**. Außerdem ist mir aufgefallen, dass Essen häufig günstiger wird, wenn man sich etwas von den direkten Strandlagen entfernt. Gerade abseits der touristischsten Bereiche lohnt es sich deshalb, auch kleinere Restaurants auszuprobieren.
 
 ### Mein Tipp für Training auf Phuket
 
-Durch das warme und teilweise sehr feuchte Klima kann Training deutlich anstrengender wirken als zuhause.
+Durch die Hitze kann Training deutlich anstrengender wirken als zuhause. Gerade im März würde ich intensive Einheiten nicht unbedingt in die heißeste Tageszeit legen.
 
-Wenn du draußen trainierst, sind der frühe Morgen oder der spätere Nachmittag häufig angenehmer als die heißeste Zeit des Tages. Genügend trinken und das Trainingspensum an das Klima anzupassen, ist besonders wichtig.
+Für Outdoor-Training sind der frühe Morgen oder der spätere Nachmittag meist angenehmer. Genügend trinken und die Belastung an das Klima anzupassen, ist besonders wichtig.
 
 Wenn du auch auf Reisen kurze Workouts einbauen möchtest, findest du hier mein [15-Minuten-Hotel-Workout ohne Gym](/blog/hotelworkout/).
 
