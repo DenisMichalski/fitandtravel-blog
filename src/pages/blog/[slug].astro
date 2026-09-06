@@ -75,6 +75,24 @@ const articleSchema = {
                             })
                         }
                     </time>
+
+                    {
+                        post.data.updated && (
+                            <>
+                                <span aria-hidden="true">•</span>
+                                <span>
+                                    Aktualisiert am{" "}
+                                    <time datetime={post.data.updated.toISOString()}>
+                                        {post.data.updated.toLocaleDateString("de-DE", {
+                                            day: "2-digit",
+                                            month: "2-digit",
+                                            year: "numeric",
+                                        })}
+                                    </time>
+                                </span>
+                            </>
+                        )
+                    }
                 </div>
 
                 <h1
