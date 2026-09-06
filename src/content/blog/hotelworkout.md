@@ -2,7 +2,8 @@
 title: "Hotel-Workout ohne Gym: 15 Minuten im Hotelzimmer"
 summary: "Hotel-Workout ohne Gym: Dieses 15-Minuten-Training für den ganzen Körper funktioniert im Hotelzimmer – ohne Geräte und mit wenig Platz."
 image: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&h=400"
-date: "2026-09-06"
+date: "2025-06-11"
+updated: "2026-09-06"
 category: "Fitness"
 ---
 
