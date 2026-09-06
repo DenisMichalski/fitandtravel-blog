@@ -2,7 +2,8 @@
 title: "Fitness-Gadgets für Reisen & Hotel-Workouts"
 summary: "Fitness-Gadgets für Reisen: 5 kompakte Empfehlungen für Hotel-Workouts – von Widerstandsbändern und Parallettes bis Speed Rope und Travel-Matte."
 image: "https://images.pexels.com/photos/4379318/pexels-photo-4379318.jpeg?auto=compress&h=400"
-date: "2026-09-06"
+date: "2025-06-09"
+updated: "2026-09-06"
 category: "Gadgets"
 ---
 
