@@ -29,7 +29,7 @@ const articleSchema = {
     description: post.data.summary,
     image: [post.data.image],
     datePublished: post.data.date.toISOString(),
-    dateModified: post.data.date.toISOString(),
+    dateModified: (post.data.updated ?? post.data.date).toISOString(),
     mainEntityOfPage: {
         "@type": "WebPage",
         "@id": canonical,
