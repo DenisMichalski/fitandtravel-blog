@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+    title="Über mich | Fit & Travel"
+    description="Mehr über Fit & Travel und die Idee hinter dem Blog."
+    canonical="https://fitandtravelblog.de/about"
+>
+    <Header />
+
+    <main class="min-h-screen bg-slate-50 px-4 py-12 dark:bg-slate-900">
+        <section
+            class="mx-auto max-w-2xl rounded-3xl bg-white px-6 py-16 text-center shadow-lg dark:bg-slate-800"
+        >
+            <h1 class="mb-4 text-3xl font-bold text-slate-900 dark:text-white">
+                Über diesen Blog
+            </h1>
+
+            <p
+                class="mb-6 text-lg leading-relaxed text-slate-800 dark:text-gray-300"
+            >
+                Hallo, ich bin Denis – Fitness-Fan &amp; Reisejunkie.
+                <br />
+                Dieser Blog inspiriert dich, aktiv zu bleiben, egal wo du gerade bist!
+            </p>
+
+            <img
+                src="/profil.jpg"
+                alt="Denis von Fit & Travel"
+                class="mx-auto mb-5 h-52 w-52 rounded-full object-cover shadow-lg"
+            />
+
+            <p class="text-slate-800 dark:text-gray-300">
+                Folge mir auch auf
+                <a
+                    href="https://www.instagram.com/fitandtravelblog/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-bold text-pink-500 underline transition hover:text-yellow-400"
+                >
+                    Instagram
+                </a>
+                !
+            </p>
+        </section>
+    </main>
+</Layout>

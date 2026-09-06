@@ -1,0 +1,52 @@
+<section
+    class="flex min-h-[60vh] flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-pink-100 px-4 py-16 text-center dark:from-slate-800 dark:to-slate-900"
+>
+    <img
+        src="https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&h=600"
+        alt="Aktiv auf Reisen"
+        class="mb-8 w-full max-w-2xl rounded-3xl object-cover shadow-xl"
+    />
+
+    <h1
+        class="mb-4 text-3xl font-extrabold text-slate-900 md:text-5xl dark:text-white"
+    >
+        Entdecke Fitness &amp; Abenteuer auf Reisen!
+    </h1>
+
+    <p class="mb-6 max-w-xl text-lg text-slate-900 dark:text-white">
+        Tipps, Motivation und praktische Gadgets für alle, die unterwegs aktiv
+        bleiben wollen.
+    </p>
+
+    <a
+        id="hero-gear-cta"
+        href="/gear"
+        class="mt-2 flex items-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 to-yellow-400 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:from-pink-600 hover:to-yellow-500"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+
+        Meine Empfehlungen ansehen ⇾
+    </a>
+</section>
+
+<script>
+    document.querySelector("#hero-gear-cta")?.addEventListener("click", () => {
+        window.trackFitAndTravelEvent?.("cta_click", {
+            location: "hero_button",
+            target: "gear_page",
+        });
+    });
+</script>

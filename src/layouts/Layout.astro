@@ -1,0 +1,178 @@
+---
+import "../styles/global.css";
+import CookieConsent from "../components/CookieConsent.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "Fit & Travel | Fitness unterwegs & Travel Essentials",
+  description = "Fit & Travel – entdecke Fitness für unterwegs, praktische Travel Essentials und hilfreiche Tipps für Reisen, Hotel und Alltag.",
+  canonical = "https://fitandtravelblog.de/",
+  image = "https://fitandtravelblog.de/og-cover.jpg",
+  noindex = false,
+} = Astro.props;
+
+const normalizedCanonical = canonical.endsWith("/") ? canonical : `${canonical}/`;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <link rel="canonical" href={normalizedCanonical} />
+
+    <link
+      rel="shortcut icon"
+      href="/fitandtravel-icon-ohne-text.ico"
+      type="image/x-icon"
+    />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={normalizedCanonical} />
+    <meta property="og:site_name" content="Fit & Travel" />
+    <meta property="og:image" content={image} />
+    <meta
+      property="og:image:alt"
+      content="Fit & Travel – Fitness unterwegs und Travel Essentials"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+  </head>
+
+  <body>
+    <slot />
+    <Footer />
+
+    <script is:inline>
+      (() => {
+        const STORAGE_KEY = "fitandtravel-consent";
+        const GA_ID = "G-4SHX2Q29JS";
+
+        let analyticsScriptLoaded = false;
+        let analyticsConfigured = false;
+        let analyticsConsentGranted = false;
+
+        window.dataLayer = window.dataLayer || [];
+
+        window.gtag =
+          window.gtag ||
+          function () {
+            window.dataLayer.push(arguments);
+          };
+
+        // Standardmäßig keine Analyse- oder Werbeeinwilligung.
+        window.gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
+
+        function loadGoogleAnalyticsScript() {
+          if (
+            analyticsScriptLoaded ||
+            document.querySelector(`script[data-fitandtravel-ga="${GA_ID}"]`)
+          ) {
+            return;
+          }
+
+          analyticsScriptLoaded = true;
+
+          const script = document.createElement("script");
+          script.async = true;
+          script.dataset.fitandtravelGa = GA_ID;
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=" +
+            encodeURIComponent(GA_ID);
+
+          document.head.appendChild(script);
+        }
+
+        window.trackFitAndTravelEvent = function (eventName, parameters = {}) {
+          if (
+            analyticsConsentGranted !== true ||
+            typeof window.gtag !== "function"
+          ) {
+            return;
+          }
+
+          window.gtag("event", eventName, parameters);
+        };
+
+        window.loadFitAndTravelAnalytics = function () {
+          analyticsConsentGranted = true;
+          window[`ga-disable-${GA_ID}`] = false;
+
+          window.gtag("consent", "update", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+          });
+
+          if (!analyticsConfigured) {
+            analyticsConfigured = true;
+
+            window.gtag("js", new Date());
+
+            window.gtag("config", GA_ID);
+
+            loadGoogleAnalyticsScript();
+          }
+        };
+
+        window.disableFitAndTravelAnalytics = function () {
+          analyticsConsentGranted = false;
+          window[`ga-disable-${GA_ID}`] = true;
+
+          window.gtag("consent", "update", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+          });
+        };
+
+        try {
+          const consent = JSON.parse(
+            localStorage.getItem(STORAGE_KEY) || "null",
+          );
+
+          if (consent?.analytics === true) {
+            window.loadFitAndTravelAnalytics();
+          } else {
+            window.disableFitAndTravelAnalytics();
+          }
+        } catch {
+          window.disableFitAndTravelAnalytics();
+        }
+      })();
+    </script>
+
+    <CookieConsent />
+  </body>
+</html>

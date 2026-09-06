@@ -1,0 +1,289 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import GearCard from "../components/GearCard.astro";
+
+const GEAR = [
+    {
+        category: "Fitness (Hotel & Unterwegs)",
+        subtitle: "Leicht, kompakt, effektiv – perfekt für Reisen.",
+        trustText:
+            "Reisetaugliche Fitness-Essentials für unterschiedliche Trips: von ultrakompaktem Equipment fürs Handgepäck bis zu Calisthenics-Gear für längere Aufenthalte – ohne klassisches Fitnessstudio.",
+        items: [
+            {
+                title: "Kompaktes Ganzkörpertraining unterwegs",
+                description:
+                    "Vier Widerstandsstufen in einem kleinen Set – ideal für Hotelzimmer, Warm-up, Mobility und kurze Workouts auf Reisen.",
+                href: "https://www.amazon.de/dp/B079VHVKLJ?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Hotel", "Kompakt", "Ganzkörper"],
+            },
+            {
+                title: "Calisthenics & Push-Training überall",
+                description:
+                    "Parallettes für Liegestütze, L-Sits und Calisthenics – für Home-Workouts, Ferienwohnung oder längere Reisen.",
+                href: "https://www.amazon.de/dp/B0FMXYCR18?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Calisthenics", "Push-Training", "Ohne Gym"],
+                reason:
+                    "Eine starke Wahl, wenn du auf Reisen nicht nur ein Mini-Workout willst, sondern gezielt Push- und Calisthenics-Übungen trainieren möchtest.",
+                featured: true,
+                topPriority: 2,
+            },
+            {
+                title: "Komfort & Hygiene beim Training unterwegs",
+                description:
+                    "Trainiere überall sauber und bequem — vom Hotelzimmer bis zum Strand.",
+                href: "https://www.amazon.de/gaiam-Exercise-Foldable-Workouts-Cranberry/dp/B07XYY3BHN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Mobility", "Sauber", "Reisetauglich"],
+            },
+            {
+                title: "Gesunde Routine auch auf Reisen",
+                description:
+                    "Protein, Snacks oder Supplements immer griffbereit. Praktisch für unterwegs.",
+                href: "https://www.amazon.de/Blender-Bottle-Shaker-Flasche-Pillen-Organizer-Proteinpulver/dp/B0CN17WPTX?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Routine", "Praktisch", "Kompakt"],
+            },
+            {
+                title: "Schnelles Cardio im Handgepäck",
+                description:
+                    "Kompaktes Speed Rope für kurze Cardio-Einheiten, HIIT und Double Unders – leicht mitzunehmen und schnell einsatzbereit.",
+                href: "https://www.amazon.de/dp/B012G9G7HW?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Cardio", "Ultraleicht", "HIIT"],
+            },
+        ],
+    },
+    {
+        category: "Travel & Outdoor Essentials",
+        subtitle: "Praktisch, robust, reisetauglich.",
+        trustText:
+            "Diese Essentials sparen dir Zeit und Nerven unterwegs. Weniger Chaos, mehr Komfort – und du bist für Tagestrips und spontane Abenteuer ready.",
+        items: [
+            {
+                title: "Stressfrei packen & schneller finden",
+                description:
+                    "Mehr Ordnung im Gepäck und schneller alles griffbereit.",
+                href: "https://www.amazon.de/-/en/TRIPPED-Travel-Gear-Compression-Organizer/dp/B0B92LC2CN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Organisation", "Stressfrei", "Travel Hack"],
+            },
+            {
+                title: "Reiseflaschen-Set fürs Handgepäck",
+                description:
+                    "23-teiliges Set mit auslaufsicheren 90-ml- und 60-ml-Behältern, Pump- und Sprühflaschen, Dosen und transparentem Kulturbeutel – praktisch für Shampoo, Lotion und andere Reise-Essentials.",
+                href: "https://www.amazon.de/dp/B0FHWDR92L?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Handgepäck", "Auslaufsicher", "23-teilig"],
+            },
+            {
+                title: "Power für lange Reisetage",
+                description:
+                    "20.000-mAh-Powerbank mit bis zu 45W Schnellladen und integriertem USB-C-Kabel – stark für Smartphone, Tablet und andere USB-C-Geräte unterwegs.",
+                href: "https://www.amazon.de/dp/B0DCYR5VNR?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Must-have", "20.000 mAh", "45W USB-C"],
+                reason:
+                    "Die höhere Kapazität und bis zu 45W Ladeleistung machen sie besonders interessant für längere Reisetage, Flüge und Trips, bei denen du mehrere Geräte unterwegs versorgen möchtest.",
+                featured: true,
+                topPriority: 1,
+            },
+            {
+                title: "Tagesrucksack mit Laptopfach",
+                description:
+                    "Praktischer Allround-Rucksack für Reise, Alltag und Tagesausflüge – mit Laptopfach, atmungsaktiver Rückseite und recyceltem Material.",
+                href: "https://www.amazon.de/dp/B0GMY2K3H3?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Travel", "Laptopfach", "Alltag"],
+            },
+            {
+                title: "Noise-Cancelling Kopfhörer",
+                description:
+                    "Perfekt für Flüge, Bahnfahrten und konzentriertes Arbeiten unterwegs.",
+                href: "https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Travel", "Noise Cancelling", "Focus", "Flug"],
+                reason:
+                    "Besonders interessant für Flug und Bahn, wenn du Umgebungsgeräusche reduzieren und unterwegs entspannter hören oder arbeiten möchtest.",
+                featured: true,
+                topPriority: 3,
+            },
+            {
+                title: "Preis-Leistungs-Tipp: Soundcore Q20i",
+                description:
+                    "Kabelloser Over-Ear-Kopfhörer mit Hybrid Noise Cancelling, Transparenzmodus, App-EQ und langer Akkulaufzeit – stark für Flug, Bahn und Alltag.",
+                href: "https://www.amazon.de/dp/B0C3HCD34R?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Preis-Leistung", "Hybrid ANC", "Over-Ear"],
+                reason:
+                    "Eine gute Alternative zum Top-Pick, wenn du solides Noise Cancelling und viele Reise-Features zu einem meist günstigeren Preis suchst.",
+            },
+            {
+                title: "Travel Organizer",
+                description:
+                    "Ordnung für Kabel, Powerbank und Technik – perfekt fürs Handgepäck.",
+                href: "https://www.amazon.de/dp/B0C6FDSTZB?tag=fitandtrave0b-21",
+                merchant: "Amazon",
+                affiliate: true,
+                badges: ["Travel", "Organisation", "Handgepäck"],
+            },
+        ],
+    },
+];
+
+const topPicks = GEAR.flatMap((section) =>
+    section.items
+        .filter((item) => item.featured)
+        .map((item) => ({
+            ...item,
+            category: section.category,
+        })),
+).sort((a, b) => (a.topPriority ?? 99) - (b.topPriority ?? 99));
+---
+
+<Layout
+    title="Fitness & Travel Gear Empfehlungen | Fit & Travel"
+    description="Entdecke meine Empfehlungen für Fitness unterwegs und praktische Travel Essentials – kompakt, reisetauglich und ideal für Hotel, Strand und Alltag."
+    canonical="https://fitandtravelblog.de/gear"
+>
+    <Header />
+
+    <main class="min-h-screen bg-gray-100 dark:bg-slate-900">
+        <section class="mx-auto max-w-5xl px-6 py-10">
+            <header class="mb-8">
+                <h1
+                    class="text-3xl font-extrabold text-slate-900 dark:text-white"
+                >
+                    Gear &amp; Empfehlungen
+                </h1>
+
+                <p
+                    class="mt-3 max-w-3xl leading-relaxed text-slate-600 dark:text-slate-300"
+                >
+                    Meine Empfehlungen für Fitness unterwegs und praktische
+                    Travel Essentials – kompakt, nützlich und ideal für Reisen.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a
+                        href="/"
+                        class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white transition hover:opacity-90 dark:bg-white dark:text-slate-900"
+                    >
+                        ← Zur Startseite
+                    </a>
+
+                    <a
+                        href="/blog"
+                        class="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-4 py-2 font-semibold text-slate-900 transition hover:bg-slate-50 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+                    >
+                        Blog ansehen
+                    </a>
+                </div>
+            </header>
+
+            <div
+                class="mb-8 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+            >
+                Hinweis: Einige Links sind Affiliate-Links. Wenn du darüber
+                etwas kaufst, erhalte ich eine kleine Provision – für dich
+                bleibt der Preis gleich. Als Amazon-Partner verdiene ich an
+                qualifizierten Verkäufen.
+            </div>
+            {
+                topPicks.length > 0 && (
+                    <section class="mb-12">
+                        <div class="mb-5">
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                                Meine Top Empfehlungen 🔥
+                            </h2>
+
+                            <p class="mt-2 text-slate-600 dark:text-slate-300">
+                                Drei besonders interessante Picks für
+                                Training und Reisen – bewusst ausgewählt, damit
+                                die wichtigsten Empfehlungen sofort ins Auge
+                                fallen.
+                            </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {topPicks.map((item) => (
+                                <GearCard
+                                    item={item}
+                                    category={item.category}
+                                    location="gear_top_picks"
+                                />
+                            ))}
+                        </div>
+                    </section>
+                )
+            }
+
+            <div class="grid gap-12">
+                {
+                    GEAR.map((section) => (
+                        <section>
+                            <div class="mb-4">
+                                <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+                                    {section.category}
+                                </h2>
+
+                                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                                    {section.subtitle}
+                                </p>
+                            </div>
+
+                            <div class="mb-5 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+                                <div class="font-bold text-slate-900 dark:text-white">
+                                    Warum diese {section.category} Empfehlungen?
+                                </div>
+
+                                <p class="mt-2 leading-relaxed text-slate-600 dark:text-slate-300">
+                                    {section.trustText}
+                                </p>
+                            </div>
+
+                            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                {section.items.map((item) => (
+                                    <GearCard
+                                        item={item}
+                                        category={section.category}
+                                        location="gear"
+                                    />
+                                ))}
+                            </div>
+                        </section>
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    document.querySelectorAll("[data-gear-link]").forEach((link) => {
+        link.addEventListener("click", () => {
+            if (!(link instanceof HTMLElement)) return;
+
+            window.trackFitAndTravelEvent?.("outbound_click", {
+                label: link.dataset.label,
+                merchant: link.dataset.merchant,
+                affiliate: link.dataset.affiliate === "true",
+                location: link.dataset.location,
+                page: "gear",
+            });
+        });
+    });
+</script>

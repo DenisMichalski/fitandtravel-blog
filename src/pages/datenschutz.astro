@@ -1,0 +1,475 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+const legalStreet = import.meta.env.LEGAL_STREET;
+const legalCity = import.meta.env.LEGAL_CITY;
+
+if (!legalStreet || !legalCity) {
+    throw new Error("Legal address environment variables are missing.");
+}
+---
+
+<Layout
+    title="Datenschutzerklärung | Fit & Travel Blog"
+    description="Datenschutzerklärung des Fit & Travel Blogs."
+    canonical="https://fitandtravelblog.de/datenschutz"
+>
+    <Header />
+
+    <main class="min-h-screen bg-slate-50 px-4 py-12 dark:bg-slate-900">
+        <article
+            class="mx-auto max-w-3xl rounded-3xl bg-white px-6 py-12 shadow-xl md:px-10 dark:bg-slate-800"
+        >
+            <h1 class="mb-8 text-3xl font-bold text-slate-900 dark:text-white">
+                Datenschutzerklärung
+            </h1>
+
+            <div
+                class="space-y-9 leading-relaxed text-slate-700 dark:text-slate-300"
+            >
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        1. Datenschutz auf einen Blick
+                    </h2>
+
+                    <p>
+                        Der Schutz deiner personenbezogenen Daten ist uns
+                        wichtig. Personenbezogene Daten werden vertraulich und
+                        entsprechend den geltenden Datenschutzvorschriften sowie
+                        dieser Datenschutzerklärung verarbeitet.
+                    </p>
+
+                    <p class="mt-3">
+                        Diese Datenschutzerklärung informiert darüber, welche
+                        Daten beim Besuch dieser Website verarbeitet werden, zu
+                        welchen Zwecken dies geschieht und welche Rechte dir
+                        zustehen.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        2. Verantwortlicher
+                    </h2>
+
+                    <p>
+                        Verantwortlich für die Datenverarbeitung auf dieser
+                        Website ist:
+                    </p>
+
+                    <address class="mt-3 not-italic">
+                        Denis Michalski<br />
+                        {legalStreet}<br />
+                        {legalCity}t<br />
+                        Deutschland
+                    </address>
+
+                    <p class="mt-3">
+                        E-Mail:
+                        <a
+                            href="mailto:fitandtravel.ai@gmail.com"
+                            class="text-blue-600 underline dark:text-blue-400"
+                        >
+                            fitandtravel.ai@gmail.com
+                        </a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        3. Hosting über Cloudflare Pages
+                    </h2>
+
+                    <p>
+                        Diese Website wird über Cloudflare Pages bereitgestellt.
+                        Anbieter ist Cloudflare, Inc., 101 Townsend St., San
+                        Francisco, CA 94107, USA.
+                    </p>
+
+                    <p class="mt-3">
+                        Beim Aufruf dieser Website werden technisch
+                        erforderliche Daten verarbeitet, damit die Website an
+                        dein Endgerät ausgeliefert und die Sicherheit sowie
+                        Stabilität des Dienstes gewährleistet werden können.
+                        Dazu können insbesondere IP-Adresse, Datum und Uhrzeit
+                        des Zugriffs, aufgerufene URL, Referrer-Informationen,
+                        Browserinformationen sowie Angaben zum verwendeten
+                        Endgerät gehören.
+                    </p>
+
+                    <p class="mt-3">
+                        Die Verarbeitung erfolgt auf Grundlage unseres
+                        berechtigten Interesses an einer sicheren, schnellen und
+                        zuverlässigen Bereitstellung der Website gemäß Art. 6
+                        Abs. 1 lit. f DSGVO.
+                    </p>
+
+                    <p class="mt-3">
+                        Soweit Cloudflare personenbezogene Daten in unserem
+                        Auftrag verarbeitet, erfolgt dies auf Grundlage der
+                        datenschutzrechtlichen Vereinbarungen mit Cloudflare. Da
+                        Cloudflare ein Unternehmen mit Sitz in den USA ist,
+                        können Daten auch außerhalb der Europäischen Union
+                        beziehungsweise des Europäischen Wirtschaftsraums
+                        verarbeitet werden.
+                    </p>
+
+                    <p class="mt-3">
+                        Weitere Informationen findest du in der
+                        <a
+                            href="https://www.cloudflare.com/de-de/privacypolicy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 underline dark:text-blue-400"
+                        >
+                            Datenschutzerklärung von Cloudflare
+                        </a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        4. Kontaktformular und Formspree
+                    </h2>
+
+                    <p>
+                        Wenn du uns über das Kontaktformular kontaktierst,
+                        verarbeiten wir die von dir eingegebenen Angaben. Dazu
+                        gehören insbesondere dein Name, deine E-Mail-Adresse,
+                        deine Nachricht sowie gegebenenfalls weitere freiwillig
+                        übermittelte Informationen.
+                    </p>
+
+                    <p class="mt-3">
+                        Für die technische Übermittlung und Verarbeitung des
+                        Kontaktformulars verwenden wir Formspree. Formspree
+                        stellt das Backend für das Kontaktformular bereit und
+                        speichert Formulareinsendungen, damit diese von uns
+                        bearbeitet werden können.
+                    </p>
+
+                    <p class="mt-3">
+                        Im Rahmen der Übermittlung können neben den von dir
+                        eingegebenen Daten auch technisch erforderliche Daten
+                        wie IP-Adresse, Zeitstempel sowie Browser- und
+                        Verbindungsinformationen verarbeitet werden.
+                    </p>
+
+                    <p class="mt-3">
+                        Formspree gibt an, seine Dienste unter Nutzung von
+                        Amazon Web Services in den USA zu betreiben. Für
+                        internationale Datenübermittlungen verwendet Formspree
+                        nach eigenen Angaben unter anderem die
+                        Standardvertragsklauseln der Europäischen Kommission.
+                    </p>
+
+                    <p class="mt-3">
+                        Erfolgt deine Kontaktaufnahme im Zusammenhang mit einem
+                        Vertrag oder vorvertraglichen Maßnahmen, beruht die
+                        Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO. In anderen
+                        Fällen beruht die Verarbeitung auf unserem berechtigten
+                        Interesse an der Bearbeitung deiner Anfrage gemäß Art. 6
+                        Abs. 1 lit. f DSGVO.
+                    </p>
+
+                    <p class="mt-3">
+                        Weitere Informationen findest du bei
+                        <a
+                            href="https://formspree.io/security/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 underline dark:text-blue-400"
+                        >
+                            Formspree
+                        </a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        5. Einwilligungsverwaltung und lokale Speicherung
+                    </h2>
+
+                    <p>
+                        Beim ersten Besuch dieser Website kannst du entscheiden,
+                        ob du der Nutzung optionaler Analyse-Technologien
+                        zustimmen möchtest.
+                    </p>
+
+                    <p class="mt-3">
+                        Deine Entscheidung wird unter dem Eintrag
+                        <code>fitandtravel-consent</code> lokal im Speicher deines
+                        Browsers gespeichert. Dadurch kann die Website deine bereits
+                        getroffene Auswahl bei weiteren Seitenaufrufen berücksichtigen.
+                    </p>
+
+                    <p class="mt-3">
+                        Diese Speicherung ist für die Bereitstellung der von dir
+                        ausdrücklich gewünschten Einwilligungsverwaltung
+                        erforderlich. Sie erfolgt daher ohne zusätzliche
+                        Einwilligung nach Maßgabe von § 25 Abs. 2 Nr. 2 TDDDG.
+                    </p>
+
+                    <p class="mt-3">
+                        Du kannst deine Auswahl jederzeit über die Schaltfläche
+                        „Cookie-Einstellungen“ ändern. Außerdem kannst du die
+                        gespeicherten Daten jederzeit über die Einstellungen
+                        deines Browsers löschen.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        6. Google Analytics
+                    </h2>
+
+                    <p>
+                        Diese Website verwendet Google Analytics 4, einen
+                        Webanalysedienst von Google, um die Nutzung der Website
+                        statistisch auszuwerten und unser Angebot zu verbessern.
+                    </p>
+
+                    <p class="mt-3">
+                        Google Analytics wird auf dieser Website erst geladen,
+                        nachdem du ausdrücklich der Verwendung optionaler
+                        Analyse-Technologien zugestimmt hast. Ohne deine
+                        Zustimmung wird das Google-Analytics-Skript nicht
+                        geladen und es werden über dieses Skript keine
+                        Analysedaten an Google übertragen.
+                    </p>
+
+                    <p class="mt-3">
+                        Nach deiner Einwilligung können insbesondere
+                        Informationen über Seitenaufrufe, Interaktionen mit der
+                        Website, Referrer, Browsertyp, Gerätetyp,
+                        Bildschirmauflösung sowie ungefähre
+                        Standortinformationen verarbeitet werden.
+                    </p>
+
+                    <p class="mt-3">
+                        Google erklärt, dass IP-Adressen in Google Analytics 4
+                        nicht protokolliert oder gespeichert werden. Für
+                        Zugriffe aus der EU werden IP-Adressen nach Angaben von
+                        Google lediglich kurzfristig zur Ableitung grober
+                        Standortinformationen verwendet und danach verworfen.
+                    </p>
+
+                    <p class="mt-3">
+                        Wir verwenden den Google Consent Mode. Standardmäßig
+                        sind Analyse- und Werbespeicher deaktiviert.
+                        Insbesondere bleiben
+                        <code>ad_storage</code>, <code>ad_user_data</code> und
+                        <code>ad_personalization</code> auf „denied“. Google Analytics
+                        wird erst nach deiner Einwilligung aktiviert.
+                    </p>
+
+                    <p class="mt-3">
+                        Rechtsgrundlage für die Verarbeitung ist deine
+                        Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO in
+                        Verbindung mit § 25 Abs. 1 TDDDG. Die Einwilligung ist
+                        freiwillig und kann jederzeit mit Wirkung für die
+                        Zukunft widerrufen werden.
+                    </p>
+
+                    <p class="mt-3">
+                        Nutze hierzu die jederzeit erreichbare Schaltfläche
+                        „Cookie-Einstellungen“ und wähle „Nur notwendige“.
+                    </p>
+
+                    <p class="mt-3">
+                        Für Google-Analytics-Daten können je nach Einstellung
+                        der Analytics-Property unterschiedliche
+                        Aufbewahrungsfristen gelten. Bei Standard-GA4-Properties
+                        können Daten auf Nutzerebene insbesondere für 2 oder 14
+                        Monate eingestellt werden.
+                    </p>
+
+                    <p class="mt-3">
+                        Weitere Informationen findest du in den
+                        <a
+                            href="https://policies.google.com/privacy?hl=de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 underline dark:text-blue-400"
+                        >
+                            Datenschutzbestimmungen von Google
+                        </a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        7. Affiliate-Links und Amazon PartnerNet
+                    </h2>
+
+                    <p>
+                        Auf dieser Website befinden sich sogenannte
+                        Affiliate-Links. Einige Produktlinks führen
+                        beispielsweise zu Amazon. Diese Links enthalten eine
+                        Partnerkennung, über die Amazon erkennen kann, dass ein
+                        Besuch beziehungsweise ein qualifizierter Kauf über
+                        diese Website vermittelt wurde.
+                    </p>
+
+                    <p class="mt-3">
+                        Wenn du einen solchen Affiliate-Link anklickst, verlässt
+                        du unsere Website und wirst zum jeweiligen Anbieter
+                        weitergeleitet. Erst durch den Aufruf der externen
+                        Website findet die weitere Datenverarbeitung durch den
+                        jeweiligen Anbieter statt.
+                    </p>
+
+                    <p class="mt-3">
+                        Dabei können insbesondere die aufgerufene Seite,
+                        technische Verbindungsdaten, Referrer-Informationen
+                        sowie die im Affiliate-Link enthaltene Partnerkennung
+                        verarbeitet werden. Ab diesem Zeitpunkt gelten die
+                        Datenschutzbestimmungen des jeweiligen Anbieters.
+                    </p>
+
+                    <p class="mt-3">
+                        Fit & Travel nimmt am Amazon-Partnerprogramm teil. Wenn
+                        du über entsprechend gekennzeichnete Links qualifizierte
+                        Käufe tätigst, können wir dafür eine Provision erhalten.
+                        Für dich entstehen dadurch keine zusätzlichen Kosten.
+                    </p>
+
+                    <p class="mt-3 font-semibold">
+                        Als Amazon-Partner verdiene ich an qualifizierten
+                        Verkäufen.
+                    </p>
+
+                    <p class="mt-3">
+                        Die Amazon-Partnerlinks setzen auf dieser Website selbst
+                        keine Amazon-Cookies. Die weitere Verarbeitung erfolgt
+                        erst nach dem Wechsel auf die Amazon-Website nach
+                        Maßgabe der dort geltenden Datenschutzbestimmungen.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        8. Externe Links und soziale Netzwerke
+                    </h2>
+
+                    <p>
+                        Diese Website enthält Links zu externen Websites und
+                        sozialen Netzwerken, beispielsweise Instagram.
+                    </p>
+
+                    <p class="mt-3">
+                        Solange du einen solchen Link nicht anklickst, wird
+                        allein durch die Darstellung eines normalen externen
+                        Links keine Verbindung zu dem jeweiligen sozialen
+                        Netzwerk hergestellt. Erst wenn du den Link aufrufst,
+                        verlässt du unsere Website.
+                    </p>
+
+                    <p class="mt-3">
+                        Für die anschließende Verarbeitung personenbezogener
+                        Daten ist der jeweilige externe Anbieter nach seinen
+                        eigenen Datenschutzbestimmungen verantwortlich.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        9. Speicherdauer
+                    </h2>
+
+                    <p>
+                        Personenbezogene Daten werden grundsätzlich nur so lange
+                        gespeichert, wie dies für den jeweiligen
+                        Verarbeitungszweck erforderlich ist oder gesetzliche
+                        Aufbewahrungspflichten bestehen.
+                    </p>
+
+                    <p class="mt-3">
+                        Daten aus Kontaktanfragen werden gelöscht, sobald die
+                        Anfrage abschließend bearbeitet wurde und keine
+                        gesetzlichen oder sonstigen berechtigten Gründe für eine
+                        weitere Speicherung bestehen.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        10. Deine Rechte
+                    </h2>
+
+                    <p>
+                        Dir stehen nach Maßgabe der gesetzlichen Voraussetzungen
+                        insbesondere folgende Rechte zu:
+                    </p>
+
+                    <ul class="mt-3 list-disc space-y-2 pl-6">
+                        <li>
+                            Recht auf Auskunft über deine gespeicherten Daten
+                        </li>
+                        <li>Recht auf Berichtigung unrichtiger Daten</li>
+                        <li>Recht auf Löschung deiner Daten</li>
+                        <li>Recht auf Einschränkung der Verarbeitung</li>
+                        <li>Recht auf Datenübertragbarkeit</li>
+                        <li>
+                            Recht auf Widerspruch gegen bestimmte Verarbeitungen
+                        </li>
+                        <li>
+                            Recht auf Widerruf einer erteilten Einwilligung mit
+                            Wirkung für die Zukunft
+                        </li>
+                    </ul>
+
+                    <p class="mt-3">
+                        Zur Ausübung deiner Rechte kannst du dich über die oben
+                        genannte E-Mail-Adresse an uns wenden.
+                    </p>
+
+                    <p class="mt-3">
+                        Außerdem hast du das Recht, dich bei einer zuständigen
+                        Datenschutzaufsichtsbehörde über die Verarbeitung deiner
+                        personenbezogenen Daten zu beschweren.
+                    </p>
+                </section>
+
+                <section>
+                    <h2
+                        class="mb-3 text-xl font-bold text-slate-900 dark:text-white"
+                    >
+                        11. Änderungen dieser Datenschutzerklärung
+                    </h2>
+
+                    <p>
+                        Diese Datenschutzerklärung wird angepasst, wenn sich die
+                        auf dieser Website eingesetzten Dienste, die technische
+                        Umsetzung oder die rechtlichen Anforderungen ändern.
+                    </p>
+
+                    <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">
+                        Stand: 30. August 2026
+                    </p>
+                </section>
+            </div>
+        </article>
+    </main>
+</Layout>

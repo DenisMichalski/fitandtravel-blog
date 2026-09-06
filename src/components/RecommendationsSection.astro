@@ -1,0 +1,122 @@
+---
+const recommendations = [
+    {
+        category: "Fitness",
+        items: [
+            {
+                title: "Resistance Bands Set",
+                description:
+                    "Super für Reisen + Home-Workouts. Leicht, günstig und effektiv.",
+            },
+            {
+                title: "Foldable Yoga Mat",
+                description:
+                    "Passt in den Koffer und eignet sich perfekt für Hotel-Workouts.",
+            },
+            {
+                title: "Shaker + Protein-Container",
+                description:
+                    "Praktisch für unterwegs und eine einfache Hilfe für deine Routine.",
+            },
+        ],
+    },
+    {
+        category: "Travel & Outdoor",
+        items: [
+            {
+                title: "Packing Cubes",
+                description:
+                    "Mehr Ordnung im Koffer und weniger Chaos auf Reisen.",
+            },
+            {
+                title: "Compact Power Bank",
+                description:
+                    "Praktisch für Citytrips, Flugreisen und längere Tage unterwegs.",
+            },
+            {
+                title: "Lightweight Daypack",
+                description: "Leicht, kompakt und ideal für Tagesausflüge.",
+            },
+        ],
+    },
+];
+---
+
+<section class="bg-white px-4 py-16 dark:bg-slate-900">
+    <div class="mx-auto max-w-6xl">
+        <div class="mb-10 text-center">
+            <h2
+                class="text-3xl font-extrabold text-slate-900 md:text-4xl dark:text-white"
+            >
+                Meine Empfehlungen
+            </h2>
+
+            <p
+                class="mx-auto mt-3 max-w-2xl text-slate-600 dark:text-slate-300"
+            >
+                Praktische Fitness- und Reise-Essentials, die unterwegs wirklich
+                sinnvoll sein können.
+            </p>
+        </div>
+
+        <div class="grid gap-10 md:grid-cols-2">
+            {
+                recommendations.map((block) => (
+                    <div>
+                        <h3 class="mb-5 text-2xl font-bold text-slate-900 dark:text-white">
+                            {block.category}
+                        </h3>
+
+                        <div class="space-y-4">
+                            {block.items.map((item) => (
+                                <a
+                                    href="/gear"
+                                    data-recommendation={item.title}
+                                    data-category={block.category}
+                                    class="group block rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800"
+                                >
+                                    <h4 class="text-lg font-bold text-slate-900 dark:text-white">
+                                        {item.title}
+                                    </h4>
+
+                                    <p class="mt-2 text-slate-600 dark:text-slate-300">
+                                        {item.description}
+                                    </p>
+
+                                    <span class="mt-4 inline-block font-semibold text-blue-600 group-hover:underline dark:text-blue-400">
+                                        Empfehlung ansehen →
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <div class="mt-10 text-center">
+            <a
+                href="/gear"
+                data-recommendation="all_recommendations"
+                data-category="overview"
+                class="inline-flex rounded-xl bg-slate-900 px-7 py-3 font-semibold text-white transition hover:bg-slate-700 dark:bg-blue-600 dark:hover:bg-blue-500"
+            >
+                Alle Gear-Empfehlungen ansehen →
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll("[data-recommendation]").forEach((link) => {
+        link.addEventListener("click", () => {
+            if (!(link instanceof HTMLElement)) return;
+
+            window.trackFitAndTravelEvent?.("recommendation_click", {
+                label: link.dataset.recommendation,
+                category: link.dataset.category,
+                location: "homepage_recommendations",
+            });
+        });
+    });
+</script>
