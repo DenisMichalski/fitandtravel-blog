@@ -73,6 +73,12 @@ Das war für mich eine schöne Abwechslung zum klassischen Strandtag: Du bist un
 
 Gerade solche Touren passen für mich sehr gut zu der Idee von Fit & Travel – nicht nur irgendwo ankommen, sondern das Reiseziel aktiv erleben.
 
+Wenn du einen ähnlichen Ausflug planst, gibt es bei GoWithGuide eine private Tour in den Phang-Nga-Nationalpark mit Longtail-Boot und James Bond Island.
+
+👉 <a href="https://tidd.ly/4h1jgcX" rel="sponsored nofollow">James Bond Island & Phang Nga Tour bei GoWithGuide ansehen</a>
+
+*Affiliate-Hinweis: Wenn du über diesen Link buchst, kann ich eine Provision erhalten. Für dich ändert sich der Preis dadurch nicht.*
+
 ### Similan Islands
 
 Außerdem habe ich einen Ausflug zu den **Similan Islands** gemacht.
