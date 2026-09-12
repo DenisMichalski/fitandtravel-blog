@@ -1,6 +1,6 @@
 ---
 title: "Phuket für Fitness-Fans: Muay Thai, Strände & aktive Urlaubstipps"
-summary: "Phuket aktiv erleben: meine Erfahrungen mit Stränden, Muay Thai, Hitze, Phuket Town und praktischen Fitness-Tipps für deinen Thailand-Urlaub."
+summary: "Phuket aktiv erleben: meine Erfahrungen mit Stränden, Muay Thai, Phi Phi, James-Bond-Ausflug, Similan Islands und praktischen Fitness-Tipps."
 image: "https://images.pexels.com/photos/4332238/pexels-photo-4332238.jpeg?auto=compress&h=400"
 date: "2026-09-12"
 category: "Reisen"
@@ -12,7 +12,7 @@ Zwischen Strand, Stadt, Ausflügen und Fitness findest du viele Möglichkeiten, 
 
 In diesem Guide zeige ich dir meine persönlichen Eindrücke von Phuket und wie sich Strand, Muay Thai, Fitness und aktive Ausflüge miteinander verbinden lassen.
 
-> **Kurz gesagt:** Wenn du Fitness, Wärme, Strände und neue Eindrücke magst, ist Phuket spannend. Besonders gut fand ich Banana Beach und Kamala Beach. Wer Kampfsport ausprobieren möchte, findet auf der Insel außerdem Muay-Thai- und MMA-Angebote.
+> **Kurz gesagt:** Wenn du Fitness, Wärme, Strände und neue Eindrücke magst, ist Phuket spannend. Besonders gut fand ich Banana Beach und Kamala Beach. Zu meinen Highlights gehörten außerdem gebuchte Ausflüge nach Phi Phi, zu den James-Bond-Inseln und zu den Similan Islands.
 
 ---
 
@@ -53,6 +53,36 @@ Bang Tao und Surin habe ich ebenfalls besucht. Gerade Bang Tao ist für Fitness-
 
 ---
 
+## Meine Ausflüge rund um Phuket
+
+Ein großer Teil meiner Reise bestand nicht nur aus Strand und Training, sondern auch aus **gebuchten Tagesausflügen**. Gerade diese Touren haben mir gezeigt, wie abwechslungsreich Phuket als Ausgangspunkt sein kann.
+
+### Phi Phi und kleinere Inselstopps
+
+Einer meiner Ausflüge führte mich nach **Phi Phi**. Unterwegs haben wir zusätzlich mehrere kleinere, für mich wirklich paradiesische Inseln und Buchten besucht.
+
+Die genauen Namen aller Stopps weiß ich heute nicht mehr sicher – deshalb möchte ich hier auch nichts erfinden. In Erinnerung geblieben sind mir vor allem das klare Wasser, die kleinen Inseln und die vielen unterschiedlichen Eindrücke während eines einzigen Tages.
+
+Für mich war das einer der Ausflüge, bei denen man merkt, dass ein Phuket-Urlaub weit über die Strände der Hauptinsel hinausgehen kann.
+
+### Kanu-Ausflug bei den James-Bond-Inseln
+
+Ein weiteres Highlight war ein Ausflug in die Gegend der **James-Bond-Inseln**. Dort war ich auch **Kanu fahren**.
+
+Das war für mich eine schöne Abwechslung zum klassischen Strandtag: Du bist unterwegs, bewegst dich, siehst die Landschaft aus einer anderen Perspektive und verbindest Sightseeing direkt mit einer Aktivität.
+
+Gerade solche Touren passen für mich sehr gut zu der Idee von Fit & Travel – nicht nur irgendwo ankommen, sondern das Reiseziel aktiv erleben.
+
+### Similan Islands
+
+Außerdem habe ich einen Ausflug zu den **Similan Islands** gemacht.
+
+Auch dieser Tag ist mir besonders wegen der Inselkulisse und des Wassers in Erinnerung geblieben. Wenn du auf Phuket bist und gerne verschiedene Inselwelten sehen möchtest, können solche organisierten Tagesausflüge eine spannende Ergänzung zum Aufenthalt sein.
+
+Welche Touren angeboten werden, welche Inseln angefahren werden und ob Ausflüge saisonal möglich sind, kann sich ändern. Deshalb würde ich aktuelle Bedingungen immer kurz vor der Reise beim jeweiligen Anbieter prüfen.
+
+---
+
 ## Muay Thai auf Phuket – Bangtao Muay Thai & MMA
 
 Wenn du Fitness mit Thailand verbindest, kommst du an **Muay Thai** kaum vorbei.
@@ -80,9 +110,9 @@ Du musst auf Phuket nicht jeden Tag in ein Gym gehen, um aktiv zu bleiben.
 - Schwimmen
 - Spaziergänge am Strand
 - aktive Tagesausflüge
-- Wassersport
+- Kanu und Wassersport
 
-Gerade die Mischung macht Phuket für mich interessant. Du kannst morgens trainieren, danach frühstücken, später an den Strand und den Rest des Tages flexibel gestalten.
+Gerade die Mischung macht Phuket für mich interessant. Du kannst morgens trainieren, danach frühstücken, später an den Strand oder auf einen Ausflug und den Rest des Tages flexibel gestalten.
 
 Wenn du ohne Fitnessstudio trainieren möchtest, findest du hier mein [15-Minuten-Hotel-Workout ohne Gym](/blog/hotelworkout/).
 
@@ -145,7 +175,7 @@ Ein entspannter aktiver Tag könnte für mich ungefähr so aussehen:
 
 1. morgens kurzes Workout oder Muay-Thai-Training
 2. Frühstück und Erholung
-3. Strand oder Ausflug
+3. Strand oder gebuchter Ausflug
 4. am späten Nachmittag Spaziergang oder Schwimmen
 5. abends entspannt essen gehen
 
@@ -178,6 +208,7 @@ Phuket ist meiner Meinung nach besonders interessant, wenn du:
 - Strandurlaub mit Bewegung verbinden möchtest
 - Muay Thai ausprobieren willst
 - gerne schwimmst oder am Strand aktiv bist
+- Insel- und Bootsausflüge erleben möchtest
 - Fitness auch im Urlaub nicht komplett pausieren möchtest
 - gleichzeitig Essen, Stadt und Ausflüge erleben willst
 
@@ -187,14 +218,14 @@ Wenn du dagegen ausschließlich kühle Temperaturen und lange Bergtouren suchst,
 
 ## Mein Fazit: Phuket funktioniert sehr gut für Fit & Travel
 
-Meine zwei Wochen auf Phuket haben mir gezeigt, dass sich **Reisen, Fitness und Erholung** dort sehr gut verbinden lassen.
+Meine zwei Wochen auf Phuket haben mir gezeigt, dass sich **Reisen, Fitness, Ausflüge und Erholung** dort sehr gut verbinden lassen.
 
-Banana Beach und Kamala Beach waren meine persönlichen Strand-Favoriten. Bangtao Muay Thai & MMA fand ich als Fitness- und Kampfsport-Option spannend, auch wenn ich dort selbst nicht trainiert habe. Phuket Town, der Big Buddha und das Essen haben die Reise zusätzlich abwechslungsreich gemacht.
+Banana Beach und Kamala Beach waren meine persönlichen Strand-Favoriten. Bangtao Muay Thai & MMA fand ich als Fitness- und Kampfsport-Option spannend, auch wenn ich dort selbst nicht trainiert habe. Die Ausflüge nach Phi Phi, zu den James-Bond-Inseln und zu den Similan Islands gehörten ebenfalls zu meinen Reise-Highlights. Phuket Town, der Big Buddha und das Essen haben die Reise zusätzlich abwechslungsreich gemacht.
 
-Für mich ist Phuket deshalb nicht nur ein klassisches Strandziel, sondern auch ein gutes Reiseziel für alle, die im Urlaub aktiv bleiben möchten.
+Für mich ist Phuket deshalb nicht nur ein klassisches Strandziel, sondern auch ein gutes Reiseziel für alle, die im Urlaub aktiv bleiben und gleichzeitig möglichst viel erleben möchten.
 
 👉 Wenn du weitere aktive Reiseziele suchst, findest du hier meinen Guide: **[Die besten Reiseziele für Aktive](/blog/reiseziele/)**
 
 ---
 
-> **Hinweis:** Anbieter, Öffnungszeiten, Preise, Zugänge und Trainingspläne können sich ändern. Prüfe aktuelle Informationen vor Ort oder direkt beim jeweiligen Anbieter.
+> **Hinweis:** Anbieter, Öffnungszeiten, Preise, Zugänge, Ausflugsrouten und Trainingspläne können sich ändern. Prüfe aktuelle Informationen vor Ort oder direkt beim jeweiligen Anbieter.
