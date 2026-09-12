@@ -1,7 +1,7 @@
 ---
 title: "Phuket für Fitness-Fans: Muay Thai, Strände & aktive Urlaubstipps"
 summary: "Phuket aktiv erleben: meine Erfahrungen mit Stränden, Muay Thai, Phi Phi, James-Bond-Ausflug, Similan Islands und praktischen Fitness-Tipps."
-image: "https://images.pexels.com/photos/4332238/pexels-photo-4332238.jpeg?auto=compress&h=400"
+image: "https://images.pexels.com/photos/36687407/pexels-photo-36687407.jpeg?auto=compress&cs=tinysrgb&h=900"
 date: "2026-09-12"
 category: "Reisen"
 ---
