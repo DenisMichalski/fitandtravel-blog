@@ -3,7 +3,7 @@ title: "Die besten Reiseziele für Aktive: 4 Ideen für Sport & Abenteuer"
 summary: "Vier Reiseziele für aktive Urlauber: Madeira, Andalusien, die Alpen und Phuket – mit Ideen für Wandern, Outdoor-Sport, Fitness und Muay Thai."
 image: "https://images.pexels.com/photos/4332238/pexels-photo-4332238.jpeg?auto=compress&h=400"
 date: "2025-06-10"
-updated: "2026-09-06"
+updated: "2026-09-12"
 category: "Reisen"
 ---
 
@@ -92,7 +92,11 @@ Meine persönlichen Favoriten waren **Banana Beach und Kamala Beach**. Gerade di
 
 Außerdem habe ich **Phuket Town** besucht und war beim **Big Buddha**. Dadurch war die Reise für mich nicht nur Strandurlaub, sondern auch eine gute Gelegenheit, unterschiedliche Orte der Insel kennenzulernen.
 
+Zu meinen Reise-Highlights gehörten außerdem Ausflüge nach **Phi Phi**, zu den **James-Bond-Inseln** mit Kanu-Erlebnis und zu den **Similan Islands**.
+
 Im März habe ich das Wetter als **sehr heiß** erlebt. Für längere Spaziergänge oder Training draußen würde ich deshalb eher die kühleren Tageszeiten wählen und genügend Wasser einplanen.
+
+👉 Meinen ausführlichen Erfahrungsbericht findest du hier: **[Phuket für Fitness-Fans: Muay Thai, Strände & aktive Urlaubstipps](/blog/phuket-fitness-muay-thai-aktive-urlaubstipps/)**
 
 ### Was kannst du auf Phuket sportlich machen?
 
