@@ -30,6 +30,12 @@ Natürlich war das kein professionelles Trainingssetup. Aber genau das ist für 
 
 Diese Erfahrung passt auch zu meiner allgemeinen Haltung beim Training unterwegs: lieber eine einfache Einheit machen, die zum Reisetag passt, als auf perfekte Bedingungen zu warten.
 
+Wenn du Kreta zusätzlich mit einem lokalen Guide individueller erkunden möchtest, findest du über GoWithGuide private Guides und Touren in Griechenland. Für Kreta beziehungsweise Heraklion kann es sich lohnen, die aktuell verfügbaren Angebote dort zu prüfen.
+
+👉 <a href="https://tidd.ly/4yG9bcC" rel="sponsored nofollow">Lokale Guides und private Touren in Griechenland bei GoWithGuide ansehen</a>
+
+*Affiliate-Hinweis: Wenn du über diesen Link buchst, kann ich eine Provision erhalten. Für dich ändert sich der Preis dadurch nicht.*
+
 Wenn du selbst ohne Fitnessstudio trainieren möchtest, findest du hier mein [15-Minuten-Hotel-Workout ohne Gym](/blog/hotelworkout/).
 
 ---
