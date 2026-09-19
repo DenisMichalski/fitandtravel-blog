@@ -1,9 +1,9 @@
 ---
 title: "Meine Travel Essentials: 6 Dinge, die ich wirklich sinnvoll finde"
 date: "2026-05-04"
-updated: "2026-09-11"
+updated: "2026-09-19"
 author: "Denis"
-category: "Travel & Outdoor Essentials"
+category: "Gear & Essentials"
 summary: "Meine Travel Essentials für entspannteres Reisen: sechs praktische Dinge für Ordnung, Strom, Komfort und Flexibilität unterwegs."
 image: "https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg"
 ---
