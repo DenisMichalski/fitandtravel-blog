@@ -3,7 +3,7 @@ title: "Hotel-Workout ohne Gym: 15 Minuten im Hotelzimmer"
 summary: "Hotel-Workout ohne Gym: Dieses 15-Minuten-Training für den ganzen Körper funktioniert im Hotelzimmer – ohne Geräte und mit wenig Platz."
 image: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&h=400"
 date: "2025-06-11"
-updated: "2026-09-06"
+updated: "2026-09-19"
 category: "Fitness"
 ---
 
@@ -201,6 +201,8 @@ Ein gutes **Hotel-Workout ohne Geräte** muss weder kompliziert noch lang sein.
 Mit Kniebeugen, Liegestützen, Ausfallschritten, Planks und einigen Core-Übungen kannst du in etwa 15 Minuten den ganzen Körper bewegen. Wenn du zusätzlich ein Widerstandsband mitnimmst, bekommst du noch mehr Übungsvarianten, ohne viel Platz im Gepäck zu verlieren.
 
 Das Wichtigste ist nicht, unterwegs exakt so zu trainieren wie zuhause. Eine kurze, realistische Routine, die du tatsächlich machst, ist auf Reisen oft die bessere Lösung.
+
+Mehr darüber, wie ich Fitness insgesamt in einen Urlaub integriere, findest du in [Fit im Urlaub: So bleibst du auch auf Reisen aktiv](/blog/fitnesstrip/). Persönliche Beispiele aus meinen Reisen habe ich außerdem in [Fitness auf Reisen: Meine besonderen Sport- & Aktiv-Erlebnisse](/blog/fitness-auf-reisen-persoenliche-sport-erlebnisse/) gesammelt.
 
 👉 **[Weitere Fitness- und Travel-Gear-Empfehlungen ansehen](/gear/)**
 
