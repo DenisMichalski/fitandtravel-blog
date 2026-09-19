@@ -6,6 +6,12 @@ import Header from "../../components/Header.astro";
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
+
+const preferredCategoryOrder = ["Fitness", "Reisen", "Gear & Essentials"];
+const availableCategories = new Set(posts.map((post) => post.data.category));
+const categories = preferredCategoryOrder.filter((category) =>
+    availableCategories.has(category),
+);
 ---
 
 <Layout
@@ -32,10 +38,43 @@ const posts = (await getCollection("blog")).sort(
                 </p>
             </header>
 
+            <div
+                class="mb-8 flex flex-wrap justify-center gap-2"
+                aria-label="Blogbeiträge nach Kategorie filtern"
+            >
+                <button
+                    type="button"
+                    class="category-filter rounded-full border border-blue-600 bg-white px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-50 aria-pressed:border-blue-600 aria-pressed:bg-blue-600 aria-pressed:text-white dark:bg-slate-800 dark:text-blue-300 dark:hover:bg-slate-700"
+                    data-category-filter="all"
+                    aria-pressed="true"
+                >
+                    Alle
+                </button>
+
+                {
+                    categories.map((category) => (
+                        <button
+                            type="button"
+                            class="category-filter rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-700 aria-pressed:border-blue-600 aria-pressed:bg-blue-600 aria-pressed:text-white dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-blue-400 dark:hover:text-blue-300"
+                            data-category-filter={category}
+                            aria-pressed="false"
+                        >
+                            {category}
+                        </button>
+                    ))
+                }
+            </div>
+
+            <p id="blog-filter-status" class="sr-only" aria-live="polite"></p>
+
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {
                     posts.map((post) => (
-                        <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800">
+                        <article
+                            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800"
+                            data-blog-card
+                            data-category={post.data.category}
+                        >
                             <a href={`/blog/${post.id}`} class="block">
                                 <img
                                     src={post.data.image}
@@ -83,4 +122,55 @@ const posts = (await getCollection("blog")).sort(
             </div>
         </section>
     </main>
+
+    <script>
+        const filterButtons =
+            document.querySelectorAll<HTMLButtonElement>(
+                "[data-category-filter]",
+            );
+        const blogCards =
+            document.querySelectorAll<HTMLElement>("[data-blog-card]");
+        const status = document.querySelector<HTMLElement>(
+            "#blog-filter-status",
+        );
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedCategory = button.dataset.categoryFilter ?? "all";
+                let visibleCount = 0;
+
+                filterButtons.forEach((filterButton) => {
+                    filterButton.setAttribute(
+                        "aria-pressed",
+                        String(filterButton === button),
+                    );
+                });
+
+                blogCards.forEach((card) => {
+                    const isVisible =
+                        selectedCategory === "all" ||
+                        card.dataset.category === selectedCategory;
+
+                    card.hidden = !isVisible;
+
+                    if (isVisible) {
+                        visibleCount += 1;
+                    }
+                });
+
+                if (status) {
+                    const categoryLabel =
+                        selectedCategory === "all"
+                            ? "allen Kategorien"
+                            : selectedCategory;
+
+                    status.textContent =
+                        visibleCount +
+                        " Beiträge aus " +
+                        categoryLabel +
+                        " angezeigt.";
+                }
+            });
+        });
+    </script>
 </Layout>
