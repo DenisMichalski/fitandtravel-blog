@@ -3,7 +3,7 @@ title: "Die besten Reiseziele für Aktive: 4 Ideen für Sport & Abenteuer"
 summary: "Vier Reiseziele für aktive Urlauber: Madeira, Andalusien, die Alpen und Phuket – mit Ideen für Wandern, Outdoor-Sport, Fitness und Muay Thai."
 image: "https://images.pexels.com/photos/4332238/pexels-photo-4332238.jpeg?auto=compress&h=400"
 date: "2025-06-10"
-updated: "2026-09-12"
+updated: "2026-09-19"
 category: "Reisen"
 ---
 
@@ -182,6 +182,8 @@ Ein aktiver Urlaub muss nicht bedeuten, jeden Tag mehrere Stunden zu trainieren.
 Auf Madeira kann es eine lange Wanderung sein, in Andalusien eine Küstentour, in den Alpen eine Bergwanderung – und auf Phuket vielleicht ein Muay-Thai-Training oder ein Workout am Strand.
 
 Für mich macht genau diese Mischung einen guten Fit-&-Travel-Urlaub aus: **ein neues Reiseziel erleben und trotzdem Bewegung in den Alltag einbauen.**
+
+Wie unterschiedlich solche aktiven Reiseerlebnisse in der Praxis aussehen können, erzähle ich in [Fitness auf Reisen: Meine besonderen Sport- & Aktiv-Erlebnisse](/blog/fitness-auf-reisen-persoenliche-sport-erlebnisse/).
 
 ---
 
