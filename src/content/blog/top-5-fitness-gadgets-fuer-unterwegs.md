@@ -3,8 +3,8 @@ title: "Fitness-Gadgets für Reisen & Hotel-Workouts"
 summary: "Fitness-Gadgets für Reisen: 5 kompakte Empfehlungen für Hotel-Workouts – von Widerstandsbändern und Parallettes bis Speed Rope und Travel-Matte."
 image: "https://images.pexels.com/photos/4379318/pexels-photo-4379318.jpeg?auto=compress&h=400"
 date: "2025-06-09"
-updated: "2026-09-06"
-category: "Gadgets"
+updated: "2026-09-19"
+category: "Gear & Essentials"
 ---
 
 Du willst auch auf Reisen trainieren, aber weder Hanteln noch halbes Gym-Equipment im Koffer mitschleppen? Dann kommt es vor allem auf **kompakte, vielseitige Fitness-Gadgets** an.
@@ -191,6 +191,8 @@ Wenn du noch mehr praktische Empfehlungen für Training und Reisen suchst, finde
 👉 **[Gear-&-Empfehlungsseite von Fit & Travel](/gear/)**
 
 Dort sammle ich Fitness- und Travel-Produkte, die thematisch zu Hotel-Workouts, aktiven Reisen und praktischem Reisegepäck passen.
+
+Wenn du nicht nur Equipment suchst, sondern wissen möchtest, wie ich Training generell in Reisen integriere, findest du hier meinen Guide [Fit im Urlaub: So bleibst du auch auf Reisen aktiv](/blog/fitnesstrip/).
 
 ---
 
