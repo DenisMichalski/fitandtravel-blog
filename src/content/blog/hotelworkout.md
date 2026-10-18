@@ -1,15 +1,15 @@
 ---
-title: "Hotel-Workout ohne Gym: 15 Minuten im Hotelzimmer"
-summary: "Hotel-Workout ohne Gym: Dieses 15-Minuten-Training für den ganzen Körper funktioniert im Hotelzimmer – ohne Geräte und mit wenig Platz."
+title: "Hotel-Workout ohne Geräte: 15-Minuten-Ganzkörpertraining"
+summary: "Hotel-Workout ohne Geräte: 15 Minuten Ganzkörpertraining im Hotelzimmer – mit Kniebeugen, Liegestützen, Planks und wenig Platz."
 image: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&h=400"
 date: "2025-06-11"
-updated: "2026-09-19"
+updated: "2026-10-18"
 category: "Fitness"
 ---
 
-Du bist auf Reisen, das Hotel-Gym ist winzig, geschlossen oder gar nicht vorhanden? Kein Problem. Für ein effektives **Hotel-Workout ohne Gym** brauchst du weder Hanteln noch Maschinen.
+Du bist auf Reisen, das Hotel-Gym ist winzig, geschlossen oder gar nicht vorhanden? Kein Problem. Für ein effektives **Hotel-Workout ohne Geräte** brauchst du weder Hanteln noch Maschinen.
 
-Mit ein paar einfachen Bodyweight-Übungen kannst du Beine, Brust, Schultern und Core direkt im Hotelzimmer trainieren. Das folgende Workout dauert etwa **15 Minuten**, braucht wenig Platz und lässt sich leicht an dein Fitnesslevel anpassen.
+Mit ein paar einfachen Bodyweight-Übungen kannst du Beine, Brust, Schultern und Core direkt im Hotelzimmer trainieren. Dieses **15-Minuten-Hotel-Workout** braucht wenig Platz und lässt sich leicht an dein Fitnesslevel anpassen.
 
 > **Kurz gesagt:** Wenn du nur wenig Zeit hast, reichen ein kurzes Warm-up und drei Runden aus Kniebeugen, Liegestützen, Ausfallschritten und Planks bereits für ein solides Ganzkörpertraining.
 

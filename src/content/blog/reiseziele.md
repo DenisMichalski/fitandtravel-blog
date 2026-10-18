@@ -1,17 +1,17 @@
 ---
-title: "Die besten Reiseziele für Aktive: 4 Ideen für Sport & Abenteuer"
-summary: "Vier Reiseziele für aktive Urlauber: Madeira, Andalusien, die Alpen und Phuket – mit Ideen für Wandern, Outdoor-Sport, Fitness und Muay Thai."
+title: "Aktivurlaub: 4 Reiseziele für Sport, Natur & Abenteuer"
+summary: "Aktivurlaub gesucht? Madeira, Andalusien, die Alpen und Phuket verbinden Natur, Sport, Wandern, Fitness und Abenteuer auf ganz unterschiedliche Weise."
 image: "https://images.pexels.com/photos/4332238/pexels-photo-4332238.jpeg?auto=compress&h=400"
 date: "2025-06-10"
-updated: "2026-09-19"
+updated: "2026-10-18"
 category: "Reisen"
 ---
 
-Du willst im Urlaub nicht nur am Pool liegen, sondern Bewegung, Natur und neue Erlebnisse miteinander verbinden? Dann gibt es Reiseziele, die sich besonders gut für **aktive Urlauber** eignen.
+Du willst im Urlaub nicht nur am Pool liegen, sondern Bewegung, Natur und neue Erlebnisse miteinander verbinden? Dann ist ein **Aktivurlaub** genau das Richtige – und einige Reiseziele eignen sich dafür besonders gut.
 
 Ob Wandern, Trailrunning, Wassersport, Fitness oder Kampfsport: Je nach Reiseziel kannst du deinen Urlaub ganz unterschiedlich gestalten.
 
-Hier sind vier Reiseziele, die Sport und Reisen besonders spannend verbinden – darunter mit **Phuket in Thailand** auch ein Ort, den ich 2026 selbst besucht habe.
+Hier sind vier Reiseziele für einen aktiven Urlaub, die Sport, Natur und Reisen besonders spannend verbinden – darunter mit **Phuket in Thailand** auch ein Ort, den ich 2026 selbst besucht habe.
 
 > **Kurz gesagt:** Madeira ist stark für Wandern und Trailrunning, Andalusien für Sonne und Outdoor-Aktivitäten, die Alpen für Bergsport – und Phuket kombiniert Strandurlaub mit Fitness, Wassersport und Muay Thai.
 
