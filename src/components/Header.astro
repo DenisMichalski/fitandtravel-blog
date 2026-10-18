@@ -1,9 +1,12 @@
 ---
-const pathname = Astro.url.pathname;
+const normalizePath = (path) =>
+    path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`;
+
+const pathname = normalizePath(Astro.url.pathname);
 
 const linkClass = (path) =>
     `block px-4 py-2 md:inline hover:text-blue-300 transition-colors ${
-        pathname === path ? "underline font-bold" : ""
+        pathname === normalizePath(path) ? "underline font-bold" : ""
     }`;
 ---
 
@@ -18,9 +21,9 @@ const linkClass = (path) =>
 
     <nav class="hidden items-center space-x-6 text-lg font-semibold md:flex">
         <a href="/" class={linkClass("/")}>Home</a>
-        <a href="/blog" class={linkClass("/blog")}>Blog</a>
-        <a href="/about" class={linkClass("/about")}>Über</a>
-        <a href="/kontakt" class={linkClass("/kontakt")}>Kontakt</a>
+        <a href="/blog/" class={linkClass("/blog/")}>Blog</a>
+        <a href="/about/" class={linkClass("/about/")}>Über</a>
+        <a href="/kontakt/" class={linkClass("/kontakt/")}>Kontakt</a>
 
         <button
             id="desktop-dark-mode-toggle"
@@ -61,9 +64,9 @@ const linkClass = (path) =>
         class="absolute left-0 top-full z-50 hidden w-full flex-col items-center space-y-2 bg-slate-900 py-4 shadow-lg md:hidden"
     >
         <a href="/" class={linkClass("/")}>Home</a>
-        <a href="/blog" class={linkClass("/blog")}>Blog</a>
-        <a href="/about" class={linkClass("/about")}>Über</a>
-        <a href="/kontakt" class={linkClass("/kontakt")}>Kontakt</a>
+        <a href="/blog/" class={linkClass("/blog/")}>Blog</a>
+        <a href="/about/" class={linkClass("/about/")}>Über</a>
+        <a href="/kontakt/" class={linkClass("/kontakt/")}>Kontakt</a>
 
         <button
             id="mobile-dark-mode-toggle"
