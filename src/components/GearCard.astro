@@ -90,9 +90,18 @@ const rel = item.affiliate
         )
     }
 
+    {
+        item.contentNote && (
+            <div class="mb-4 rounded-xl border border-pink-200 bg-pink-50 p-3 text-sm leading-relaxed text-pink-950 dark:border-pink-900/50 dark:bg-pink-950/30 dark:text-pink-100">
+                <span class="font-bold">Aus unserem Content:</span>{" "}
+                {item.contentNote}
+            </div>
+        )
+    }
+
     <div
         class="mt-auto pt-2 font-semibold text-blue-600 transition-transform duration-200 group-hover:translate-x-0.5 dark:text-blue-400"
     >
-        {item.merchant ? `Bei ${item.merchant} ansehen →` : "Empfehlung ansehen →"}
+        {item.cta ?? (item.merchant ? `Bei ${item.merchant} ansehen →` : "Empfehlung ansehen →")}
     </div>
 </a>
