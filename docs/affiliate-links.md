@@ -39,6 +39,15 @@ Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
 - Änderungen an Affiliate-Links hier dokumentieren, bevor oder direkt nachdem sie live gehen.
 - Social-Traffic weiterhin über UTM-Parameter zur Website führen; Details dazu stehen in `docs/marketing-tracking.md`.
 
-## Nächste Ergänzung
+## AliExpress DE über Awin
 
-AliExpress DE wird später ergänzt, sobald die ersten konkreten Produkte und Tracking-Links ausgewählt wurden.
+| Produkt | ClickRef | Affiliate-Link | Einsatz | Hinweis |
+|---|---|---|---|---|
+| Kompressions-Packing-Cubes | `gear_packingcubes` | https://tidd.ly/4z7YwIr | Gear-Seite / Packing-Content | Empfehlung: 6er-Variante wählen; zuletzt ca. 19,89 €. Die Produktseite öffnet standardmäßig nicht zuverlässig direkt die 6er-Variante. |
+
+## Hinweise zu AliExpress
+
+- AliExpress-Links immer über den Awin Link Builder erzeugen.
+- Für konkrete Produktvarianten prüfen, ob die Auswahl in der URL erhalten bleibt.
+- Wenn die Variante nicht zuverlässig vorausgewählt wird, auf der Gear-Seite klar angeben, welche Variante empfohlen wird.
+- Preise können sich ändern; Preisangaben daher nur als ungefähr bzw. zuletzt gesehen kennzeichnen.
