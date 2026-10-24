@@ -11,15 +11,17 @@ const GEAR = [
             "Reisetaugliche Fitness-Essentials für unterschiedliche Trips: von ultrakompaktem Equipment fürs Handgepäck bis zu Calisthenics-Gear für längere Aufenthalte – ohne klassisches Fitnessstudio.",
         items: [
             {
-                title: "Kompaktes Ganzkörpertraining unterwegs",
+                title: "Widerstandsbänder fürs Hotel-Workout",
                 description:
-                    "Drei Widerstandsstufen für Kraft, Mobility und Ganzkörpertraining – kompakt, vielseitig und ideal für Hotelzimmer und Reisen.",
+                    "Drei Widerstandsstufen für Kraft, Mobility und Ganzkörpertraining – leicht im Gepäck und ideal für Hotelzimmer, Ferienwohnung oder Strand.",
                 href: "https://tidd.ly/4e1LJP5",
                 merchant: "Decathlon",
                 affiliate: true,
                 badges: ["Hotel", "Kompakt", "Ganzkörper"],
                 reason:
                     "Besonders passend für Reisen, weil du mit drei Widerstandsstufen viele Übungen abdecken kannst, ohne viel Platz im Gepäck zu verlieren.",
+                contentNote: "Passt zu unserem Content: 3 Übungen mit dem Fitnessband fürs Hotelzimmer.",
+                cta: "Fitnessband bei Decathlon ansehen →",
                 featured: true,
                 topPriority: 2,
             },
@@ -53,13 +55,19 @@ const GEAR = [
                 badges: ["Routine", "Praktisch", "Kompakt"],
             },
             {
-                title: "Schnelles Cardio im Handgepäck",
+                title: "Springseil für dein 10-Minuten-Travel-Workout",
                 description:
-                    "Kompaktes Speed Rope für kurze Cardio-Einheiten, HIIT und Double Unders – leicht mitzunehmen und schnell einsatzbereit.",
+                    "Kompaktes Speed Rope für kurze Cardio-Einheiten unterwegs – kaum Platz im Gepäck und schnell einsatzbereit im Hotel, draußen oder auf Reisen.",
                 href: "https://tidd.ly/4zr5xo1",
                 merchant: "Decathlon",
                 affiliate: true,
-                badges: ["Cardio", "Ultraleicht", "HIIT"],
+                badges: ["10-Min-Workout", "Ultraleicht", "Cardio"],
+                reason:
+                    "Mein Tipp für kurze Cardio-Einheiten auf Reisen: wenig Equipment, wenig Platz und trotzdem ein klar strukturiertes Workout.",
+                contentNote: "Dazu haben wir bereits das 10-Minuten-Springseil-Workout auf Social Media veröffentlicht.",
+                cta: "Springseil bei Decathlon ansehen →",
+                featured: true,
+                topPriority: 1,
             },
         ],
     },
@@ -110,9 +118,7 @@ const GEAR = [
                 badges: ["Handgepäck", "Laptopfach", "23–27 L"],
                 reason:
                     "Für Flug und Alltag besonders praktisch: flexibel erweiterbar, mit Laptopfach und genug Platz für Tagestrip oder Handgepäck.",
-                featured: true,
-                topPriority: 3,
-            },
+                            },
             {
                 title: "Noise-Cancelling Kopfhörer",
                 description:
@@ -177,8 +183,7 @@ const topPicks = GEAR.flatMap((section) =>
                 <p
                     class="mt-3 max-w-3xl leading-relaxed text-slate-600 dark:text-slate-300"
                 >
-                    Meine Empfehlungen für Fitness unterwegs und praktische
-                    Travel Essentials – kompakt, nützlich und ideal für Reisen.
+                    Ausgewählte Fitness- und Travel-Produkte, die ein konkretes Problem unterwegs lösen – vom kurzen Hotel-Workout bis zu langen Reisetagen.
                 </p>
 
                 <div class="mt-5 flex flex-wrap gap-3">
@@ -207,19 +212,23 @@ const topPicks = GEAR.flatMap((section) =>
                 Amazon sowie DECATHLON über Awin. Als Amazon-Partner verdiene
                 ich an qualifizierten Verkäufen.
             </div>
+
+            <div class="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm leading-relaxed text-emerald-950 dark:border-emerald-900/60 dark:bg-emerald-950/30 dark:text-emerald-100">
+                <div class="font-bold">So wähle ich Empfehlungen aus</div>
+                <p class="mt-2">
+                    Ich möchte hier nicht möglichst viele Produkte sammeln. Im Fokus stehen Dinge, die auf Reisen einen klaren Nutzen haben, wenig Platz brauchen oder ein konkretes Problem lösen. Bei Fitness-Gear zählt für mich vor allem: unkompliziert einsetzbar, reisetauglich und ohne großes Setup nutzbar.
+                </p>
+            </div>
             {
                 topPicks.length > 0 && (
                     <section class="mb-12">
                         <div class="mb-5">
                             <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
-                                Meine Top Empfehlungen 🔥
+                                Meine 3 Kern-Empfehlungen 🔥
                             </h2>
 
                             <p class="mt-2 text-slate-600 dark:text-slate-300">
-                                Drei besonders interessante Picks für
-                                Training und Reisen – bewusst ausgewählt, damit
-                                die wichtigsten Empfehlungen sofort ins Auge
-                                fallen.
+                                Die Produkte, die aktuell am besten zu unserem Content und zu typischen Situationen auf Reisen passen – mit klarem Nutzen statt einer endlosen Produktliste.
                             </p>
                         </div>
 
