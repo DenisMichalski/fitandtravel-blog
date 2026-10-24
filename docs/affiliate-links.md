@@ -45,6 +45,7 @@ Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
 |---|---|---|---|---|
 | Kompressions-Packing-Cubes | `gear_packingcubes` | https://tidd.ly/4z7YwIr | Gear-Seite / Packing-Content | Empfehlung: 6er-Variante wählen; zuletzt ca. 19,89 €. Die Produktseite öffnet standardmäßig nicht zuverlässig direkt die 6er-Variante. |
 | Kabel-/Technik-Organizer | `gear_kabelorganizer` | https://tidd.ly/3UGbn5A | Gear-Seite / Travel-Organisation | Double-Layer-Variante bevorzugt; zuletzt ca. 8,09 €. |
+| Travel-Organizer für Nass-/Trockensachen | `gear_kulturbeutel` | https://tidd.ly/4esuQgK | Gear-Seite / Travel-Organisation | Für Reise, Fitness, Strand und Schwimmen; zuletzt ca. 6,39 €. |
 
 ## Hinweise zu AliExpress
 
