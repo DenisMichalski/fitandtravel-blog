@@ -1,6 +1,6 @@
 # Affiliate-Link-Verwaltung
 
-Stand: 24.10.2026
+Stand: 31.10.2026
 
 Diese Datei ist die zentrale Übersicht für Affiliate-Links und Tracking-Zuordnungen von Fit & Travel.
 
@@ -29,6 +29,14 @@ Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
 | Springseil / Speed Rope | `gear_springseil` | https://tidd.ly/4zr5xo1 | Gear-Seite / produktbezogener Content |
 | Fitnessband | `gear_fitnessband` | https://tidd.ly/4e1LJP5 | Gear-Seite / produktbezogener Content |
 | Reiserucksack | `gear_rucksack` | https://tidd.ly/3UmOT9F | Gear-Seite / produktbezogener Content |
+
+## GoWithGuide über Awin
+
+| Einsatz | ClickRef | Affiliate-Link | Verwendung |
+|---|---|---|---|
+| Phuket: Phang Nga / James Bond Island | bestehender Deeplink | https://tidd.ly/4h1jgcX | Phuket-Artikel |
+| Phuket: private Touren mit lokalen Guides | bestehender Deeplink | https://tidd.ly/4y8Kaac | Phuket-Artikel / Reiseziele-Seite |
+| Private Flughafentransfers | `blog_airporttransfer` | https://tidd.ly/4ik4fVy | Artikel „Fit auf langen Reisen“ |
 
 ## Tracking-Regeln
 
