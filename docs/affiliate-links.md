@@ -38,6 +38,13 @@ Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
 | Phuket: private Touren mit lokalen Guides | bestehender Deeplink | https://tidd.ly/4y8Kaac | Phuket-Artikel / Reiseziele-Seite |
 | Private Flughafentransfers | `blog_airporttransfer` | https://tidd.ly/4ik4fVy | Artikel „Fit auf langen Reisen“ |
 
+
+## EVASIM über Awin
+
+| Produkt / Zielseite | ClickRef | Affiliate-Link | Einsatz | Hinweis |
+|---|---|---|---|---|
+| Thailand eSIM (englische Produktseite) | `gear_esim_thailand` | https://tidd.ly/48xp75P | Gear-Seite / Thailand-Content | Zielseite: https://evasim.com/en/products/tailandia-esim |
+
 ## Tracking-Regeln
 
 - Für neue Awin-Links immer den Link Builder verwenden.
