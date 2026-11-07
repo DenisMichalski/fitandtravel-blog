@@ -31,7 +31,7 @@ Mit einem Set aus mehreren Widerstandsstufen kannst du unter anderem Beine, Rüc
 - ideal für kurze Hotel-Workouts
 - auch für Mobility und Warm-up nutzbar
 
-👉 [Widerstandsbänder bei Amazon ansehen](https://www.amazon.de/dp/B079VHVKLJ?tag=fitandtrave0b-21)
+👉 [Widerstandsbänder bei Amazon ansehen](https://www.amazon.de/dp/B079VHVKLJ?tag=fittravelrepe-21)
 
 Wenn du nur **ein einziges Fitness-Gadget** in den Koffer packen möchtest, wären Widerstandsbänder für mich die naheliegendste Wahl.
 
@@ -51,7 +51,7 @@ Der große Vorteil: Durch die erhöhte Griffposition kannst du viele Übungen va
 - Schulter- und Push-Training
 - längere Reisen oder Ferienwohnungen
 
-👉 [AmazeFan Parallettes bei Amazon ansehen](https://www.amazon.de/dp/B0FMXYCR18?tag=fitandtrave0b-21)
+👉 [AmazeFan Parallettes bei Amazon ansehen](https://www.amazon.de/dp/B0FMXYCR18?tag=fittravelrepe-21)
 
 Für ultraleichtes Handgepäck sind Parallettes natürlich größer als ein Fitnessband. Wenn du aber mit Auto reist, länger an einem Ort bleibst oder bewusst Trainings-Equipment mitnehmen möchtest, bieten sie deutlich mehr Möglichkeiten.
 
@@ -70,7 +70,7 @@ Sie eignet sich nicht nur für Yoga, sondern auch für Mobility, Stretching, Cor
 - für Yoga, Mobility und Bodyweight-Training
 - faltbar und reisetauglicher als klassische Rollmatten
 
-👉 [Faltbare Travel-Yogamatte bei Amazon ansehen](https://www.amazon.de/dp/B07XYY3BHN?tag=fitandtrave0b-21)
+👉 [Faltbare Travel-Yogamatte bei Amazon ansehen](https://www.amazon.de/dp/B07XYY3BHN?tag=fittravelrepe-21)
 
 Gerade wenn du regelmäßig Planks, Sit-ups, Stretching oder Mobility machst, kann die Matte unterwegs einen großen Unterschied beim Komfort machen.
 
@@ -89,7 +89,7 @@ Besonders praktisch auf Reisen sind Modelle mit zusätzlichen Fächern. Damit ka
 - auch für Wasser oder andere Getränke nutzbar
 - praktisch für längere Reise- oder Trainingstage
 
-👉 [Reise-Shaker bei Amazon ansehen](https://www.amazon.de/dp/B0CN17WPTX?tag=fitandtrave0b-21)
+👉 [Reise-Shaker bei Amazon ansehen](https://www.amazon.de/dp/B0CN17WPTX?tag=fittravelrepe-21)
 
 Das ist vor allem dann interessant, wenn du auch unterwegs möglichst wenig an deiner normalen Fitness-Routine ändern möchtest.
 
@@ -109,7 +109,7 @@ Für kurze Cardio-Einheiten oder HIIT kannst du mit wenigen Minuten bereits orde
 - für Warm-up und HIIT geeignet
 - draußen fast überall einsetzbar
 
-👉 [Speed Rope bei Amazon ansehen](https://www.amazon.de/dp/B012G9G7HW?tag=fitandtrave0b-21)
+👉 [Speed Rope bei Amazon ansehen](https://www.amazon.de/dp/B012G9G7HW?tag=fittravelrepe-21)
 
 Im Hotelzimmer selbst ist Springseil natürlich nur sinnvoll, wenn ausreichend Platz vorhanden ist und du niemanden unter dir störst. Draußen, im Hotel-Gym oder auf einer geeigneten Fläche ist es dafür umso praktischer.
 
