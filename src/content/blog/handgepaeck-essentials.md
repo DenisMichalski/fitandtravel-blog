@@ -31,7 +31,7 @@ Eine kompakte Powerbank gehört deshalb zu den sinnvollsten Dingen im Handgepäc
 - hilfreich, wenn Steckdosen besetzt oder nicht vorhanden sind
 - auch am Reiseziel nützlich
 
-👉 [INIU Powerbank bei Amazon ansehen](https://www.amazon.de/dp/B0DCYR5VNR?tag=fitandtrave0b-21)
+👉 [INIU Powerbank bei Amazon ansehen](https://www.amazon.de/dp/B0DCYR5VNR?tag=fittravelrepe-21)
 
 **Wichtig bei Flugreisen:** Für Akkus und Powerbanks gelten besondere Transportregeln. Prüfe vor dem Abflug immer die aktuellen Vorgaben deiner Airline und des Abflughafens.
 
@@ -49,7 +49,7 @@ Sie sind für mich besonders praktisch für:
 - Musik und Podcasts
 - konzentriertes Arbeiten unterwegs
 
-👉 [Noise-Cancelling-Kopfhörer bei Amazon ansehen](https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21)
+👉 [Noise-Cancelling-Kopfhörer bei Amazon ansehen](https://www.amazon.de/dp/B0FV3QWBJN?tag=fittravelrepe-21)
 
 Wenn du eine preislich alternative Option suchst, findest du auf meiner [Gear-Seite](/gear/) noch eine weitere Kopfhörer-Empfehlung.
 
@@ -71,7 +71,7 @@ Ein Travel Organizer schafft dafür einen festen Platz.
 - USB-Sticks oder Speicherkarten
 - kleinere Reiseutensilien
 
-👉 [Travel Organizer bei Amazon ansehen](https://www.amazon.de/dp/B0C6FDSTZB?tag=fitandtrave0b-21)
+👉 [Travel Organizer bei Amazon ansehen](https://www.amazon.de/dp/B0C6FDSTZB?tag=fittravelrepe-21)
 
 Der große Vorteil ist weniger das Produkt selbst als die feste Routine: Du weißt unterwegs immer, wo deine Technik liegt.
 
@@ -88,7 +88,7 @@ Große Shampoo- oder Duschgelflaschen nehmen unnötig Platz weg. Kleine wiederbe
 - Kulturbeutel bleibt übersichtlicher
 - praktisch für Hotel, Fitnessstudio und Strand
 
-👉 [Reiseflaschen-Set bei Amazon ansehen](https://www.amazon.de/dp/B0FHWDR92L?tag=fitandtrave0b-21)
+👉 [Reiseflaschen-Set bei Amazon ansehen](https://www.amazon.de/dp/B0FHWDR92L?tag=fittravelrepe-21)
 
 Bei Flugreisen können sich Vorgaben für Flüssigkeiten je nach Flughafen und Sicherheitskontrolle unterscheiden. Prüfe deshalb vor Reisebeginn die aktuellen Regeln für deine Strecke.
 
@@ -108,7 +108,7 @@ Statt alles lose in den Rucksack oder Trolley zu packen, kannst du beispielsweis
 - praktisch bei mehreren Unterkünften
 - hilfreich für Handgepäck und Koffer
 
-👉 [Packing Cubes bei Amazon ansehen](https://www.amazon.de/dp/B0B92LC2CN?tag=fitandtrave0b-21)
+👉 [Packing Cubes bei Amazon ansehen](https://www.amazon.de/dp/B0B92LC2CN?tag=fittravelrepe-21)
 
 Gerade bei Rundreisen oder häufigem Hotelwechsel spart eine gute Organisation viel Zeit.
 
@@ -127,7 +127,7 @@ Besonders nützlich ist er für:
 - Stadttrips
 - Training unterwegs
 
-👉 [Tagesrucksack mit Laptopfach bei Amazon ansehen](https://www.amazon.de/dp/B0GMY2K3H3?tag=fitandtrave0b-21)
+👉 [Tagesrucksack mit Laptopfach bei Amazon ansehen](https://www.amazon.de/dp/B0GMY2K3H3?tag=fittravelrepe-21)
 
 Achte bei Flugreisen darauf, dass die Maße zu den Gepäckregeln deiner Airline passen.
 
