@@ -135,7 +135,7 @@ Du kannst beispielsweise:
 - seitliche Schritte für Beine und Gesäß einbauen
 - das Band fürs Warm-up und Mobility nutzen
 
-👉 [Widerstandsbänder bei Amazon ansehen](https://www.amazon.de/dp/B079VHVKLJ?tag=fitandtrave0b-21)
+👉 [Widerstandsbänder bei Amazon ansehen](https://www.amazon.de/dp/B079VHVKLJ?tag=fittravelrepe-21)
 
 Mehr kompakte Trainingshelfer findest du außerdem auf meiner [Gear-&-Empfehlungsseite](/gear/).
 
