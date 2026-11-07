@@ -32,7 +32,7 @@ Ich finde sie besonders praktisch, um Kleidung nach Kategorien zu trennen. So mu
 - Sport- und Alltagskleidung lassen sich trennen
 - mehr Übersicht im Koffer oder Rucksack
 
-👉 [Packing Cubes bei Amazon ansehen](https://www.amazon.de/dp/B0B92LC2CN?tag=fitandtrave0b-21)
+👉 [Packing Cubes bei Amazon ansehen](https://www.amazon.de/dp/B0B92LC2CN?tag=fittravelrepe-21)
 
 Gerade auf Reisen mit mehreren Stationen finde ich eine feste Ordnung deutlich angenehmer als alles lose im Gepäck zu haben.
 
@@ -53,7 +53,7 @@ Deshalb gehört eine Powerbank für mich zu den Dingen, bei denen ich ungern dar
 - Fotos und Videos
 - Situationen ohne freie Steckdose
 
-👉 [INIU Powerbank bei Amazon ansehen](https://www.amazon.de/dp/B0DCYR5VNR?tag=fitandtrave0b-21)
+👉 [INIU Powerbank bei Amazon ansehen](https://www.amazon.de/dp/B0DCYR5VNR?tag=fittravelrepe-21)
 
 **Bei Flugreisen wichtig:** Für Powerbanks gelten besondere Transport- und Kapazitätsregeln. Ich würde deshalb vor dem Flug immer die aktuellen Vorgaben der jeweiligen Airline prüfen.
 
@@ -73,7 +73,7 @@ Kleine wiederbefüllbare Reisebehälter finde ich deshalb gerade für kürzere R
 - für Hotel und Fitnessstudio praktisch
 - auch bei Reisen mit Handgepäck hilfreich
 
-👉 [Reiseflaschen-Set bei Amazon ansehen](https://www.amazon.de/dp/B0FHWDR92L?tag=fitandtrave0b-21)
+👉 [Reiseflaschen-Set bei Amazon ansehen](https://www.amazon.de/dp/B0FHWDR92L?tag=fittravelrepe-21)
 
 Die konkreten Flüssigkeitsregeln können je nach Flughafen und Sicherheitskontrolle unterschiedlich sein. Vor dem Abflug lohnt sich deshalb ein kurzer Check der aktuellen Vorgaben.
 
@@ -93,7 +93,7 @@ Ein Tagesrucksack ist für mich besonders vielseitig, weil er für ganz untersch
 - Fitnessstudio
 - Laptop und Technik unterwegs
 
-👉 [Tagesrucksack mit Laptopfach bei Amazon ansehen](https://www.amazon.de/dp/B0GMY2K3H3?tag=fitandtrave0b-21)
+👉 [Tagesrucksack mit Laptopfach bei Amazon ansehen](https://www.amazon.de/dp/B0GMY2K3H3?tag=fittravelrepe-21)
 
 Für mich ist vor allem wichtig, dass ein Tagesrucksack nicht schon leer unnötig schwer ist und genug Platz für Wasser, Powerbank und die wichtigsten Sachen bietet.
 
@@ -113,7 +113,7 @@ Noise Cancelling kann besonders angenehm sein, wenn du Musik hören, einen Film 
 - Musik und Podcasts
 - Arbeiten unterwegs
 
-👉 [Noise-Cancelling-Kopfhörer bei Amazon ansehen](https://www.amazon.de/dp/B0FV3QWBJN?tag=fitandtrave0b-21)
+👉 [Noise-Cancelling-Kopfhörer bei Amazon ansehen](https://www.amazon.de/dp/B0FV3QWBJN?tag=fittravelrepe-21)
 
 Eine günstigere Alternative habe ich ebenfalls auf meiner [Gear-Seite](/gear/) aufgeführt.
 
