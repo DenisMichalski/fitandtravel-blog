@@ -1,6 +1,6 @@
 # Affiliate-Link-Verwaltung
 
-Stand: 31.10.2026
+Stand: 07.11.2026
 
 Diese Datei ist die zentrale Übersicht für Affiliate-Links und Tracking-Zuordnungen von Fit & Travel.
 
@@ -16,11 +16,9 @@ Direkte Affiliate-Links in Social Media nur dort einsetzen, wo sie strategisch s
 
 | Einsatz | Tracking-ID | Verwendung |
 |---|---|---|
-| Gear-Seite | `fittravel-gear-21` | Alle Amazon-Produktlinks auf `/gear/` |
-| Blog | `fittravel-blog-21` | Amazon-Links in Blogartikeln |
-| YouTube | `fittravel-youtube-21` | Direkte Amazon-Links in geeigneten YouTube-Inhalten |
+| Gesamte Website | `fittravelrepe-21` | Aktuelle Amazon-Partner-ID für Gear-Seite und Blogartikel |
 
-Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
+Hinweis: Nach der Neuanmeldung am 07.11.2026 verwenden alle Amazon-Links auf der Website die neue Partner-ID `fittravelrepe-21`.
 
 ## DECATHLON über Awin
 
@@ -50,7 +48,7 @@ Hinweis: Produktlinks werden jeweils mit der passenden Tracking-ID erzeugt.
 - Für neue Awin-Links immer den Link Builder verwenden.
 - `ClickRef 1` eindeutig und verständlich benennen, z. B. `gear_produktname`.
 - Nach Möglichkeit gekürzte `tidd.ly`-Links verwenden.
-- Bei Amazon immer die Tracking-ID passend zum Einsatzort wählen.
+- Bei Amazon derzeit ausschließlich die aktuelle Partner-ID `fittravelrepe-21` verwenden.
 - Änderungen an Affiliate-Links hier dokumentieren, bevor oder direkt nachdem sie live gehen.
 - Social-Traffic weiterhin über UTM-Parameter zur Website führen; Details dazu stehen in `docs/marketing-tracking.md`.
 
